@@ -1757,12 +1757,20 @@
 
 <h1 id="refit-ideas-and-questions">Refit Ideas and Questions<a class="headerlink" href="#refit-ideas-and-questions" title="Permanent link">&para;</a></h1>
 <div class="admonition info">
-<p class="admonition-title">Note - Oct 19, 2025</p>
+<p class="admonition-title">Note 1 - Oct 19, 2025</p>
 <p>This page is temporary. I'll be using it to post questions for us to review and discuss.</p>
 </div>
-<h3 id="background">Background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h3>
-<p><mark>Christina</mark>, the issues with the database and resulting dataset mean we should at least review the project deliverables, and decide which of these are most beneficial for the project at this point. Most of this will be laid out elsewhere, in more detail, in the <a href="../../bnr-process-audit/">process audit</a>, and in the proposed changes: <a href="../process-new/">Process Changes</a> ○ <a href="../dataset-new/">Data Changes</a> ○ <a href="../analytics-new/">Analytics Changes</a> ○ <a href="../reporting-new/">Reporting Changes</a>.</p>
-<p>So this is just to get our discussion started. Here are the main data issues, and how we might sort through them, to deliver something useful for the project:</p>
+<div class="admonition info">
+<p class="admonition-title">Note 2 - Oct 22, 2025</p>
+<p>The original ToR spoke about a <code>.do</code> file audit. It's now fairly clear that the current (circa. 2023) set of <code>.do</code> files will be scrapped completely. It's also clearer (also perhaps not surprising) that many of the data issues are the result of systemic process issues, rather than coding problems. So, I'm extending the review (somewhat, not completely) to include database and process concerns.</p>
+<p>This page starts to document these concerns...</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Note 3 - Oct 22, 2025</p>
+<p>Issues with the REDCap database and resulting analytics dataset mean we should at least review the project deliverables, and decide which of these are most beneficial for the project at this point. </p>
+<p>In the end, the audit findings will be laid out in more detail, in the <a href="../../bnr-process-audit/">process audit</a>, and in the proposed changes: <a href="../process-new/">Process Changes</a> ○ <a href="../dataset-new/">Data Changes</a> ○ <a href="../analytics-new/">Analytics Changes</a> ○ <a href="../reporting-new/">Reporting Changes</a>.</p>
+</div>
+<p>So this is just to get our discussion started. Here are some of the important data issues, and how we might sort through them, to deliver something useful for the project:</p>
 <table>
 <thead>
 <tr>
@@ -1773,14 +1781,14 @@
 </thead>
 <tbody>
 <tr>
-<td>2023 Database revamp</td>
-<td>➤ Poorly executed. <br />➤ System in development throughout - changes undocumented<br /></td>
+<td>The 2023 Database revamp</td>
+<td>➤ Poorly executed. <br />➤ System left in development throughout - changes therefore not audited by our system<br /></td>
 <td>➤ We know of some consequences. Perhaps not all... <br />➤ Certain key variables underwent change of meaning. We will create a mapping of key variables.<br /></td>
 </tr>
 <tr>
-<td>No definitive historical CVD dataset</td>
+<td>There is no definitive historical CVD dataset (that we can find)</td>
 <td>➤ The BNR historical record has never been organised, and seems in disarray. <br />➤ Process documentation and dataset documentation, if they exist, are lost in the unorganised folder structures.</td>
-<td>➤ We have 'patched together' our best guess of the historical data record.<br />➤ To some extent, we are doing the same for process, but this goes beyond the project scope.</td>
+<td>➤ We have 'patched together' our best guess of the historical data record.<br />➤ To some extent, we are doing the same for process, but this goes beyond the Refit scope.</td>
 </tr>
 <tr>
 <td>Potentially unfixable missingness</td>
@@ -1790,17 +1798,32 @@
 <tr>
 <td>Within-REDCap data cleaning process seems minimal, or at best incomplete.</td>
 <td>➤ within-REDCap data cleaning has - at least in part - broken down. <br>➤ Or perhaps within-REDCap data processing was never fully initiated by the BNR leads?</td>
-<td>➤ This problem - over the years - has been patched by mixing post-REDCap data cleaning with analytics.<br />➤ This has created unmanageable analytical code that must be substantially altered for each analysis run. <br />➤ Code recycling (without implementing those important alterations) has likely led to analysis errors.</td>
+<td>➤ This problem - over the years - has been patched by mixing post-REDCap data cleaning with analytics.<br />➤ This has created <em>"hard to manage"</em> analytical code that needs substantial alteration for each analysis run. <br />➤ Code recycling (without implementing those important alterations) has likely led to analysis errors.</td>
 </tr>
 <tr>
-<td>planned automation will rely on <em>dataset invariance</em></td>
+<td>The planned Refit automation will rely on <em>dataset invariance</em></td>
 <td>➤ In this work, we had planned to append new cases to the cumulative data record each month.<br />➤ Each new monthly addition must have the same structure as the cumulative record.</td>
-<td>➤ Currently, data messyness within REDCap will be problematic.<br />➤ We have corrected the cumulative record to Dec 2023. Thereafter, without within-REDCap process improvements, errors will likely re-appear</td>
+<td>➤ Currently, data messyness within REDCap will be problematic.<br />➤ We are correcting the cumulative record to Dec 2023. Thereafter, without within-REDCap process improvements, errors will likely re-appear</td>
 </tr>
 <tr>
-<td>Death data not fit for purpose</td>
-<td>➤ Not the fault of BNR</td>
-<td>➤ Linkage with incidence data problematic - more positively, can be linked with uncertainty...</td>
+<td>Death data not currently fit for purpose</td>
+<td>➤ Problem exists because underlying CoD (UCOD) not provided by MoHW.<br>➤ The current BNR solution is flawed in several ways:</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>➤➤ (a) BNR opts for post-REDCap data cleaning. This mixes data prep + analytics.</td>
+<td>➤ Proposed analytics automation becomes difficult. Each monthly export requires updated data cleaning <code>.do</code> files. More automation = more points of failure.</td>
+</tr>
+<tr>
+<td></td>
+<td>➤➤ (b) The current BNR approach (possibly) uses all listed causes, not UCOD. Overestimatation??</td>
+<td>➤ Simply. We don't know... Sensitivity work required.</td>
+</tr>
+<tr>
+<td></td>
+<td>➤➤ (c) The current BNR approach ignores the 'proximal / causal' importance of free text. It simply finds keywords. So terms like <em>due to</em>, <em>secondary to</em>, <em>as a result of</em> and so on, are probably ignored. These are key for UCOD coding.</td>
+<td>➤ Again - implications unclear at this point.</td>
 </tr>
 </tbody>
 </table>
@@ -1814,16 +1837,16 @@
 </thead>
 <tbody>
 <tr>
-<td>Reduce level of planned automation</td>
-<td>➤ We can improve project analytics a lot without full automation. A full set of <em>analysis only</em> <code>.do</code> files will be a huge improvement, without accompanying <code>.ado</code> files, menuing, or dialogue boxes. <br/>➤ More automation at this point = more points of failure.<br/>➤ Careful use by approved personnel should be fine.</td>
+<td>As part of this Refit, we could develop a longer-term <em>'Staged Improvement Plan'</em></td>
+<td>➤ We create an uber Refit plan, with several major steps. <br/>➤ This consultancy would likely be Stage 1. Further stages will be needed, but I imagine will need Advisory Committee involvement?</td>
 </tr>
 <tr>
-<td>Create a new category of <em>research analytics</em></td>
-<td>➤ For example, we might decide to shift the linkage of death records and incident cases to an 'occasional' research analysis - to remove the need for this time-consuming data preparation step.</td>
+<td>Initially (Stage 1?), reduce level of planned automation</td>
+<td>➤ We can improve project analytics a lot <strong>without</strong> full automation. A full set of <em>analysis only</em> <code>.do</code> files will be a huge improvement, without accompanying <code>.ado</code> files, menuing, or dialogue boxes. <br/>➤ More automation at this point = more points of failure.<br/>➤ Careful use of <code>do</code> files by approved personnel should be fine.</td>
 </tr>
 <tr>
 <td>Create new monthly outputs for continuous reporting</td>
-<td>➤ With monthly data exports - <em>I'll assume these will be possible without errors at the point</em> - we could create a new series of 'continuous output' results from the BNR - simple counts, smoothed incidence trends, charts compared to previous years.</td>
+<td>➤ With monthly data exports - <em>I'll assume these will be possible without (or with minimal) errors at this point</em> - we could create a new series of <strong>continuous output</strong> results from the BNR - simple counts, smoothed incidence trends, charts compared to previous years. Dashboard?  <br>➤ Added benefit of early error flags</td>
 </tr>
 <tr>
 <td>Use monthly outputs to monitor performance KPIs</td>
@@ -1831,15 +1854,19 @@
 </tr>
 <tr>
 <td>Reduce number of REDCap database variables further</td>
-<td>➤ The exported dataset still contains over 100 variables. Are they all needed? Could we still operate on a further reduced dataset, allied to simpler processing?<br/>➤ Not sure myself, but worth a discussion? Quality might be compromised a little, but quality right now is already struggling, right?</td>
+<td>➤ The exported dataset still contains close to 150 variables. Are they all needed? Could we still operate on a further reduced dataset, allied to simpler processing?<br/>➤ Not sure myself, but worth a discussion? Usefulness might be compromised a little, but quality right now is struggling, right?</td>
+</tr>
+<tr>
+<td>Create a new category of <em>research analytics</em></td>
+<td>➤ For example, for survival analysis, we might decide to shift the linkage of death records and incident cases to an 'occasional' research analysis - to remove the need for this time-consuming data preparation step.</td>
 </tr>
 <tr>
 <td>Simplify process wherever possible</td>
-<td>➤ Linked to the above point, again worth a discussion to think through how we might do this?</td>
+<td>➤ Linked to the <em>'Staged Improvement Plan'</em>. Worth a discussion to think through how we might do this?</td>
 </tr>
 <tr>
-<td>Brainstorm a radical revamp (for future perhaps?)</td>
-<td>➤ My personal favourite :)<br/>➤ I know not possible in the short-term, and perhaps not even likely in the long-term. <br>➤ We might like to imagine though, what a simple system might looks like that still produces incidence and mortality rates. With a lot less effort, it might produce results that are not too far from the truth... I feel this is possible...</td>
+<td><em>'Staged Improvement Plan'</em> = opportunity for radical revamp.</td>
+<td>➤ My personal favourite :)<br/>➤ E.g. a new BNR might include:<br/><br/>➤➤ Hospital-based AMI and CVD registry<br/>➤➤ Official UCOD reporting - Barbados currently judged as poor by WHO.<br/>➤➤ HEARTS monitoring<br/>➤➤ Other monitoring of outcomes available via electronic record</td>
 </tr>
 </tbody>
 </table>

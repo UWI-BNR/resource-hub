@@ -1771,49 +1771,49 @@
 <td>pid</td>
 <td><strong>KEY</strong><br><strong>ANALYSIS</strong><br>Internal unique ID</td>
 <td>➤ We will keep this in shared datasets as non-identifying uniqueness</td>
-<td></td>
+<td>Created by JC in Stata.</td>
 </tr>
 <tr>
 <td>--</td>
 <td>nrpt_sd_db</td>
 <td><strong>PROCESS</strong><br>In-house database used</td>
 <td>➤ Background interest only. Might metrics differ across BNR phases?</td>
-<td></td>
+<td>Created by JC in Stata</td>
 </tr>
 <tr>
 <td>--</td>
 <td>rpt_sd_etype</td>
 <td><strong>PRIMARY</strong><br><strong>ANALYSIS</strong><br>Event type</td>
 <td>➤ <mark>Variable provenance? What database variables are used to create?</mark></td>
-<td></td>
+<td>Created by JC in Stata.</td>
 </tr>
 <tr>
 <td>--</td>
 <td>rpt_sd_eyear</td>
 <td><strong>PRIMARY</strong><br><strong>ANALYSIS</strong><br>Event year</td>
 <td>➤ <mark>Variable provenance? What database variables are used to create?</mark></td>
-<td></td>
+<td>Created by JC from event-date.</td>
 </tr>
 <tr>
 <td>--</td>
 <td>nrpt_sd_abstracted</td>
 <td><strong>PROCESS</strong><br>Abstraction type (abstracted, DCO)</td>
 <td>➤ <mark>Variable provenance? Coding process to create this?</mark></td>
-<td></td>
+<td>This could be used if switching to hospital-based registry.</td>
 </tr>
 <tr>
 <td>recid</td>
 <td>rpt_recid</td>
 <td><strong>PREP ONLY</strong><br>Original Unique ID</td>
 <td>➤ A mix of ID types over time. <mark>Are these the internal REDCap IDs</mark>. We would drop after creating the Stata unique ID.</td>
-<td></td>
+<td>Internal REDCap ID</td>
 </tr>
 <tr>
 <td>--</td>
 <td>nrpt_redcap_event_name</td>
 <td><strong>PREP ONLY</strong><br>initial distinction between AMIs and strokes</td>
 <td>➤ <mark>Use to create <code>rpt_sd_etype</code> I imagine? Variable from where?</mark> Then drop.</td>
-<td></td>
+<td>Exported automatically. For classifying as AMI/stroke.</td>
 </tr>
 <tr>
 <td>cfdoa</td>
@@ -1848,7 +1848,7 @@
 <td>rpt_cfsource__1</td>
 <td><strong>PROCESS</strong><br>Casefinding source (Ward A1)</td>
 <td>➤ Won't be needed in analytics export. <mark>How have these <strong>(_1 to _27)</strong> been used in the past?</mark></td>
-<td></td>
+<td>Only used as a quality metric. Potentially useful into the future.</td>
 </tr>
 <tr>
 <td>cfsource</td>
@@ -2044,7 +2044,7 @@
 <td>nrpt_fname</td>
 <td><strong>NOT NEEDED</strong><br>First Name</td>
 <td>➤ Do not export. <mark>Or needed for any death record joins?</mark></td>
-<td></td>
+<td>This would be used in a <code>research survival analysis</code></td>
 </tr>
 <tr>
 <td>mname</td>
@@ -2093,7 +2093,7 @@
 <td>nrpt_natregno</td>
 <td><strong>NOT NEEDED</strong><br>Unique National ID identifier</td>
 <td>➤ Do not export</td>
-<td></td>
+<td>This would be used in a <code>research survival analysis</code></td>
 </tr>
 <tr>
 <td>recnum</td>
@@ -2107,14 +2107,14 @@
 <td>nrpt_cfadmdate</td>
 <td><strong>PREP ONLY</strong><br>Admission Date</td>
 <td>➤ <mark>It feels as though this is an important preparatory variable used to calculate age and age groups. Then would be dropped</mark></td>
-<td></td>
+<td>Good completion. Reasonable proxy as date of event onset. But also see onset date.</td>
 </tr>
 <tr>
 <td>admtime</td>
 <td>nrpt_admtime</td>
 <td><mark><strong>QUESTION</strong></mark><br>Admission Time</td>
 <td>➤ <mark>Probably don't use this - UNLESS it is used to calculate time until drugs received perhaps?</mark></td>
-<td></td>
+<td>Time needed for admission-to-reperfusion. BUT... reperfusion data seems mostly empty field.</td>
 </tr>
 <tr>
 <td>initialdx</td>
@@ -2135,21 +2135,21 @@
 <td>rpt_slc</td>
 <td><mark><strong>QUESTION</strong></mark><br>Vital status at last known contact</td>
 <td>➤ <mark>How is this used. For this to be useful, we need the date and reason for each last known contact. What follow-up is still performed as part of the BNR?</mark></td>
-<td></td>
+<td>Changed meaning in 2023. No longer useful.</td>
 </tr>
 <tr>
 <td>dlc</td>
 <td>rpt_dlc</td>
 <td><strong>PREP ONLY</strong><br>Discharge date</td>
 <td>➤ Used to calculate time in hospital, then drop.</td>
-<td></td>
+<td>Now discharge date across all years - associated with discharge vital status</td>
 </tr>
 <tr>
 <td>cfdod</td>
 <td>rpt_dod</td>
 <td><strong>PREP ONLY</strong><br>Date of death</td>
 <td>➤ =This seems to be for DCO cases only. Need to hear more on the whole dates and recording deaths infrastructure?==</td>
-<td></td>
+<td>Date of death for all deaths - in-hospital date of death - associated with discharge vital status</td>
 </tr>
 <tr>
 <td>finaldx</td>
@@ -2177,7 +2177,7 @@
 <td>nrpt_eligible</td>
 <td><strong>NOT NEEDED</strong><br>Looks to be an eligibility status, that would need regular updating within record?</td>
 <td>➤ <mark>I'm guessing this might be messy and therefore not useful?</mark></td>
-<td></td>
+<td>Eligibility and duplicate fields should move to a sign-off process</td>
 </tr>
 <tr>
 <td>ineligible</td>
@@ -2219,42 +2219,42 @@
 <td>nrpt_mstatus</td>
 <td><strong>NOT NEEDED</strong><br>Marital status</td>
 <td>➤  Do not export. Probably no longer used.</td>
-<td></td>
+<td>Not required</td>
 </tr>
 <tr>
 <td>resident</td>
 <td>nrpt_resident</td>
 <td><strong>NOT NEEDED</strong><br>Is this used</td>
 <td>➤ Code errors. Some "0" codes. <mark>1000s missing - how could this be used when incorporating DCOs?</mark></td>
-<td></td>
+<td>Not required</td>
 </tr>
 <tr>
 <td>citizen</td>
 <td>nrpt_citizen</td>
 <td><strong>NOT NEEDED</strong><br>Is this used</td>
 <td>➤ Code errors. Some "0" codes. <mark>1000s missing - how could this be used when incorporating DCOs?</mark></td>
-<td></td>
+<td>Not required</td>
 </tr>
 <tr>
 <td>addr</td>
 <td>nrpt_addr</td>
 <td><strong>NOT NEEDED</strong><br>Address</td>
 <td>➤ Do not export</td>
-<td></td>
+<td>Not required</td>
 </tr>
 <tr>
 <td>parish</td>
 <td>rpt_parish</td>
 <td><strong>ANALYSIS</strong><br>Parish</td>
 <td>➤ <mark>Possibly useful but would like to hear more. Distance to hosiptal as a predictor of outcome??</mark></td>
-<td></td>
+<td>Keep for now</td>
 </tr>
 <tr>
 <td>ward</td>
 <td>nrpt_ward__1</td>
 <td><strong>ANALYSIS</strong><br>Treatment in ICU/HDU</td>
 <td>➤ <mark>Possibly useful but would like to hear more. Treatment ward as a predictor of outcome??</mark></td>
-<td></td>
+<td>Maybe keep as potential predictors of case-fatality</td>
 </tr>
 <tr>
 <td>ward</td>
@@ -2296,35 +2296,35 @@
 <td>nrpt_htype</td>
 <td>➤ <strong>PRIMARY</strong><br><strong>ANALYTICS</strong><br>AMI subtype</td>
 <td>➤ Primary analysis field. <mark>You have an non-reporting field - why?</mark></td>
-<td></td>
+<td>Export</td>
 </tr>
 <tr>
 <td>stype</td>
 <td>nrpt_stype</td>
 <td>➤ <strong>PRIMARY</strong><br><strong>ANALYTICS</strong><br>Stroke subtype</td>
 <td>➤ Primary analysis field. <mark>You have an non-reporting field - why?</mark></td>
-<td></td>
+<td>Export</td>
 </tr>
 <tr>
 <td>dxtype</td>
 <td>nrpt_dxtype</td>
 <td><strong>QUESTION</strong><br>How AMI subtype diagnosed</td>
 <td>➤ <mark>Probably not used - but for confirmation? Is there an equivalent question for stroke?</mark></td>
-<td></td>
+<td>Probably would nto present this level of information - may use to stratify subtypes...</td>
 </tr>
 <tr>
 <td>dstroke</td>
 <td>nrpt_dstroke</td>
 <td><strong>QUESTION</strong><br>This feels like an internal variable</td>
 <td>➤ <mark>If not definite stroke, it would not be approved and locked, in a new process, right ??</mark></td>
-<td></td>
+<td>Is meant to start a review process, but does not currently?</td>
 </tr>
 <tr>
 <td>edate</td>
 <td>rpt_edate</td>
 <td><strong>PREP ONLY</strong><br>Event Date</td>
 <td>➤ Used to create derived time variables and ages, then drop</td>
-<td></td>
+<td>Pivotal event date - date of symptom onset</td>
 </tr>
 <tr>
 <td>edateyr</td>
@@ -2352,14 +2352,14 @@
 <td>nrpt_inhosp</td>
 <td><strong>NOT NEEDED</strong><br>Mostly blank</td>
 <td>➤ Do not export</td>
-<td></td>
+<td>Not performed appropriately</td>
 </tr>
 <tr>
 <td>etime</td>
 <td>etime</td>
 <td><strong>NOT NEEDED</strong><br>seem incomplete</td>
 <td>➤ Do not export</td>
-<td></td>
+<td>Pivotal event date - date of symptom onset</td>
 </tr>
 <tr>
 <td>etimeampm</td>
@@ -2380,28 +2380,28 @@
 <td>rpt_pstroke</td>
 <td><strong>ANALYTICS</strong><br>Previous stroke</td>
 <td>➤ Export, but look at completeness</td>
-<td></td>
+<td>Quality may be OK. Consider exporting</td>
 </tr>
 <tr>
 <td>pstrokeyr</td>
 <td>nrpt_pstrokeyr</td>
 <td><strong>NOT NEEDED</strong><br>Seems incomplete</td>
 <td>➤ <mark>Probably do not export?</mark></td>
-<td></td>
+<td>Quality may be OK. Consider exporting</td>
 </tr>
 <tr>
 <td>pami</td>
 <td>rpt_pami</td>
 <td><strong>ANALYTICS</strong><br>Previous AMI</td>
 <td>➤ Export, but look at completeness</td>
-<td></td>
+<td>Quality may be OK. Consider exporting</td>
 </tr>
 <tr>
 <td>pamiyr</td>
 <td>nrpt_pamiyr</td>
 <td><strong>NOT NEEDED</strong><br>Seems incomplete</td>
 <td>➤ <mark>Probably do not export?</mark></td>
-<td></td>
+<td>Quality may be OK. Consider exporting</td>
 </tr>
 <tr>
 <td><strong>Risk Factors</strong></td>
@@ -2415,21 +2415,21 @@
 <td>rpt_rfany</td>
 <td><strong>ANALYTICS</strong><br>Any risk factors?</td>
 <td>➤ Export - check completeness</td>
-<td></td>
+<td>Don't export</td>
 </tr>
 <tr>
 <td>htn</td>
 <td>rpt_htn</td>
 <td><strong>ANALYTICS</strong><br>Hypertension?</td>
 <td>➤ Export - check completeness</td>
-<td></td>
+<td>Export</td>
 </tr>
 <tr>
 <td>diab</td>
 <td>rpt_diab</td>
 <td><strong>ANALYTICS</strong><br>Diabetes?</td>
 <td>➤ Export - check completeness</td>
-<td></td>
+<td>Export</td>
 </tr>
 <tr>
 <td><strong>TESTS</strong></td>
@@ -2450,14 +2450,14 @@
 <td>nrpt_sysbp</td>
 <td><strong>ANALYTICS</strong><br>Blood pressure at admission</td>
 <td>➤ Export - check completeness</td>
-<td></td>
+<td>Export</td>
 </tr>
 <tr>
 <td>diasbp</td>
 <td>nrpt_diasbp</td>
 <td><strong>ANALYTICS</strong><br>Blood pressure at admission</td>
 <td>➤ Export - check completeness</td>
-<td></td>
+<td>Export</td>
 </tr>
 <tr>
 <td>bgunit</td>
@@ -2478,7 +2478,7 @@
 <td>nrpt_bgmmol</td>
 <td><strong>ANALYTICS</strong><br>Blood glucose at admission (mmol/l)</td>
 <td>➤ Export - check completeness</td>
-<td></td>
+<td>Export</td>
 </tr>
 <tr>
 <td><strong>Exam</strong></td>
@@ -2506,21 +2506,21 @@
 <td>rpt_ecg</td>
 <td><strong>NOT NEEDED</strong><br>ECG report available?</td>
 <td>➤ Do not export. <mark>Think we can use date as a proxy for ECG done/report available</mark></td>
-<td></td>
+<td>KPI. Export</td>
 </tr>
 <tr>
 <td>ecgd</td>
 <td>rpt_ecgd</td>
 <td><strong>ANALYSIS</strong><br>Date of ECG</td>
 <td>➤ <mark>Think this might contribute to a performance measure?</mark></td>
-<td></td>
+<td>KPI. Export</td>
 </tr>
 <tr>
 <td>ecgt</td>
 <td>rpt_ecgt</td>
 <td><strong>ANALYSIS</strong><br>Time of ECG</td>
 <td>➤ <mark>Think this might contribute to a performance measure? But not always available when date exists</mark></td>
-<td></td>
+<td>KPI. Export</td>
 </tr>
 <tr>
 <td>ecgtampm</td>
@@ -2555,21 +2555,21 @@
 <td>nrpt_tropres</td>
 <td><strong>QUESTION</strong><br>How many troponin results</td>
 <td>➤ <mark>If we report troponin, this can be the proxy for test completed (when 1 or 2)</mark></td>
-<td></td>
+<td>KPI. Export</td>
 </tr>
 <tr>
 <td>trop1res</td>
 <td>nrpt_trop1res</td>
 <td><strong>QUESTION</strong><br>Troponin Result 1</td>
 <td>➤ <mark>Probably do not export</mark></td>
-<td></td>
+<td>KPI. Export</td>
 </tr>
 <tr>
 <td>trop2res</td>
 <td>nrpt_trop2res</td>
 <td><strong>QUESTION</strong><br>Troponin Result 2</td>
 <td>➤ <mark>Probably do not export</mark></td>
-<td></td>
+<td>KPI. Export</td>
 </tr>
 <tr>
 <td><strong>Assessments</strong></td>
@@ -2583,28 +2583,28 @@
 <td>nrpt_assess1</td>
 <td><strong>QUESTION</strong><br> Evaluation by occupational therapist</td>
 <td>➤ <mark>Suggests not currently used. But is this useful information?</mark></td>
-<td></td>
+<td>KPI. Export</td>
 </tr>
 <tr>
 <td>assess2</td>
 <td>nrpt_assess2</td>
 <td><strong>QUESTION</strong><br> Evaluation by physiotherapist</td>
 <td>➤ <mark>Suggests not currently used. But is this useful information?</mark></td>
-<td></td>
+<td>KPI. Export</td>
 </tr>
 <tr>
 <td>assess3</td>
 <td>nrpt_assess3</td>
 <td><strong>QUESTION</strong><br> Evaluation by speech therapist</td>
 <td>➤ <mark>Suggests not currently used. But is this useful information?</mark></td>
-<td></td>
+<td>KPI. Export</td>
 </tr>
 <tr>
 <td>assess4</td>
 <td>nrpt_assess4</td>
 <td><strong>QUESTION</strong><br> Evaluation by swallowing assessment</td>
 <td>➤ <mark>Suggests not currently used. But is this useful information?</mark></td>
-<td></td>
+<td>KPI. Export</td>
 </tr>
 <tr>
 <td>dieany</td>
@@ -2625,14 +2625,14 @@
 <td>rpt_ct</td>
 <td><strong>QUESTION</strong><br>Is CT report available</td>
 <td>➤ <mark>Think this might contribute to a performance measure?</mark></td>
-<td></td>
+<td>KPI. Export</td>
 </tr>
 <tr>
 <td>doct</td>
 <td>rpt_doct</td>
 <td><strong>QUESTION</strong><br>Date of CT</td>
 <td>➤ <mark>Think this might contribute to a performance measure?</mark></td>
-<td></td>
+<td>KPI. Export</td>
 </tr>
 <tr>
 <td><strong>TREATMENT DISCHARGE</strong></td>
@@ -2660,21 +2660,21 @@
 <td>rpt_repertype</td>
 <td><strong>QUESTION</strong><br>Reperfusion type</td>
 <td>➤ <mark>Does missingness allow use. Or is it really quite a rare event?</mark></td>
-<td></td>
+<td>KPI. Export</td>
 </tr>
 <tr>
 <td>reperfd</td>
 <td>rpt_reperfd</td>
 <td><strong>QUESTION</strong><br>Reperfusion date</td>
 <td>➤ <mark>Does missingness allow use. Or is it really quite a rare event?</mark></td>
-<td></td>
+<td>KPI. Export</td>
 </tr>
 <tr>
 <td>reperft</td>
 <td>rpt_reperft</td>
 <td><strong>QUESTION</strong><br>Reperfusion time</td>
 <td>➤ <mark>Does missingness allow use. Or is it really quite a rare event?</mark></td>
-<td></td>
+<td>KPI. Export</td>
 </tr>
 <tr>
 <td><strong>Medications</strong></td>
@@ -2688,28 +2688,28 @@
 <td>rpt_asp__1</td>
 <td><strong>QUESTION</strong><br>Aspirin - acute use</td>
 <td>➤ <mark>Performance metric?</mark></td>
-<td></td>
+<td>KPI. Export</td>
 </tr>
 <tr>
 <td>asp</td>
 <td>rpt_asp__2</td>
 <td><strong>QUESTION</strong><br>Aspirin - chronic use</td>
 <td>➤ <mark>Performance metric?</mark></td>
-<td></td>
+<td>KPI. Export</td>
 </tr>
 <tr>
 <td>asp</td>
 <td>rpt_asp__3</td>
 <td><strong>QUESTION</strong><br>Aspirin - contraindicated</td>
 <td>➤ <mark>Performance metric?</mark></td>
-<td></td>
+<td>KPI. Export</td>
 </tr>
 <tr>
 <td>asp</td>
 <td>rpt_asp__99</td>
 <td><strong>QUESTION</strong><br>Aspirin - no record of use</td>
 <td>➤ <mark>Performance metric?</mark></td>
-<td></td>
+<td>KPI. Export</td>
 </tr>
 <tr>
 <td>asp</td>
@@ -2737,21 +2737,21 @@
 <td>rpt_aspdose</td>
 <td><strong>QUESTION</strong><br>Aspirin - acute use dose</td>
 <td>➤ <mark>Performance metric?</mark></td>
-<td></td>
+<td>KPI. Export</td>
 </tr>
 <tr>
 <td>aspd</td>
 <td>rpt_aspd</td>
 <td><strong>QUESTION</strong><br>Aspirin - acute use dose date</td>
 <td>➤ <mark>Performance metric?</mark></td>
-<td></td>
+<td>KPI. Export</td>
 </tr>
 <tr>
 <td>aspt</td>
 <td>rpt_aspd</td>
 <td><strong>QUESTION</strong><br>Aspirin - acute use dose time</td>
 <td>➤ <mark>Performance metric?</mark></td>
-<td></td>
+<td>KPI. Export</td>
 </tr>
 <tr>
 <td>asptimeampm_2</td>
@@ -2765,7 +2765,7 @@
 <td>rpt_vstatus</td>
 <td><strong>PRIMARY</strong><br><strong>ANALYSIS</strong><br>Vital status at discharge</td>
 <td>➤ <mark>Primary variable. Associated date of discharge?</mark></td>
-<td></td>
+<td>Export</td>
 </tr>
 <tr>
 <td><strong>Discharge Meds</strong></td>
@@ -2779,77 +2779,77 @@
 <td>rpt_dismeds___1</td>
 <td><strong>QUESTION</strong><br>Discharge meds: Aspirin</td>
 <td>➤ <mark>Performance metric?</mark></td>
-<td></td>
+<td>KPI. Export</td>
 </tr>
 <tr>
 <td>dismeds</td>
 <td>rpt_dismeds___2</td>
 <td><strong>QUESTION</strong><br>Discharge meds: warfarin</td>
 <td>➤ <mark>Performance metric?</mark></td>
-<td></td>
+<td>KPI. Export</td>
 </tr>
 <tr>
 <td>dismeds</td>
 <td>rpt_dismeds___3</td>
 <td><strong>QUESTION</strong><br>Discharge meds: heparin</td>
 <td>➤ <mark>Performance metric?</mark></td>
-<td></td>
+<td>KPI. Export</td>
 </tr>
 <tr>
 <td>dismeds</td>
 <td>rpt_dismeds___4</td>
 <td><strong>QUESTION</strong><br>Discharge meds: antiplatelet</td>
 <td>➤ <mark>Performance metric?</mark></td>
-<td></td>
+<td>KPI. Export</td>
 </tr>
 <tr>
 <td>dismeds</td>
 <td>rpt_dismeds___5</td>
 <td><strong>QUESTION</strong><br>Discharge meds: statin</td>
 <td>➤ <mark>Performance metric?</mark></td>
-<td></td>
+<td>KPI. Export</td>
 </tr>
 <tr>
 <td>dismeds</td>
 <td>rpt_dismeds___6</td>
 <td><strong>QUESTION</strong><br>Discharge meds: ACE inhibitor</td>
 <td>➤ <mark>Performance metric?</mark></td>
-<td></td>
+<td>KPI. Export</td>
 </tr>
 <tr>
 <td>dismeds</td>
 <td>rpt_dismeds___7</td>
 <td><strong>QUESTION</strong><br>Discharge meds: ARBs</td>
 <td>➤ <mark>Performance metric?</mark></td>
-<td></td>
+<td>KPI. Export</td>
 </tr>
 <tr>
 <td>dismeds</td>
 <td>rpt_dismeds___8</td>
 <td><strong>QUESTION</strong><br>Discharge meds: Beta blockers</td>
 <td>➤ <mark>Performance metric?</mark></td>
-<td></td>
+<td>KPI. Export</td>
 </tr>
 <tr>
 <td>dismeds</td>
 <td>rpt_dismeds___9</td>
 <td><strong>QUESTION</strong><br>Discharge meds: Bivalrudin</td>
 <td>➤ <mark>Performance metric?</mark></td>
-<td></td>
+<td>KPI. Export</td>
 </tr>
 <tr>
 <td>dismeds</td>
 <td>rpt_dismeds___10</td>
 <td><strong>QUESTION</strong><br>Discharge meds: Antihypertensives</td>
 <td>➤ <mark>Performance metric?</mark></td>
-<td></td>
+<td>KPI. Export</td>
 </tr>
 <tr>
 <td>aspdosedis</td>
 <td>rpt_aspdosedis</td>
 <td><strong>QUESTION</strong><br>Dose of ASA at discharge</td>
 <td>➤ <mark>Performance metric?</mark></td>
-<td></td>
+<td>KPI. Export</td>
 </tr>
 <tr>
 <td><strong>Discharge Vital Signs</strong></td>
@@ -2863,35 +2863,35 @@
 <td>nrpt_dissysbp</td>
 <td><strong>NOT NEEDED</strong><br>At discharge: SBP</td>
 <td>➤ Do not export</td>
-<td></td>
+<td>Do not export</td>
 </tr>
 <tr>
 <td>disdiasbp</td>
 <td>nrpt_disdiasbp</td>
 <td><strong>NOT NEEDED</strong><br>At discharge: SBP</td>
 <td>➤ Do not export</td>
-<td></td>
+<td>Do not export</td>
 </tr>
 <tr>
 <td>disbgmmol</td>
 <td>nrpt_disbgmmol</td>
 <td><strong>NOT NEEDED</strong><br>At discharge: Blood glucose</td>
 <td>➤ Do not export</td>
-<td></td>
+<td>Do not export</td>
 </tr>
 <tr>
 <td>carunit</td>
 <td>rpt_carunit</td>
-<td><strong>QUESTION</strong><br>Admitted to care unit</td>
+<td><strong>QUESTION</strong><br>Admitted to cardiac unit</td>
 <td>➤ Export - AMI equiv of admitted to stroke unit</td>
-<td></td>
+<td><mark>?? Ward code: 5</mark></td>
 </tr>
 <tr>
 <td><strong>Stroke Unit</strong></td>
 <td></td>
 <td></td>
 <td></td>
-<td></td>
+<td>Potentially useful. Why no equivalent for cardiac unit</td>
 </tr>
 <tr>
 <td>strunit</td>
