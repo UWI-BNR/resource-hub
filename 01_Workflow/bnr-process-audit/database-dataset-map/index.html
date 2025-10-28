@@ -2204,7 +2204,7 @@
 <td>dod</td>
 <td>dod</td>
 <td><strong>PREP ONLY</strong><br>Date of death</td>
-<td>➤ For DCO cases only</td>
+<td>➤ For DCO cases only.<br><mark>Need to understand full death casefinding process</mark></td>
 <td><strong>KEEP</strong></td>
 </tr>
 <tr>
@@ -2466,7 +2466,7 @@
 <tr>
 <td>pstroke</td>
 <td>pstroke</td>
-<td></td>
+<td>pstroke</td>
 <td><strong>ANALYTICS</strong><br>Previous stroke</td>
 <td>➤ Export, but look at completeness</td>
 <td><strong>KEEP</strong></td>
@@ -2474,7 +2474,7 @@
 <tr>
 <td>pstrokeyr</td>
 <td>pstrokeyr</td>
-<td></td>
+<td>pstrokeyr</td>
 <td><strong>ANALYTICS</strong><br>Previous stroke year</td>
 <td>➤ Export, but look at completeness</td>
 <td><strong>KEEP</strong></td>
@@ -2482,7 +2482,7 @@
 <tr>
 <td>pami</td>
 <td>pami</td>
-<td></td>
+<td>pami</td>
 <td><strong>ANALYTICS</strong><br>Previous AMI</td>
 <td>➤ Export, but look at completeness</td>
 <td><strong>KEEP</strong></td>
@@ -2490,7 +2490,7 @@
 <tr>
 <td>pamiyr</td>
 <td>pamiyr</td>
-<td></td>
+<td>pamiyr</td>
 <td><strong>ANALYTICS</strong><br>Previous AMI year</td>
 <td>➤ Export, but look at completeness</td>
 <td><strong>KEEP</strong></td>
@@ -2514,7 +2514,7 @@
 <tr>
 <td>htn</td>
 <td>htn</td>
-<td></td>
+<td>htn</td>
 <td><strong>ANALYTICS</strong><br>Hypertension?</td>
 <td>➤ Export - check completeness</td>
 <td><strong>KEEP</strong></td>
@@ -2522,7 +2522,7 @@
 <tr>
 <td>diab</td>
 <td>diab</td>
-<td></td>
+<td>diab</td>
 <td><strong>ANALYTICS</strong><br>Diabetes?</td>
 <td>➤ Export - check completeness</td>
 <td><strong>KEEP</strong></td>
@@ -2546,7 +2546,7 @@
 <tr>
 <td>sysbp</td>
 <td>sysbp</td>
-<td></td>
+<td>sbp</td>
 <td><strong>ANALYTICS</strong><br>Blood pressure at admission</td>
 <td>➤ Export - check completeness.<br><mark>Possible poor quality. REDCap checks in place?</mark></td>
 <td><strong>KEEP</strong></td>
@@ -2554,7 +2554,7 @@
 <tr>
 <td>diasbp</td>
 <td>diasbp</td>
-<td></td>
+<td>dbp</td>
 <td><strong>ANALYTICS</strong><br>Blood pressure at admission</td>
 <td>➤ Export - check completeness.<br><mark>Possible poor quality. REDCap checks in place?</mark></td>
 <td><strong>KEEP</strong></td>
@@ -2578,7 +2578,7 @@
 <tr>
 <td>bgmmol</td>
 <td>bgmmol</td>
-<td></td>
+<td>bgmmol</td>
 <td><strong>ANALYTICS</strong><br>Blood glucose at admission (mmol/l)</td>
 <td>➤ Export - check completeness.<br><mark>Possible poor quality. REDCap checks in place?</mark></td>
 <td><strong>KEEP</strong></td>
@@ -2610,7 +2610,7 @@
 <tr>
 <td>ecg</td>
 <td>ecg</td>
-<td></td>
+<td>ecg</td>
 <td><strong>ANALYSIS</strong><br>ECG report available?</td>
 <td>➤ Use date as a proxy for ECG performed</td>
 <td><strong>KEEP</strong></td>
@@ -2618,7 +2618,7 @@
 <tr>
 <td>ecgd</td>
 <td>ecgd</td>
-<td></td>
+<td>doecg</td>
 <td><strong>ANALYSIS</strong><br>Date of ECG</td>
 <td>➤ Performance measure?</td>
 <td><strong>KEEP</strong></td>
@@ -2626,7 +2626,7 @@
 <tr>
 <td>ecgt</td>
 <td>ecgt</td>
-<td></td>
+<td>htecg, mtecg</td>
 <td><strong>ANALYSIS</strong><br>Time of ECG</td>
 <td>➤ Performance measure?</td>
 <td><strong>KEEP</strong></td>
@@ -2641,9 +2641,9 @@
 </tr>
 <tr>
 <td><strong>Cardiac Enzymes</strong></td>
-<td><mark><strong>Mon 27-OCT-2027</strong></mark></td>
-<td><mark><strong>Questions not documented yet</strong></mark></td>
-<td><mark><strong>Still to prepare analysis dataset from here</strong></mark></td>
+<td></td>
+<td></td>
+<td></td>
 <td></td>
 <td></td>
 </tr>
@@ -2666,26 +2666,26 @@
 <tr>
 <td>tropres</td>
 <td>tropres</td>
-<td></td>
+<td>tropres</td>
 <td><strong>ANALYSIS</strong><br>How many troponin results</td>
 <td></td>
-<td><strong>KEEP / DEID</strong></td>
+<td><strong>KEEP</strong></td>
 </tr>
 <tr>
 <td>trop1res</td>
 <td>trop1res</td>
-<td></td>
+<td>trop1res</td>
 <td><strong>ANALYSIS</strong><br>Troponin Result 1</td>
 <td></td>
-<td><strong>KEEP / DEID</strong></td>
+<td><strong>KEEP</strong></td>
 </tr>
 <tr>
 <td>trop2res</td>
 <td>trop2res</td>
-<td></td>
+<td>trop2res</td>
 <td><strong>ANALYSIS</strong><br>Troponin Result 2</td>
 <td></td>
-<td><strong>KEEP / DEID</strong></td>
+<td><strong>KEEP</strong></td>
 </tr>
 <tr>
 <td><strong>Assessments</strong></td>
@@ -2696,36 +2696,44 @@
 <td></td>
 </tr>
 <tr>
-<td>assess1</td>
-<td>assess1</td>
+<td>assess</td>
+<td>assess</td>
+<td>assess</td>
+<td><strong>ANALYSIS</strong><br> Evaluation by any therapist</td>
 <td></td>
+<td><strong>KEEP</strong></td>
+</tr>
+<tr>
+<td>assess1</td>
+<td>assess1</td>
+<td>assess1</td>
 <td><strong>ANALYSIS</strong><br> Evaluation by occupational therapist</td>
 <td></td>
-<td><strong>KEEP / DEID</strong></td>
+<td><strong>KEEP</strong></td>
 </tr>
 <tr>
 <td>assess2</td>
 <td>assess2</td>
-<td></td>
+<td>assess2</td>
 <td><strong>ANALYSIS</strong><br> Evaluation by physiotherapist</td>
 <td></td>
-<td><strong>KEEP / DEID</strong></td>
+<td><strong>KEEP</strong></td>
 </tr>
 <tr>
 <td>assess3</td>
 <td>assess3</td>
-<td></td>
+<td>assess3</td>
 <td><strong>ANALYSIS</strong><br> Evaluation by speech therapist</td>
 <td></td>
-<td><strong>KEEP / DEID</strong></td>
+<td><strong>KEEP</strong></td>
 </tr>
 <tr>
 <td>assess4</td>
 <td>assess4</td>
-<td></td>
+<td>assess4</td>
 <td><strong>ANALYSIS</strong><br> Evaluation by swallowing assessment</td>
 <td></td>
-<td><strong>KEEP / DEID</strong></td>
+<td><strong>KEEP</strong></td>
 </tr>
 <tr>
 <td>dieany</td>
@@ -2746,18 +2754,18 @@
 <tr>
 <td>ct</td>
 <td>ct</td>
-<td></td>
+<td>ct</td>
 <td><strong>ANALYSIS</strong><br>Is CT report available</td>
 <td>➤ Contribution to a performance measure?</td>
-<td><strong>KEEP / DEID</strong></td>
+<td><strong>KEEP</strong></td>
 </tr>
 <tr>
 <td>doct</td>
 <td>doct</td>
-<td></td>
+<td>doct</td>
 <td><strong>ANALYSIS</strong><br>Date of CT</td>
 <td>➤ Contribution to a performance measure?</td>
-<td><strong>KEEP / DEID</strong></td>
+<td><strong>KEEP</strong></td>
 </tr>
 <tr>
 <td><strong>TREATMENT DISCHARGE</strong></td>
@@ -2786,7 +2794,7 @@
 <tr>
 <td>repertype</td>
 <td>repertype</td>
-<td></td>
+<td>repertype</td>
 <td><strong>ANALYSIS</strong><br>Reperfusion type</td>
 <td>➤ Does missingness allow use?</td>
 <td><strong>KEEP / DEID</strong></td>
@@ -2794,7 +2802,7 @@
 <tr>
 <td>reperfd</td>
 <td>reperfd</td>
-<td></td>
+<td>dore</td>
 <td><strong>ANALYSIS</strong><br>Reperfusion date</td>
 <td>➤ Does missingness allow use?</td>
 <td><strong>KEEP / DEID</strong></td>
@@ -2802,7 +2810,7 @@
 <tr>
 <td>reperft</td>
 <td>reperft</td>
-<td></td>
+<td>htore, mtore</td>
 <td><strong>ANALYSIS</strong><br>Reperfusion time</td>
 <td>➤ Does missingness allow use?</td>
 <td><strong>KEEP / DEID</strong></td>
@@ -2818,26 +2826,26 @@
 <tr>
 <td>asp</td>
 <td>asp__1</td>
-<td></td>
+<td>asp1</td>
 <td><strong>ANALYSIS</strong><br>Aspirin - acute use</td>
 <td>➤ Performance metric?</td>
-<td><strong>KEEP / DEID</strong></td>
+<td><strong>KEEP</strong></td>
 </tr>
 <tr>
 <td>asp</td>
 <td>asp__2</td>
-<td></td>
+<td>asp2</td>
 <td><strong>ANALYSIS</strong><br>Aspirin - chronic use</td>
 <td>➤ Performance metric?</td>
-<td><strong>KEEP / DEID</strong></td>
+<td><strong>KEEP</strong></td>
 </tr>
 <tr>
 <td>asp</td>
 <td>asp__3</td>
-<td></td>
+<td>asp3</td>
 <td><strong>ANALYSIS</strong><br>Aspirin - contraindicated</td>
 <td>➤ Performance metric?</td>
-<td><strong>KEEP / DEID</strong></td>
+<td><strong>KEEP</strong></td>
 </tr>
 <tr>
 <td>asp</td>
@@ -2845,7 +2853,7 @@
 <td></td>
 <td><strong>ANALYSIS</strong><br>Aspirin - no record of use</td>
 <td>➤ Performance metric?</td>
-<td><strong>KEEP / DEID</strong></td>
+<td><strong>NOT EXPORTED (n=0)</strong></td>
 </tr>
 <tr>
 <td>asp</td>
@@ -2853,7 +2861,7 @@
 <td></td>
 <td><strong>NOT NEEDED</strong><br>Aspirin - ??</td>
 <td>➤ Performance metric?</td>
-<td></td>
+<td><strong>NOT EXPORTED (n=0)</strong></td>
 </tr>
 <tr>
 <td>asp</td>
@@ -2861,7 +2869,7 @@
 <td></td>
 <td><strong>NOT NEEDED</strong><br>Aspirin - ??</td>
 <td>➤ Performance metric?</td>
-<td></td>
+<td><strong>NOT EXPORTED (n=0)</strong></td>
 </tr>
 <tr>
 <td>asp</td>
@@ -2869,31 +2877,31 @@
 <td></td>
 <td><strong>NOT NEEDED</strong><br>Aspirin - ??</td>
 <td>➤ Performance metric?</td>
-<td></td>
+<td><strong>NOT EXPORTED (n=0)</strong></td>
 </tr>
 <tr>
 <td>aspdose</td>
 <td>aspdose</td>
-<td></td>
+<td>aspdose</td>
 <td><strong>ANALYSIS</strong><br>Aspirin - acute use dose</td>
 <td>➤ Performance metric?</td>
-<td><strong>KEEP / DEID</strong></td>
+<td><strong>KEEP</strong></td>
 </tr>
 <tr>
 <td>aspd</td>
 <td>aspd</td>
-<td></td>
+<td>doasp</td>
 <td><strong>ANALYSIS</strong><br>Aspirin - acute use dose date</td>
 <td>➤ Performance metric?</td>
-<td><strong>KEEP / DEID</strong></td>
+<td><strong>KEEP</strong></td>
 </tr>
 <tr>
 <td>aspt</td>
 <td>aspd</td>
-<td></td>
+<td>htoasp, mtoasp</td>
 <td><strong>ANALYSIS</strong><br>Aspirin - acute use dose time</td>
 <td>➤ Performance metric?</td>
-<td><strong>KEEP / DEID</strong></td>
+<td><strong>KEEP</strong></td>
 </tr>
 <tr>
 <td>asptimeampm_2</td>
@@ -2906,10 +2914,10 @@
 <tr>
 <td>vstatus</td>
 <td>vstatus</td>
-<td></td>
+<td>sadi</td>
 <td><strong>PRIMARY</strong><br><strong>ANALYSIS</strong><br>Vital status at discharge</td>
-<td>➤ Primary variable. Associated date of discharge?</td>
-<td><strong>KEEP / DEID</strong></td>
+<td>➤ Primary variable. Associated date of discharge = dodi? <br><mark>A lot of missing right now? (almost 5,000 missing - 4,377 related to DCO, 376 when abstracted)</mark></td>
+<td><strong>KEEP</strong></td>
 </tr>
 <tr>
 <td><strong>Discharge Meds</strong></td>
@@ -2922,90 +2930,90 @@
 <tr>
 <td>dismeds</td>
 <td>dismeds___1</td>
-<td></td>
+<td>dmed1</td>
 <td><strong>ANALYSIS</strong><br>Discharge meds: Aspirin</td>
 <td>➤ Performance metric?</td>
-<td><strong>KEEP / DEID</strong></td>
+<td><strong>KEEP</strong></td>
 </tr>
 <tr>
 <td>dismeds</td>
 <td>dismeds___2</td>
-<td></td>
+<td>dmed2</td>
 <td><strong>ANALYSIS</strong><br>Discharge meds: warfarin</td>
 <td>➤ Performance metric?</td>
-<td><strong>KEEP / DEID</strong></td>
+<td><strong>KEEP</strong></td>
 </tr>
 <tr>
 <td>dismeds</td>
 <td>dismeds___3</td>
-<td></td>
+<td>dmed3</td>
 <td><strong>ANALYSIS</strong><br>Discharge meds: heparin</td>
 <td>➤ Performance metric?</td>
-<td><strong>KEEP / DEID</strong></td>
+<td><strong>KEEP</strong></td>
 </tr>
 <tr>
 <td>dismeds</td>
 <td>dismeds___4</td>
-<td></td>
+<td>dmed4</td>
 <td><strong>ANALYSIS</strong><br>Discharge meds: antiplatelet</td>
 <td>➤ Performance metric?</td>
-<td><strong>KEEP / DEID</strong></td>
+<td><strong>KEEP</strong></td>
 </tr>
 <tr>
 <td>dismeds</td>
 <td>dismeds___5</td>
-<td></td>
+<td>dmed5</td>
 <td><strong>ANALYSIS</strong><br>Discharge meds: statin</td>
 <td>➤ Performance metric?</td>
-<td><strong>KEEP / DEID</strong></td>
+<td><strong>KEEP</strong></td>
 </tr>
 <tr>
 <td>dismeds</td>
 <td>dismeds___6</td>
-<td></td>
+<td>dmed6</td>
 <td><strong>ANALYSIS</strong><br>Discharge meds: ACE inhibitor</td>
 <td>➤ Performance metric?=</td>
-<td><strong>KEEP / DEID</strong></td>
+<td><strong>KEEP</strong></td>
 </tr>
 <tr>
 <td>dismeds</td>
 <td>dismeds___7</td>
-<td></td>
+<td>dmed7</td>
 <td><strong>ANALYSIS</strong><br>Discharge meds: ARBs</td>
 <td>➤ Performance metric?</td>
-<td><strong>KEEP / DEID</strong></td>
+<td><strong>KEEP</strong></td>
 </tr>
 <tr>
 <td>dismeds</td>
 <td>dismeds___8</td>
-<td></td>
+<td>dmed8</td>
 <td><strong>ANALYSIS</strong><br>Discharge meds: Beta blockers</td>
 <td>➤ Performance metric?</td>
-<td><strong>KEEP / DEID</strong></td>
+<td><strong>KEEP</strong></td>
 </tr>
 <tr>
 <td>dismeds</td>
 <td>dismeds___9</td>
-<td></td>
+<td>dmed9</td>
 <td><strong>ANALYSIS</strong><br>Discharge meds: Bivalrudin</td>
 <td>➤ Performance metric?</td>
-<td><strong>KEEP / DEID</strong></td>
+<td><strong>KEEP</strong></td>
 </tr>
 <tr>
 <td>dismeds</td>
 <td>dismeds___10</td>
-<td></td>
+<td>dmed10</td>
 <td><strong>ANALYSIS</strong><br>Discharge meds: Antihypertensives</td>
 <td>➤ Performance metric?</td>
-<td><strong>KEEP / DEID</strong></td>
+<td><strong>KEEP</strong></td>
 </tr>
 <tr>
 <td>aspdosedis</td>
 <td>aspdosedis</td>
-<td></td>
+<td>daspdose</td>
 <td><strong>ANALYSIS</strong><br>Dose of ASA at discharge</td>
 <td>➤ Performance metric?</td>
-<td><strong>KEEP / DEID</strong></td>
+<td><strong>KEEP</strong></td>
 </tr>
 <tr>
 <td><strong>Discharge Vital Signs</strong></td>
@@ -3058,42 +3066,42 @@
 <tr>
 <td>strunit</td>
 <td>strunit</td>
-<td></td>
+<td>sunit</td>
 <td><strong>ANALYSIS</strong><br>Admitted to stroke unit</td>
 <td></td>
-<td><strong>KEEP / DEID</strong></td>
+<td><strong>KEEP</strong></td>
 </tr>
 <tr>
 <td>sunitadmsame</td>
 <td>sunitadmsame</td>
-<td></td>
-<td><strong>NOT NEEDED</strong><br> Can use date to recalculate</td>
+<td>doasu_same</td>
+<td><strong>ANALYSIS</strong><br> Can use date to recalculate</td>
 <td>➤ Do not export</td>
-<td><strong>KEEP / DEID</strong></td>
+<td><strong>KEEP</strong></td>
 </tr>
 <tr>
 <td>astrunitd</td>
 <td>astrunitd</td>
-<td></td>
+<td>doasu</td>
 <td><strong>ANALYSIS</strong><br>date of stroke unit admission</td>
 <td>➤ Use to calculate if admitted "immediately" - i.e. same day</td>
-<td><strong>KEEP / DEID</strong></td>
+<td><strong>KEEP</strong></td>
 </tr>
 <tr>
 <td>sunitdissame</td>
 <td>sunitdissame</td>
-<td></td>
+<td>dodisu_same</td>
 <td><strong>NOT NEEDED</strong><br> Can use date to recalculate</td>
 <td>➤ Do not export</td>
-<td><strong>KEEP / DEID</strong></td>
+<td><strong>KEEP</strong></td>
 </tr>
 <tr>
 <td>dstrunitd</td>
 <td>dstrunitd</td>
-<td></td>
+<td>dodisu</td>
 <td><strong>ANALYSIS</strong><br>Date of stroke unit discharge</td>
 <td>➤ Use to calculate if discharged "on same day" - as hospital discharge</td>
-<td><strong>KEEP / DEID</strong></td>
+<td><strong>KEEP</strong></td>
 </tr>
 </tbody>
 </table>
