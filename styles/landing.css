@@ -108,14 +108,55 @@ body {
   text-decoration: underline;
 }
 
+
+
+/* DATA DOWNLOAD BUTTON */ 
+.md-button-data {
+  background-color: white !important;
+  color: #596b6d !important;
+  border: 2px solid #596b6d !important;
+  text-decoration: none !important;
+  text-align: center !important;
+  font-weight: 400 !important;
+  border-radius: 6px !important;
+  padding: 0.4em 0.65em !important;
+  font-family: 'Montserrat', sans-serif !important;
+  transition: background-color 0.2s ease, color 0.2s ease !important;
+  font-size: 0.8rem !important;  /* scale for smaller screens */
+}
+
+/* Hover + focus effect */
+.md-button-data:hover,
+.md-button-data:focus {
+  background-color: #596b6d !important;
+  color: white !important;
+  text-decoration: none !important;
+}
+.md-button-data:hover {
+  transform: scale(1.02) !important;
+}
+@media (max-width: 1220px) {
+  .md-button-data {
+    width: 100% !important;
+    text-align: center !important;
+    display: block !important;
+    font-size: 0.7rem !important;  /* scale for smaller screens */
+  }
+} 
+
+
+
+/* MAIN BUTTON */ 
+
 .md-button {
   background-color: white !important;
   color: #596b6d !important;
   border: 2px solid #596b6d !important;
   text-decoration: none !important;
+  text-align: center !important;
   font-weight: 500 !important;
   border-radius: 6px !important;
-  padding: 0.6em 1.2em !important;
+  padding: 0.5em 0.75em !important;
   font-family: 'Montserrat', sans-serif !important;
   transition: background-color 0.2s ease, color 0.2s ease !important;
   font-size: 1.0rem !important;  /* scale for smaller screens */
@@ -124,7 +165,7 @@ body {
 /* Hover + focus effect */
 .md-button:hover,
 .md-button:focus {
-  background-color: #e87a00 !important;
+  background-color: #596b6d !important;
   color: white !important;
   text-decoration: none !important;
 }
@@ -140,23 +181,28 @@ body {
   }
 } 
 
+
+
+
 /* EXTERNAL BUTTON */ 
 .md-button-external {
   background-color: #04517400 !important;
   color: #596b6d !important;
   border: 1.5px solid #596b6d !important;
+  text-align: center !important;
   text-decoration: none !important;
-  font-weight: 400 !important;
+  font-weight: 300 !important;
   border-radius: 6px !important;
-  padding: 0.6em 1.2em !important;
+  padding: 0.4em 0.65em !important;
   font-family: 'Montserrat', sans-serif !important;
   transition: background-color 0.2s ease, color 0.2s ease !important;
+  font-size: 1.0rem !important;  /* scale for smaller screens */
 }
 
 /* Hover + focus effect */
 .md-button-external:hover,
 .md-button-external:focus {
-  background-color: #e87a00 !important;
+  background-color: #596b6d !important;
   border: 2px solid #04517400 !important;
   color: white !important;
   text-decoration: none !important;
@@ -169,13 +215,21 @@ body {
     width: 100% !important;
     text-align: center !important;
     display: block !important;
-    font-size: 0.55rem !important;  /* scale for smaller screens */
+    font-size: 0.8rem !important;  /* scale for smaller screens */
   }
 } 
 
 
-
-
+.btn-right {
+  float: right;
+  margin-left: 1rem;
+}
+.btn-center {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 1rem 0;
+}
 
 /* EXTERNAL BUTTON 2 
   Use this button on pages with LHS navigation */ 
@@ -194,7 +248,7 @@ body {
 /* Hover + focus effect */
 .md-button-external2:hover,
 .md-button-external2:focus {
-  background-color: #e87a00 !important;
+  background-color: #596b6d !important;
   border: 2px solid #04517400 !important;
   color: white !important;
   text-decoration: none !important;

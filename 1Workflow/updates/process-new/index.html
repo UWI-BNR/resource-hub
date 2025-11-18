@@ -1307,6 +1307,8 @@
       
         
       
+        
+      
     
     
     
@@ -1371,6 +1373,8 @@
       
         
       
+        
+      
     
     
     
@@ -1391,7 +1395,7 @@
   
   
   <span class="md-ellipsis">
-    Our Analytics
+    Our Methods
     
   </span>
   
@@ -1408,7 +1412,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
-            Our Analytics
+            Our Methods
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1506,6 +1510,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3Reporting/analytics/bnr-sap-length-of-stay/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Length of Stay
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1522,6 +1549,8 @@
   
     
     
+      
+        
       
         
       
@@ -1632,9 +1661,55 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3Reporting/briefings/length-of-stay-2023/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Length of Stay in 2023
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3Reporting/datatables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Tables 2023
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1902,15 +1977,36 @@
 <td><strong>REDCap database audit</strong></td>
 <td>➤ The database structure has been changed repeatedly without a full change record.<br>➤ An audit will identify discrepancies and reset to best practice.</td>
 <td>ⓘ Advise</td>
-<td>🟨 <br><a href="../../bnr-process-audit/">See Data Handling Process Audit</a></td>
+<td>✅ <br><a href="../../bnr-process-audit/">See Data Handling Process Audit</a></td>
 <td>🔴 <strong>Rec 2</strong> (REDCap Quality Controls)<br>🟠 <strong>Rec 7</strong> (Data Dictionary &amp; Metadata Management)</td>
 </tr>
 <tr>
-<td><strong>REDCap database alignment</strong></td>
-<td>➤ The cumulative dataset must be re-aligned with the current REDCap database. Harmonisation is required.</td>
-<td>⚙ Contribute</td>
-<td>❌ <br><a href="../../../2Data/dataset/structure/">See data dictionary</a></td>
+<td><strong>REDCap<br/>dataset&mdash;database alignment</strong></td>
+<td>➤ The cumulative dataset must be re-aligned to mimic the structure of the current (as of Nov-2025) REDCap database. Harmonisation is required.</td>
+<td>🗹 Lead</td>
+<td>✅ <br><a href="../../../2Data/dataset/structure/">See data dictionary</a></td>
 <td>🔴 <strong>Rec 1</strong> (Dataset Governance)<br>🟠 <strong>Rec 7</strong> (Data Dictionary &amp; Metadata Management)</td>
+</tr>
+<tr>
+<td><strong>Reassess how to use death data</strong></td>
+<td>➤ To evaluate death record completeness and the most appropriate method for use in future analytics.</td>
+<td>⚙ Contribute</td>
+<td>✅ <br><a href="../../../3Reporting/analytics/">See statistical analysis plan</a></td>
+<td>🔴 <strong>Rec 4</strong> (Hospital-Based Re-focus)<br>🔴 <strong>Rec 5</strong> (Automated UCOD Assignment – IRIS)<br>🟢 <strong>Rec 12</strong> (Research Analytics Workstream)</td>
+</tr>
+<tr>
+<td><strong>Develop process for final case review and sign-off</strong></td>
+<td>➤ To ensure all fields are complete and verified by a senior staff member before dataset release.</td>
+<td>⚙ Contribute</td>
+<td>🟨 <br><a href="../../../2Data/dataset-release/">See dataset release process (Step 5)</a></td>
+<td>🔴 <strong>Rec 1</strong> (Dataset Governance &amp; Version Control)<br>🟢 <strong>Rec 14</strong> (Sustainability &amp; Governance Enhancements)</td>
+</tr>
+<tr>
+<td><strong>Automate monthly data extractions of locked cases only</strong></td>
+<td>➤ To ensure each extraction is clean, reproducible, and limited to verified data ready for reporting.</td>
+<td>🗹 Lead</td>
+<td>❌</td>
+<td>🔴 <strong>Rec 1</strong> (Dataset Governance)<br>🟠 <strong>Rec 6</strong> (Analytics Workflow Redesign)<br>🟠 <strong>Rec 9</strong> (Continuous Data-Quality Monitoring)</td>
 </tr>
 <tr>
 <td><strong>Duplicates handled within REDCap</strong><br><br><strong>Use query system within REDCap</strong></td>
@@ -1918,13 +2014,6 @@
 <td>ⓘ Advise</td>
 <td>❌</td>
 <td>🟠 <strong>Rec 2</strong> (REDCap Quality Controls)<br>🔴 <strong>Rec 3</strong> (Core Variable Set)<br>🟠 <strong>Rec 9</strong> (Continuous Data-Quality Monitoring)</td>
-</tr>
-<tr>
-<td><strong>Develop process for final case review and sign-off</strong></td>
-<td>➤ To ensure all fields are complete and verified by a senior staff member before dataset release.</td>
-<td>ⓘ Advise</td>
-<td>🟨 <br><a href="../../../2Data/dataset-release/">See dataset release process (Step 5)</a></td>
-<td>🔴 <strong>Rec 1</strong> (Dataset Governance &amp; Version Control)<br>🟢 <strong>Rec 14</strong> (Sustainability &amp; Governance Enhancements)</td>
 </tr>
 <tr>
 <td><strong>Initiate case-level record lock in database</strong></td>
@@ -1939,20 +2028,6 @@
 <td>ⓘ Advise</td>
 <td>❌</td>
 <td>🔴 <strong>Rec 3</strong> (Core Variable Set Definition)<br>🟢 <strong>Rec 13</strong> (Revamped Reporting Framework)</td>
-</tr>
-<tr>
-<td><strong>Automate monthly data extractions of locked cases only</strong></td>
-<td>➤ To ensure each extraction is clean, reproducible, and limited to verified data ready for reporting.</td>
-<td>🗹 Lead</td>
-<td>❌</td>
-<td>🔴 <strong>Rec 1</strong> (Dataset Governance)<br>🟠 <strong>Rec 6</strong> (Analytics Workflow Redesign)<br>🟠 <strong>Rec 9</strong> (Continuous Data-Quality Monitoring)</td>
-</tr>
-<tr>
-<td><strong>Reassess how to use death data</strong></td>
-<td>➤ To evaluate death record completeness and the most appropriate method for use in future analytics.</td>
-<td>🗹 Lead</td>
-<td>🟨 <br><a href="../../../3Reporting/analytics/">See statistical analysis plan</a></td>
-<td>🔴 <strong>Rec 4</strong> (Hospital-Based Re-focus)<br>🔴 <strong>Rec 5</strong> (Automated UCOD Assignment – IRIS)<br>🟢 <strong>Rec 12</strong> (Research Analytics Workstream)</td>
 </tr>
 </tbody>
 </table>
