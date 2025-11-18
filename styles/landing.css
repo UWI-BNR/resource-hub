@@ -108,7 +108,14 @@ body {
   text-decoration: underline;
 }
 
+.bnr-figure {
+  margin-bottom: 2rem;
+}
 
+.md-typeset .bnr-downloads {
+  clear: both;
+  margin-top: 5.5rem;   /* extra gap above buttons */
+}
 
 /* DATA DOWNLOAD BUTTON */ 
 .md-button-data {
@@ -123,6 +130,8 @@ body {
   font-family: 'Montserrat', sans-serif !important;
   transition: background-color 0.2s ease, color 0.2s ease !important;
   font-size: 0.8rem !important;  /* scale for smaller screens */
+  margin: 1.5rem 1.5rem 0rem 0rem !important;     /* top/bottom 8px, no horizontal margin */
+
 }
 
 /* Hover + focus effect */
