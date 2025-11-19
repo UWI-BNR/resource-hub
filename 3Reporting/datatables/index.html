@@ -2050,6 +2050,9 @@
   }
 
 /* Show 2023 table by default (while keeping other years hidden) */
+.bnr-year-table {
+  display: none;
+}
 .bnr-year-table[data-bnr-year="2023"] {
   display: block;
 }
@@ -3405,7 +3408,7 @@
 <hr />
 <!-- JavaScript to control year choice in Table 2 -->
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
+  (function () {
     document.querySelectorAll('.bnr-year-block').forEach(function (block) {
       var select = block.querySelector('.bnr-year-select');
       if (!select) return;
@@ -3421,10 +3424,13 @@
         });
       }
 
+      // On change, switch visible table
       select.addEventListener('change', updateTables);
+
+      // Initialise correct table on load
       updateTables();
     });
-  });
+  })();
 </script>
 
 
