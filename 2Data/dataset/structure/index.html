@@ -920,7 +920,7 @@
   
   
   <span class="md-ellipsis">
-    Data Dictionaries
+    Data Dictionary
     
   </span>
   
@@ -933,7 +933,7 @@
   
   
   <span class="md-ellipsis">
-    Data Dictionaries
+    Data Dictionary
     
   </span>
   
@@ -956,18 +956,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#updated-november-18th-2025" class="md-nav__link">
+  <a href="#updated-november-21st-2025" class="md-nav__link">
     <span class="md-ellipsis">
-      Updated: November 18th, 2025
+      Updated: November 21st, 2025
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#table-1-data-map-redcap-database-final-dataset" class="md-nav__link">
+  <a href="#data-map-redcap-database-final-dataset" class="md-nav__link">
     <span class="md-ellipsis">
-      TABLE 1. Data Map - REDCap database ➡️ Final Dataset
+      DATA MAP - REDCap database ➡️ Final Dataset
     </span>
   </a>
   
@@ -1906,18 +1906,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#updated-november-18th-2025" class="md-nav__link">
+  <a href="#updated-november-21st-2025" class="md-nav__link">
     <span class="md-ellipsis">
-      Updated: November 18th, 2025
+      Updated: November 21st, 2025
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#table-1-data-map-redcap-database-final-dataset" class="md-nav__link">
+  <a href="#data-map-redcap-database-final-dataset" class="md-nav__link">
     <span class="md-ellipsis">
-      TABLE 1. Data Map - REDCap database ➡️ Final Dataset
+      DATA MAP - REDCap database ➡️ Final Dataset
     </span>
   </a>
   
@@ -1941,497 +1941,681 @@
 
 
 
-<!-- ======================= -->
-<!--  YEAR SELECTOR + TABLES -->
-<!-- ======================= -->
-
-<p><label for="year-select"><strong>Select year:</strong></label>
-<select id="year-select">
-<br />
-<option value="2011">2011</option></p>
-<option value="2012">2012</option>
-<option value="2013">2013</option>
-<!-- Add remaining years up to 13 tables -->
-<p></select></p>
-<style>
-  /* Hide all year tables by default */
-  .year-table {
-    display: none;
-    margin-top: 1rem;
-  }
-
-  /* Optional: style to ensure spacing */
-  #year-select {
-    margin-left: 0.5rem;
-    padding: 0.2rem 0.4rem;
-  }
-</style>
-
-<!-- ======================= -->
-<!--  YEAR TABLE: 2011       -->
-<!--  NOTE markdown="1"      -->
-<!-- ======================= -->
-<div class="year-table" data-year="2011">
-<table>
-<thead>
-<tr>
-<th>Week</th>
-<th>Stroke</th>
-<th>AMI</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>12</td>
-<td>3</td>
-</tr>
-<tr>
-<td>2</td>
-<td>10</td>
-<td>2</td>
-</tr>
-<tr>
-<td>3</td>
-<td>14</td>
-<td>4</td>
-</tr>
-<tr>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-</tr>
-</tbody>
-</table>
-</div>
-<!-- ======================= -->
-<!--  YEAR TABLE: 2012       -->
-<!-- ======================= -->
-<div class="year-table" data-year="2012">
-<table>
-<thead>
-<tr>
-<th>Week</th>
-<th>Stroke</th>
-<th>AMI</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>15</td>
-<td>4</td>
-</tr>
-<tr>
-<td>2</td>
-<td>11</td>
-<td>3</td>
-</tr>
-<tr>
-<td>3</td>
-<td>13</td>
-<td>5</td>
-</tr>
-<tr>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-</tr>
-</tbody>
-</table>
-</div>
-<!-- ======================= -->
-<!--  YEAR TABLE: 2013       -->
-<!-- ======================= -->
-<div class="year-table" data-year="2013">
-<table>
-<thead>
-<tr>
-<th>Week</th>
-<th>Stroke</th>
-<th>AMI</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>9</td>
-<td>2</td>
-</tr>
-<tr>
-<td>2</td>
-<td>13</td>
-<td>5</td>
-</tr>
-<tr>
-<td>3</td>
-<td>11</td>
-<td>3</td>
-</tr>
-<tr>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-</tr>
-</tbody>
-</table>
-</div>
-<!-- ======================= -->
-<!--  JAVASCRIPT CONTROLLER  -->
-<!-- ======================= -->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const select = document.getElementById("year-select");
-    const tables = document.querySelectorAll(".year-table");
-
-    function showYear(year) {
-      tables.forEach(table => {
-        if (table.getAttribute("data-year") === year) {
-          table.style.display = "block";
-        } else {
-          table.style.display = "none";
-        }
-      });
-    }
-
-    // Initial display: show the first year in the dropdown
-    if (select && select.value) {
-      showYear(select.value);
-    }
-
-    // Change handler
-    select.addEventListener("change", function () {
-      showYear(this.value);
-    });
-  });
-</script>
-
-<p><br/><br/><br/></p>
-<hr />
 <h1 id="bnr-data-structure-data-dictionary">BNR Data Structure (Data Dictionary)<a class="headerlink" href="#bnr-data-structure-data-dictionary" title="Permanent link">&para;</a></h1>
-<h2 id="updated-november-18th-2025">Updated: <strong>November 18th, 2025</strong><a class="headerlink" href="#updated-november-18th-2025" title="Permanent link">&para;</a></h2>
-<h2 id="table-1-data-map-redcap-database-final-dataset"><strong>TABLE 1</strong>. Data Map - REDCap database ➡️ Final Dataset<a class="headerlink" href="#table-1-data-map-redcap-database-final-dataset" title="Permanent link">&para;</a></h2>
+<h2 id="updated-november-21st-2025">Updated: <strong>November 21st, 2025</strong><a class="headerlink" href="#updated-november-21st-2025" title="Permanent link">&para;</a></h2>
+<h2 id="data-map-redcap-database-final-dataset"><strong>DATA MAP</strong> - REDCap database ➡️ Final Dataset<a class="headerlink" href="#data-map-redcap-database-final-dataset" title="Permanent link">&para;</a></h2>
 <details class="info" open="open">
 <summary>REDCap Database ➡️ Dataset Release</summary>
+<p>This data dictionary includes <strong>three sets</strong> of variables representing:</p>
+<ul>
+<li><strong>COLUMN 1: REDCap database.</strong> Variables collected in the 2025 REDCap database</li>
+<li><mark><strong>COLUMN 2: Extracted Dataset.</strong> Variables after extraction from the 2025 REDCap database, with DO file preparation (<strong>DO FILE:</strong> <code>DO file name</code>)</mark></li>
+<li><strong>COLUMN 3: Analytics Dataset.</strong> Variables for analytics use, after firther DO file preparation (<strong>DO FILE:</strong> <code>bnrcvd-2023-prep1.do</code>) </li>
+</ul>
 <table>
 <thead>
 <tr>
-<th>DATABASE</th>
-<th>INTERIM DATASET</th>
-<th>FINAL DATASET</th>
-<th>DESCRIPTION</th>
-<th>Comments</th>
-<th>DECISION</th>
+<th>REDCap variable</th>
+<th>Extracted dataset variable</th>
+<th>Analytics dataset variable</th>
+<th>Variable label</th>
+<th>Display format</th>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><strong>Key Classifiers</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
 <tr>
 <td>--</td>
 <td>pid</td>
 <td>eid</td>
-<td><strong>KEY</strong><br><strong>ANALYSIS</strong><br>Event ID (Unique)</td>
-<td>➤ Keep in shared datasets as non-identifying uniqueness</td>
-<td><strong>KEEP</strong>.</td>
-</tr>
-<tr>
-<td>--</td>
-<td>sd_db</td>
-<td></td>
-<td><strong>PROCESS</strong><br>In-house database used</td>
-<td>➤ Background interest. (E.g.) might metrics differ across BNR phases?</td>
-<td><strong>DROPPED</strong></td>
-</tr>
-<tr>
-<td>--</td>
-<td>jc_etype</td>
-<td>etype</td>
-<td><strong>PRIMARY</strong><br><strong>ANALYSIS</strong><br>Event type</td>
-<td><mark>➤ Does not match <em>redcap_event_name</em>?</mark></td>
-<td><strong>DROPPED / RECALCULATED</strong></td>
-</tr>
-<tr>
-<td>--</td>
-<td>sd_eyear</td>
-<td>yoe</td>
-<td><strong>PRIMARY</strong><br><strong>ANALYSIS</strong><br>Event year</td>
-<td></td>
-<td><strong>DROPPED / RECALCULATED</strong></td>
-</tr>
-<tr>
-<td>--</td>
-<td>sd_abstracted</td>
-<td>dco</td>
-<td><strong>PROCESS</strong><br>Abstraction type (abstracted, DCO)</td>
-<td><mark>➤ There is a third abstracted status = <em>partial abstraction</em>?</mark></td>
-<td><strong>KEEP</strong></td>
+<td>CVD Event Unique Identifier</td>
+<td>%9.0g</td>
 </tr>
 <tr>
 <td>recid</td>
 <td>recid</td>
 <td>rid</td>
-<td><strong>PREP ONLY</strong><br>Original REDCap Unique ID</td>
-<td><mark>➤ Lots of missing entries?</mark></td>
-<td><strong>KEEP</strong></td>
+<td>* REDCap Record ID</td>
+<td>%16s</td>
 </tr>
 <tr>
 <td>--</td>
-<td>redcap_event_name</td>
+<td>--</td>
+<td>dco</td>
+<td>* Death Certificate Only (DCO) Case (0=Hospital Event, 1=DCO)</td>
+<td>%10.0g</td>
+</tr>
+<tr>
+<td>--</td>
+<td>--</td>
+<td>dco_alt</td>
+<td>* Death Certificate Only (DCO) Case (0=Hospital Event, 1=DCO, 2-partial abstraction) classification</td>
+<td>%20.0g</td>
+</tr>
+<tr>
+<td>--</td>
+<td>jc_etype</td>
 <td>etype</td>
-<td><strong>PREP ONLY</strong><br>initial distinction between AMIs and strokes</td>
-<td><mark>➤ There is a third abstracted status<em><em> =  </em>death_data_collect_arm_1</em>. How to tell if AMI or stroke?</mark></td>
-<td><strong>KEEP</strong></td>
+<td>CVD Event Type (AMI=2, Stroke=1)</td>
+<td>%9.0g</td>
+</tr>
+<tr>
+<td><strong>Key Dates and Times</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td>cfdoa</td>
 <td>cfdoa</td>
 <td>docf</td>
-<td><strong>PROCESS</strong><br>Date of entry to database</td>
-<td></td>
-<td><strong>KEEP</strong></td>
+<td>CVD casefinding date (dd-mon-yyyy)</td>
+<td>%dD_m_CY</td>
 </tr>
 <tr>
-<td>cfdoat</td>
-<td>cfdoat</td>
-<td></td>
-<td><strong>NOT NEEDED</strong><br>Time of entry to database</td>
-<td></td>
-<td><strong>DROPPED</strong></td>
+<td>dob</td>
+<td>dob</td>
+<td>dob</td>
+<td>Patient date of birth (dd-mon-yyyy)</td>
+<td>%dD_m_CY</td>
 </tr>
 <tr>
-<td>cfda</td>
-<td>cfda</td>
-<td></td>
-<td><strong>NOT NEEDED</strong><br>Person doing data entry</td>
-<td></td>
-<td><strong>DROPPED</strong></td>
+<td>edate</td>
+<td>edate</td>
+<td>doe</td>
+<td>CVD event date (dd-mon-yyyy)</td>
+<td>%dD_m_CY</td>
 </tr>
 <tr>
-<td><strong>Process Info</strong></td>
-<td></td>
+<td>edateyr</td>
+<td>eyear</td>
+<td>yoe</td>
+<td>CVD event year (yyyy)</td>
+<td>%9.0g</td>
+</tr>
+<tr>
+<td>edatemon</td>
+<td>--</td>
+<td>moe</td>
+<td>CVD event month (mm)</td>
+<td>%9.0g</td>
+</tr>
+<tr>
+<td>etime</td>
+<td>etime</td>
+<td>htoe</td>
+<td>Patient hour of event (hh)</td>
+<td>%9.0g</td>
+</tr>
+<tr>
+<td>etime</td>
+<td>etime</td>
+<td>mtoe</td>
+<td>Patient minute of event (mm)</td>
+<td>%9.0g</td>
+</tr>
+<tr>
+<td>cfadmdate</td>
+<td>cfadmdate</td>
+<td>doa</td>
+<td>Patient date of admission (dd-mon-yyyy)</td>
+<td>%dD_m_CY</td>
+</tr>
+<tr>
+<td>admtime</td>
+<td>admtime</td>
+<td>htoa</td>
+<td>Patient hour of admission (hh)</td>
+<td>%9.0g</td>
+</tr>
+<tr>
+<td>admtime</td>
+<td>admtime</td>
+<td>mtoa</td>
+<td>Patient minute of admission (mm)</td>
+<td>%9.0g</td>
+</tr>
+<tr>
+<td>dlc</td>
+<td>dlc</td>
+<td>dodi</td>
+<td>Patient date of discharge (dd-mon-yyyy)</td>
+<td>%dD_m_CY</td>
+</tr>
+<tr>
+<td>vstatus</td>
+<td>vstatus</td>
+<td>sadi</td>
+<td>Patient vital status at discharge (1=Alive; 2=Dead)</td>
+<td>%8.0g</td>
+</tr>
+<tr>
+<td>cfdod</td>
+<td>dod</td>
+<td>dod</td>
+<td>Patient date of death (dd-mon-yyyy)</td>
+<td>%dD_m_CY</td>
+</tr>
+<tr>
+<td><strong>Key Demographics</strong></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>cfsource</td>
-<td>cfsource__1</td>
-<td></td>
-<td><strong>PROCESS</strong><br>Casefinding source (Ward A1)</td>
-<td>➤ Casefinding now medical records only</td>
-<td><strong>DROPPED</strong></td>
+<td>sex</td>
+<td>sex</td>
+<td>sex</td>
+<td>Patient sex (1=female, 2=male)</td>
+<td>%8.0g</td>
 </tr>
 <tr>
-<td>cfsource</td>
-<td>cfsource__2</td>
-<td></td>
-<td><strong>PROCESS</strong><br>Casefinding source (Ward A2)</td>
-<td></td>
-<td><strong>DROPPED</strong></td>
+<td>--</td>
+<td>--</td>
+<td>agey</td>
+<td>Patient age at event (years as integer). <em>Note: Constructed from multiple past files. Not directly extracted from REDCap database.</em></td>
+<td>%9.0g</td>
 </tr>
 <tr>
-<td>cfsource</td>
-<td>cfsource__3</td>
-<td></td>
-<td><strong>PROCESS</strong><br>Casefinding source (Ward A3/HDU)</td>
-<td></td>
-<td><strong>DROPPED</strong></td>
+<td>--</td>
+<td>--</td>
+<td>age5</td>
+<td>Patient age at event (5-year age groups)</td>
+<td>%9.0g</td>
 </tr>
 <tr>
-<td>cfsource</td>
-<td>cfsource__4</td>
-<td></td>
-<td><strong>PROCESS</strong><br>Casefinding source (Ward A5)</td>
-<td></td>
-<td><strong>DROPPED</strong></td>
+<td>--</td>
+<td>--</td>
+<td>age70</td>
+<td>Patient age group (&lt;70 yrs; 70+ yrs)</td>
+<td>%18.0g</td>
 </tr>
 <tr>
-<td>cfsource</td>
-<td>cfsource__5</td>
-<td></td>
-<td><strong>PROCESS</strong><br>Casefinding source (Ward A6)</td>
-<td></td>
-<td><strong>DROPPED</strong></td>
+<td>parish</td>
+<td>parish</td>
+<td>parish</td>
+<td>Patient parish of residence</td>
+<td>%13.0g</td>
 </tr>
 <tr>
-<td>cfsource</td>
-<td>cfsource__6</td>
+<td><strong>Ward Information</strong></td>
 <td></td>
-<td><strong>PROCESS</strong><br>Casefinding source (MICU)</td>
 <td></td>
-<td><strong>DROPPED</strong></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
-<td>cfsource</td>
-<td>cfsource__7</td>
-<td></td>
-<td><strong>PROCESS</strong><br>Casefinding source (SICU)</td>
-<td></td>
-<td><strong>DROPPED</strong></td>
+<td>ward</td>
+<td>ward__1</td>
+<td>treatloc1</td>
+<td>Treated in ICU/HDU (1=Yes; 0=No)</td>
+<td>%9.0g</td>
 </tr>
 <tr>
-<td>cfsource</td>
-<td>cfsource__8</td>
-<td></td>
-<td><strong>PROCESS</strong><br>Casefinding source (Ward B5)</td>
-<td></td>
-<td><strong>DROPPED</strong></td>
+<td>ward</td>
+<td>ward__2</td>
+<td>treatloc2</td>
+<td>Treated in A&amp;E (1=Yes; 0=No)</td>
+<td>%9.0g</td>
 </tr>
 <tr>
-<td>cfsource</td>
-<td>cfsource__9</td>
-<td></td>
-<td><strong>PROCESS</strong><br>Casefinding source (Ward B6)</td>
-<td></td>
-<td><strong>DROPPED</strong></td>
+<td>ward</td>
+<td>ward__3</td>
+<td>treatloc3</td>
+<td>Treated in Medical wards (1=Yes; 0=No)</td>
+<td>%9.0g</td>
 </tr>
 <tr>
-<td>cfsource</td>
-<td>cfsource__10</td>
-<td></td>
-<td><strong>PROCESS</strong><br>Casefinding source (Ward B7)</td>
-<td></td>
-<td><strong>DROPPED</strong></td>
+<td>ward</td>
+<td>ward__4</td>
+<td>treatloc4</td>
+<td>Treated in Stroke Unit (1=Yes; 0=No)</td>
+<td>%9.0g</td>
 </tr>
 <tr>
-<td>cfsource</td>
-<td>cfsource__11</td>
-<td></td>
-<td><strong>PROCESS</strong><br>Casefinding source (Ward B8)</td>
-<td></td>
-<td><strong>DROPPED</strong></td>
+<td>ward</td>
+<td>ward__5</td>
+<td>treatloc5</td>
+<td>Treated in Cardiac Unit (1=Yes; 0=No)</td>
+<td>%9.0g</td>
 </tr>
 <tr>
-<td>cfsource</td>
-<td>cfsource__12</td>
+<td><strong>Event Classifiers / Risk factor Information</strong></td>
 <td></td>
-<td><strong>PROCESS</strong><br>Casefinding source (Ward C5)</td>
 <td></td>
-<td><strong>DROPPED</strong></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
-<td>cfsource</td>
-<td>cfsource__13</td>
-<td></td>
-<td><strong>PROCESS</strong><br>Casefinding source (Ward C6)</td>
-<td></td>
-<td><strong>DROPPED</strong></td>
+<td>htype</td>
+<td>htype</td>
+<td>htype</td>
+<td>AMI subtype (1=STEMI; 2=NSTEMI; other categories)</td>
+<td>%20.0g</td>
 </tr>
 <tr>
-<td>cfsource</td>
-<td>cfsource__14</td>
-<td></td>
-<td><strong>PROCESS</strong><br>Casefinding source (C7/PICU)</td>
-<td></td>
-<td><strong>DROPPED</strong></td>
+<td>stype</td>
+<td>stype</td>
+<td>stype</td>
+<td>Stroke subtype (1=Ischemic; 2/3=Hemorrhagic; other categories)</td>
+<td>%25.0g</td>
 </tr>
 <tr>
-<td>cfsource</td>
-<td>cfsource__15</td>
-<td></td>
-<td><strong>PROCESS</strong><br>Casefinding source (C8)</td>
-<td></td>
-<td><strong>DROPPED</strong></td>
+<td>pstroke</td>
+<td>pstroke</td>
+<td>pstroke</td>
+<td>History of previous stroke (1=Yes; 2=No)</td>
+<td>%8.0g</td>
 </tr>
 <tr>
-<td>cfsource</td>
-<td>cfsource__16</td>
-<td></td>
-<td><strong>PROCESS</strong><br>Casefinding source (C9)</td>
-<td></td>
-<td><strong>DROPPED</strong></td>
+<td>pstrokeyr</td>
+<td>pstrokeyr</td>
+<td>pstrokeyr</td>
+<td>Year of previous stroke event (yyyy)</td>
+<td>%8.0g</td>
 </tr>
 <tr>
-<td>cfsource</td>
-<td>cfsource__17</td>
-<td></td>
-<td><strong>PROCESS</strong><br>Casefinding source (C10/Stroke Unit)</td>
-<td></td>
-<td><strong>DROPPED</strong></td>
+<td>pami</td>
+<td>pami</td>
+<td>pami</td>
+<td>History of previous AMI (1=Yes; 2=No)</td>
+<td>%8.0g</td>
 </tr>
 <tr>
-<td>cfsource</td>
-<td>cfsource__18</td>
-<td></td>
-<td><strong>PROCESS</strong><br>Casefinding source (C12)</td>
-<td></td>
-<td><strong>DROPPED</strong></td>
+<td>pamiyr</td>
+<td>pamiyr</td>
+<td>pamiyr</td>
+<td>Year of previous AMI event (yyyy)</td>
+<td>%8.0g</td>
 </tr>
 <tr>
-<td>cfsource</td>
-<td>cfsource__19</td>
-<td></td>
-<td><strong>PROCESS</strong><br>Casefinding source (Cardiac Unit)</td>
-<td></td>
-<td><strong>DROPPED</strong></td>
+<td>htn</td>
+<td>htn</td>
+<td>htn</td>
+<td>History of hypertension (1=Yes; 2=No)</td>
+<td>%8.0g</td>
 </tr>
 <tr>
-<td>cfsource</td>
-<td>cfsource__20</td>
-<td></td>
-<td><strong>PROCESS</strong><br>Casefinding source (Medical Record)</td>
-<td></td>
-<td><strong>DROPPED</strong></td>
+<td>diab</td>
+<td>diab</td>
+<td>diab</td>
+<td>History of diabetes mellitus (1=Yes; 2=No)</td>
+<td>%8.0g</td>
 </tr>
 <tr>
-<td>cfsource</td>
-<td>cfsource__21</td>
-<td></td>
-<td><strong>PROCESS</strong><br>Casefinding source (Death Record)</td>
-<td></td>
-<td><strong>DROPPED</strong></td>
+<td>sysbp</td>
+<td>sysbp</td>
+<td>sbp</td>
+<td>Systolic blood pressure on admission (mmHg)</td>
+<td>%8.0g</td>
 </tr>
 <tr>
-<td>cfsource</td>
-<td>cfsource__22</td>
-<td></td>
-<td><strong>PROCESS</strong><br>Casefinding source (A&amp;E)</td>
-<td></td>
-<td><strong>DROPPED</strong></td>
+<td>diasbp</td>
+<td>diasbp</td>
+<td>dbp</td>
+<td>Diastolic blood pressure on admission (mmHg)</td>
+<td>%8.0g</td>
 </tr>
 <tr>
-<td>cfsource</td>
-<td>cfsource__23</td>
-<td></td>
-<td><strong>PROCESS</strong><br>Casefinding source (Polyclinic)</td>
-<td></td>
-<td><strong>DROPPED</strong></td>
+<td>bgmmol</td>
+<td>bgmmol</td>
+<td>bgmmol</td>
+<td>Blood glucose on admission (mmol/L)</td>
+<td>%9.0g</td>
 </tr>
 <tr>
-<td>cfsource</td>
-<td>cfsource__24</td>
+<td><strong>Exam</strong></td>
 <td></td>
-<td><strong>PROCESS</strong><br>Casefinding source (Private Physician)</td>
 <td></td>
-<td><strong>DROPPED</strong></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
-<td>cfsource</td>
-<td>cfsource__25</td>
-<td></td>
-<td><strong>PROCESS</strong><br>Casefinding source (Emerg.Clinic)</td>
-<td></td>
-<td><strong>DROPPED</strong></td>
+<td>ecg</td>
+<td>ecg</td>
+<td>ecg</td>
+<td>ECG performed during event admission (1=Yes; 2=No)</td>
+<td>%8.0g</td>
 </tr>
 <tr>
-<td>cfsource</td>
-<td>cfsource__26</td>
-<td></td>
-<td><strong>PROCESS</strong><br>Casefinding source (Nursing Home)</td>
-<td></td>
-<td><strong>DROPPED</strong></td>
+<td>ecgd</td>
+<td>ecgd</td>
+<td>doecg</td>
+<td>Date of ECG during event admission (dd-mon-yyyy)</td>
+<td>%dD_m_CY</td>
 </tr>
 <tr>
-<td>cfsource</td>
-<td>cfsource__27</td>
-<td></td>
-<td><strong>PROCESS</strong><br>Casefinding source (MedData)</td>
-<td></td>
-<td><strong>DROPPED</strong></td>
+<td>ecgt</td>
+<td>ecgt</td>
+<td>htecg</td>
+<td>Hour of ECG during event admission (hh)</td>
+<td>%9.0g</td>
 </tr>
 <tr>
-<td><strong>DEMOGRAPHICS</strong></td>
+<td>ecgt</td>
+<td>ecgt</td>
+<td>mtecg</td>
+<td>Minute of ECG during event admission (mm)</td>
+<td>%9.0g</td>
+</tr>
+<tr>
+<td><strong>Cardiac Enzymes</strong></td>
 <td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>tropres</td>
+<td>tropres</td>
+<td>tropres</td>
+<td>Number of troponin tests completed</td>
+<td>%13.0g</td>
+</tr>
+<tr>
+<td>trop1res</td>
+<td>trop1res</td>
+<td>trop1res</td>
+<td>Result of troponin test 1 (ng/L)</td>
+<td>%9.0g</td>
+</tr>
+<tr>
+<td>trop2res</td>
+<td>trop2res</td>
+<td>trop2res</td>
+<td>Result of troponin test 2 (ng/L)</td>
+<td>%9.0g</td>
+</tr>
+<tr>
+<td><strong>Assessments</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>assess</td>
+<td>assess</td>
+<td>assess</td>
+<td>Assessment by any therapist (1=Yes; 2=No)</td>
+<td>%8.0g</td>
+</tr>
+<tr>
+<td>assess1</td>
+<td>assess1</td>
+<td>assess1</td>
+<td>Evaluated by occupational therapist (1=Yes; 2=No; 3=Referred)</td>
+<td>%12.0g</td>
+</tr>
+<tr>
+<td>assess2</td>
+<td>assess2</td>
+<td>assess2</td>
+<td>Evaluated by physiotherapist (1=Yes; 2=No; 3=Referred)</td>
+<td>%12.0g</td>
+</tr>
+<tr>
+<td>assess3</td>
+<td>assess3</td>
+<td>assess3</td>
+<td>Evaluated by speech therapist (1=Yes; 2=No; 3=Referred)</td>
+<td>%12.0g</td>
+</tr>
+<tr>
+<td>assess4</td>
+<td>assess4</td>
+<td>assess4</td>
+<td>Evaluated by swallowing assessment (1=Yes; 2=No; 3=Referred)</td>
+<td>%12.0g</td>
+</tr>
+<tr>
+<td>ct</td>
+<td>ct</td>
+<td>ct</td>
+<td>CT scan report available (1=Yes; 2=No)</td>
+<td>%8.0g</td>
+</tr>
+<tr>
+<td>doct</td>
+<td>doct</td>
+<td>doct</td>
+<td>Date of CT scan report (dd-mon-yyyy)</td>
+<td>%dD_m_CY</td>
+</tr>
+<tr>
+<td>reperf</td>
+<td>reperf</td>
+<td>reperf</td>
+<td>Reperfusion attempted (1=Yes; 02=No)</td>
+<td></td>
+</tr>
+<tr>
+<td>repertype</td>
+<td>repertype</td>
+<td>repertype</td>
+<td>Type of reperfusion therapy (1=Fibrinolytic; 2=PCI)</td>
+<td>%20.0g</td>
+</tr>
+<tr>
+<td>reperfd</td>
+<td>reperfd</td>
+<td>dore</td>
+<td>Date of reperfusion therapy (dd-mon-yyyy)</td>
+<td>%dD_m_CY</td>
+</tr>
+<tr>
+<td>reperft</td>
+<td>reperft</td>
+<td>htore</td>
+<td>Hour of reperfusion therapy (hh)</td>
+<td>%9.0g</td>
+</tr>
+<tr>
+<td>reperft</td>
+<td>reperft</td>
+<td>mtore</td>
+<td>Minute of reperfusion therapy (mm)</td>
+<td>%9.0g</td>
+</tr>
+<tr>
+<td>asp</td>
+<td>asp__1</td>
+<td>asp1</td>
+<td>Aspirin - acute use (1=Yes; 0=No)</td>
+<td>%9.0g</td>
+</tr>
+<tr>
+<td>asp</td>
+<td>asp__2</td>
+<td>asp2</td>
+<td>Aspirin chronic use (1=Yes; 0=No)</td>
+<td>%9.0g</td>
+</tr>
+<tr>
+<td>asp</td>
+<td>asp__3</td>
+<td>asp3</td>
+<td>Aspirin contraindicated (1=Yes; 0=No)</td>
+<td>%9.0g</td>
+</tr>
+<tr>
+<td>aspdose</td>
+<td>aspdose</td>
+<td>aspdose</td>
+<td>Aspirin dose (mg)</td>
+<td>%8.0g</td>
+</tr>
+<tr>
+<td>aspd</td>
+<td>aspd</td>
+<td>doasp</td>
+<td>Date aspirin prescribed (dd-mon-yyyy)</td>
+<td>%dD_m_CY</td>
+</tr>
+<tr>
+<td>aspt</td>
+<td>aspd</td>
+<td>htoasp</td>
+<td>Hour aspirin prescribed (hh)</td>
+<td>%9.0g</td>
+</tr>
+<tr>
+<td>aspt</td>
+<td>aspd</td>
+<td>mtoasp</td>
+<td>Minute aspirin prescribed (mm)</td>
+<td>%9.0g</td>
+</tr>
+<tr>
+<td>asptimeampm_2</td>
+<td>asptimeampm_2</td>
+<td>asp_ampm</td>
+<td>Approximate time aspirin prescribed</td>
+<td>%8.0g</td>
+</tr>
+<tr>
+<td><strong>Discharge Information</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>dismeds</td>
+<td>dismeds___1</td>
+<td>dmed1</td>
+<td>Aspirin prescribed at discharge (1=Yes; 0=No)</td>
+<td>%9.0g</td>
+</tr>
+<tr>
+<td>dismeds</td>
+<td>dismeds___2</td>
+<td>dmed2</td>
+<td>Warfarin prescribed at discharge (1=Yes; 0=No)</td>
+<td>%9.0g</td>
+</tr>
+<tr>
+<td>dismeds</td>
+<td>dismeds___3</td>
+<td>dmed3</td>
+<td>Heparin prescribed at discharge (1=Yes; 0=No)</td>
+<td>%9.0g</td>
+</tr>
+<tr>
+<td>dismeds</td>
+<td>dismeds___4</td>
+<td>dmed4</td>
+<td>Antiplatelet prescribed at discharge (1=Yes; 0=No)</td>
+<td>%9.0g</td>
+</tr>
+<tr>
+<td>dismeds</td>
+<td>dismeds___5</td>
+<td>dmed5</td>
+<td>Statin prescribed at discharge (1=Yes; 0=No)</td>
+<td>%9.0g</td>
+</tr>
+<tr>
+<td>dismeds</td>
+<td>dismeds___6</td>
+<td>dmed6</td>
+<td>ACE inhibitor prescribed at discharge (1=Yes; 0=No)</td>
+<td>%9.0g</td>
+</tr>
+<tr>
+<td>dismeds</td>
+<td>dismeds___7</td>
+<td>dmed7</td>
+<td>ARB prescribed at discharge (1=Yes; 0=No)</td>
+<td>%9.0g</td>
+</tr>
+<tr>
+<td>dismeds</td>
+<td>dismeds___8</td>
+<td>dmed8</td>
+<td>Beta-blocker prescribed at discharge (1=Yes; 0=No)</td>
+<td>%9.0g</td>
+</tr>
+<tr>
+<td>dismeds</td>
+<td>dismeds___9</td>
+<td>dmed9</td>
+<td>Bivalrudin prescribed at discharge (1=Yes; 0=No)</td>
+<td>%9.0g</td>
+</tr>
+<tr>
+<td>dismeds</td>
+<td>dismeds___10</td>
+<td>dmed10</td>
+<td>Anti-hypertensive prescribed at discharge (1=Yes; 0=No)</td>
+<td>%9.0g</td>
+</tr>
+<tr>
+<td>aspdosedis</td>
+<td>aspdosedis</td>
+<td>aspdose_dis</td>
+<td>Aspirin dose at discharge (mg)</td>
+<td>%8.0g</td>
+</tr>
+<tr>
+<td><strong>Stroke Unit</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>strunit</td>
+<td>strunit</td>
+<td>sunit</td>
+<td>Admitted to stroke unit (1=Yes; 2=No)</td>
+<td>%8.0g</td>
+</tr>
+<tr>
+<td>astrunitd</td>
+<td>astrunitd</td>
+<td>doasu</td>
+<td>Date of stroke unit admission (dd-mon-yyyy)</td>
+<td>%dD_m_CY</td>
+</tr>
+<tr>
+<td>dstrunitd</td>
+<td>dstrunitd</td>
+<td>dodisu</td>
+<td>Date of stroke unit discharge (dd-mon-yyyy)</td>
+<td>%dD_m_CY</td>
+</tr>
+<tr>
+<td>sunitadmsame</td>
+<td>sunitadmsame</td>
+<td>doasu_same</td>
+<td></td>
+<td>%8.0g</td>
+</tr>
+<tr>
+<td>sunitdissame</td>
+<td>sunitdissame</td>
+<td>dodisu_same</td>
+<td></td>
+<td>%8.0g</td>
+</tr>
+<tr>
+<td>--</td>
+<td>redcap_event_name</td>
+<td>redcap_event_name</td>
+<td>Event Type using REDCap format for all years</td>
+<td>%12s.</td>
+</tr>
+<tr>
+<td><strong>Identifiable Information</strong></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2442,1029 +2626,558 @@
 <td>fname</td>
 <td>id_fname</td>
 <td>First Name</td>
-<td>➤ Identifiable</td>
-<td><strong>KEEP</strong></td>
+<td>%29s</td>
 </tr>
 <tr>
 <td>mname</td>
 <td>mname</td>
 <td>id_mname</td>
-<td>Middle Name</td>
-<td>➤ Identifiable</td>
-<td><strong>KEEP</strong></td>
+<td>Middle Name(s)/Initial(s)</td>
+<td>%30s</td>
 </tr>
 <tr>
 <td>lname</td>
 <td>lname</td>
 <td>id_lname</td>
-<td>Last Name</td>
-<td>➤ Identifiable</td>
-<td><strong>KEEP</strong></td>
+<td>Last Name(s)</td>
+<td>%22s</td>
 </tr>
 <tr>
-<td>sex</td>
-<td>sex</td>
-<td>sex</td>
-<td><strong>PRIMARY</strong><br><strong>ANALYTICS</strong><br>Patient sex</td>
-<td><mark>Missing <em>sex</em> in 2022 and 2023 if DCO?</mark></td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>dob</td>
-<td>dob</td>
-<td>dob</td>
-<td><strong>PRIMARY</strong><br><strong>ANALYTICS</strong><br>Patient date of birth</td>
-<td><mark>➤ A lot of mssingness?</mark></td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>cfage</td>
-<td>cfage</td>
 <td></td>
-<td><strong>NOT NEEDED?</strong><br>This is called age at casefinding (auto-calculated).</td>
-<td><mark>➤ We need a definitive age variable.<br> ➤ This needs a hierarchy  of dates, <strong>with an accompanying indicator showing that hierarchy</strong>.</mark> E.g.<br><br> ➤ (cat 1) Symptom onset date<br> ➤ (cat 2) If no symptom date, A&amp;E date<br> ➤   (cat 3) If no symptom or A&amp;E date, admission date, and so on<br> ➤ (cat 4) Discharge date<br> ➤ (cat 4) Death date.<br><br> We then calculate age using this  <em>event date</em> and <em>date of birth</em></td>
-<td><strong>DROPPED</strong></td>
+<td></td>
+<td>id_nid</td>
+<td>* Patient hospital number</td>
+<td>%11s</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>id_hid</td>
+<td>* Hospital / Patient Record Number</td>
+<td>%13s</td>
+</tr>
+<tr>
+<td><strong>In REDCap database - not currently exported to analytics dataset</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>--</td>
+<td>sd_db</td>
+<td>--</td>
+<td>The database used by the BNR team (e.g. Epi-Info, REDCap)</td>
+<td></td>
+</tr>
+<tr>
+<td>cfdoat</td>
+<td>cfdoat</td>
+<td>--</td>
+<td>Time of entry to database</td>
+<td></td>
+</tr>
+<tr>
+<td>cfda</td>
+<td>cfda</td>
+<td>--</td>
+<td>Person performing data entry</td>
+<td></td>
+</tr>
+<tr>
+<td>cfsource</td>
+<td>cfsource__1</td>
+<td>--</td>
+<td>Casefinding Source (Ward A1)</td>
+<td></td>
+</tr>
+<tr>
+<td>cfsource</td>
+<td>cfsource__2</td>
+<td>--</td>
+<td>Casefinding Source (Ward A2)</td>
+<td></td>
+</tr>
+<tr>
+<td>cfsource</td>
+<td>cfsource__3</td>
+<td>--</td>
+<td>Casefinding Source (Ward A3)</td>
+<td></td>
+</tr>
+<tr>
+<td>cfsource</td>
+<td>cfsource__4</td>
+<td>--</td>
+<td>Casefinding Source (Ward A5)</td>
+<td></td>
+</tr>
+<tr>
+<td>cfsource</td>
+<td>cfsource__5</td>
+<td>--</td>
+<td>Casefinding Source (Ward A6)</td>
+<td></td>
+</tr>
+<tr>
+<td>cfsource</td>
+<td>cfsource__6</td>
+<td>--</td>
+<td>Casefinding Source (MICU)</td>
+<td></td>
+</tr>
+<tr>
+<td>cfsource</td>
+<td>cfsource__7</td>
+<td>--</td>
+<td>Casefinding Source (SICU)</td>
+<td></td>
+</tr>
+<tr>
+<td>cfsource</td>
+<td>cfsource__8</td>
+<td>--</td>
+<td>Casefinding Source (Ward B5)</td>
+<td></td>
+</tr>
+<tr>
+<td>cfsource</td>
+<td>cfsource__9</td>
+<td>--</td>
+<td>Casefinding Source (Ward B6)</td>
+<td></td>
+</tr>
+<tr>
+<td>cfsource</td>
+<td>cfsource__10</td>
+<td>--</td>
+<td>Casefinding Source (Ward B7)</td>
+<td></td>
+</tr>
+<tr>
+<td>cfsource</td>
+<td>cfsource__11</td>
+<td>--</td>
+<td>Casefinding Source (Ward B8)</td>
+<td></td>
+</tr>
+<tr>
+<td>cfsource</td>
+<td>cfsource__12</td>
+<td>--</td>
+<td>Casefinding Source (Ward C5)</td>
+<td></td>
+</tr>
+<tr>
+<td>cfsource</td>
+<td>cfsource__13</td>
+<td>--</td>
+<td>Casefinding Source (Ward C6)</td>
+<td></td>
+</tr>
+<tr>
+<td>cfsource</td>
+<td>cfsource__14</td>
+<td>--</td>
+<td>Casefinding Source (Ward C7/PICU)</td>
+<td></td>
+</tr>
+<tr>
+<td>cfsource</td>
+<td>cfsource__15</td>
+<td>--</td>
+<td>Casefinding Source (Ward C8)</td>
+<td></td>
+</tr>
+<tr>
+<td>cfsource</td>
+<td>cfsource__16</td>
+<td>--</td>
+<td>Casefinding Source (Ward C9)</td>
+<td></td>
+</tr>
+<tr>
+<td>cfsource</td>
+<td>cfsource__17</td>
+<td>--</td>
+<td>Casefinding Source (Ward C10/Stroke Unit)</td>
+<td></td>
+</tr>
+<tr>
+<td>cfsource</td>
+<td>cfsource__18</td>
+<td>--</td>
+<td>Casefinding Source (Ward C12)</td>
+<td></td>
+</tr>
+<tr>
+<td>cfsource</td>
+<td>cfsource__19</td>
+<td>--</td>
+<td>Casefinding Source (Cardiac Unit)</td>
+<td></td>
+</tr>
+<tr>
+<td>cfsource</td>
+<td>cfsource__20</td>
+<td>--</td>
+<td>Casefinding Source (Medical Record)</td>
+<td></td>
+</tr>
+<tr>
+<td>cfsource</td>
+<td>cfsource__21</td>
+<td>--</td>
+<td>Casefinding Source (Death Record)</td>
+<td></td>
+</tr>
+<tr>
+<td>cfsource</td>
+<td>cfsource__22</td>
+<td>--</td>
+<td>Casefinding Source (A&amp;E)</td>
+<td></td>
+</tr>
+<tr>
+<td>cfsource</td>
+<td>cfsource__23</td>
+<td>--</td>
+<td>Casefinding Source (Polyclinic)</td>
+<td></td>
+</tr>
+<tr>
+<td>cfsource</td>
+<td>cfsource__24</td>
+<td>--</td>
+<td>Casefinding Source (Private Physician)</td>
+<td></td>
+</tr>
+<tr>
+<td>cfsource</td>
+<td>cfsource__25</td>
+<td>--</td>
+<td>Casefinding Source (Emerg Clinic)</td>
+<td></td>
+</tr>
+<tr>
+<td>cfsource</td>
+<td>cfsource__26</td>
+<td>--</td>
+<td>Casefinding Source (Nursing Home)</td>
+<td></td>
+</tr>
+<tr>
+<td>cfsource</td>
+<td>cfsource__27</td>
+<td>--</td>
+<td>Casefinding Source (MedData)</td>
+<td></td>
+</tr>
+<tr>
+<td>cfage</td>
+<td>cfage</td>
+<td>--</td>
+<td>Age at casefinding.</td>
+<td></td>
 </tr>
 <tr>
 <td>cfage_da</td>
 <td>--</td>
+<td>--</td>
+<td>Age at casefinding - date abstracted</td>
 <td></td>
-<td><strong>NOT NEEDED?</strong><br>This is called age at casefinding (data entered).</td>
-<td></td>
-<td><strong>DROPPED</strong></td>
-</tr>
-<tr>
-<td>natregno</td>
-<td>natregno</td>
-<td>nid</td>
-<td><strong>NOT NEEDED</strong><br>Unique National ID identifier</td>
-<td>➤ Do not export</td>
-<td><strong>KEEP</strong></td>
 </tr>
 <tr>
 <td>recnum</td>
 <td>recnum</td>
 <td>hid</td>
-<td><strong>NOT NEEDED</strong><br>Unique Hospital identifier</td>
-<td>➤ Do not export</td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>cfadmdate</td>
-<td>cfadmdate</td>
-<td>doa</td>
-<td><strong>PREP ONLY</strong><br>Admission Date</td>
-<td>➤ Important preparatory variable used to calculate age and age groups</td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>admtime</td>
-<td>admtime</td>
-<td>htoa, mtoa</td>
-<td><strong>PREP ONLY</strong><br>Admission Time (hrs, minutes)</td>
-<td>➤ Used to calculate time until reperfusion</td>
-<td><strong>KEEP</strong></td>
+<td>Unique National ID identifier</td>
+<td></td>
 </tr>
 <tr>
 <td>initialdx</td>
 <td>initialdx</td>
+<td>--</td>
+<td>Text-based diagnosis</td>
 <td></td>
-<td><strong>NOT NEEDED</strong><br>Text-based diagnosis</td>
-<td>➤ Do not export</td>
-<td><strong>DROPPED</strong></td>
 </tr>
 <tr>
 <td>hstatus</td>
 <td>hstatus</td>
+<td>--</td>
+<td>Text-based statusdischarged/on ward</td>
 <td></td>
-<td><strong>NOT NEEDED</strong><br>Text-based statusdischarged/on ward</td>
-<td>➤ Whether on ward at a point in time. No use for analyses.</td>
-<td><strong>DROPPED</strong></td>
 </tr>
 <tr>
 <td>slc</td>
 <td>slc</td>
+<td>--</td>
+<td>Vital status at last known contact. <em>Changed meaning in 2023. No longer useful.</em></td>
 <td></td>
-<td><strong>NOT NEEDED</strong><br>Vital status at last known contact</td>
-<td>➤ Changed meaning in 2023. No longer useful.</td>
-<td><strong>DROPPED</strong></td>
-</tr>
-<tr>
-<td>dlc</td>
-<td>dlc</td>
-<td>dodi</td>
-<td><strong>PREP ONLY</strong><br>Discharge date</td>
-<td>➤ Used to calculate time in hospital, then drop.</td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>cfdod</td>
-<td>dod</td>
-<td>dod</td>
-<td><strong>PREP ONLY</strong><br>Date of death</td>
-<td>➤ For DCO cases only.<br><mark>Need to understand full death casefinding process</mark></td>
-<td><strong>KEEP</strong></td>
 </tr>
 <tr>
 <td>finaldx</td>
 <td>finaldx</td>
+<td>--</td>
+<td>Final diagnosis. <em>IRH: does not look complete?</em></td>
 <td></td>
-<td><strong>NOT NEEDED</strong><br>Final diagnosis - does not look complete?</td>
-<td></td>
-<td><strong>DROPPED</strong></td>
 </tr>
 <tr>
 <td>cfcods</td>
 <td>cfcods</td>
+<td>--</td>
+<td>Another final diagnosis. <em>IRH: does not look complete?</em></td>
 <td></td>
-<td><strong>NOT NEEDED</strong><br>Another final diagnosis - does not look complete?</td>
-<td></td>
-<td><strong>DROPPED</strong></td>
 </tr>
 <tr>
 <td>cstatus</td>
 <td>cstatus</td>
+<td>--</td>
+<td><em>IRH: Always recorded as "eligible". No variation.</em></td>
 <td></td>
-<td><strong>NOT NEEDED</strong><br>Always "eligible"?</td>
-<td></td>
-<td><strong>DROPPED</strong></td>
 </tr>
 <tr>
 <td>eligible</td>
 <td>eligible</td>
+<td>--</td>
+<td><em>IRH: Looks to be an eligibility status, that would need regular updating within ech record. Does not seem to be used now.</em></td>
 <td></td>
-<td><strong>NOT NEEDED</strong><br>Looks to be an eligibility status, that would need regular updating within record?</td>
-<td>➤ Eligibility and duplicate fields   should move to a sign-off process</td>
-<td><strong>DROPPED</strong></td>
 </tr>
 <tr>
 <td>ineligible</td>
 <td>ineligible</td>
+<td>--</td>
+<td><em>IRH:Empty field</em></td>
 <td></td>
-<td><strong>NOT NEEDED</strong><br>Empty field</td>
-<td></td>
-<td><strong>DROPPED</strong></td>
 </tr>
 <tr>
 <td>duplicate</td>
 <td>duplicate</td>
+<td>--</td>
+<td><em>IRH: Duplicate information. Unclear how this is operationalised?</em></td>
 <td></td>
-<td><strong>NOT NEEDED</strong><br>Duplicate information</td>
-<td>➤ Should be part of a query system, going forwards?</td>
-<td><strong>DROPPED</strong></td>
 </tr>
 <tr>
 <td>duprec</td>
 <td>duprec</td>
+<td>--</td>
+<td>Duplicates information. <em>IRH: Should be part of a query system, going forwards?</em></td>
 <td></td>
-<td><strong>NOT NEEDED</strong><br>Duplicates information</td>
-<td>➤ Should be part of a query system, going forwards?</td>
-<td><strong>DROPPED</strong></td>
 </tr>
 <tr>
 <td>dupcheck</td>
 <td>dupcheck</td>
+<td>--</td>
+<td>Duplicate information. <em>IRH: Should be part of a query system, going forwards?</em></td>
 <td></td>
-<td><strong>NOT NEEDED</strong><br>Duplicate information</td>
-<td>➤ Should be part of a query system, going forwards?</td>
-<td><strong>DROPPED</strong></td>
 </tr>
 <tr>
 <td>toabs</td>
 <td>toabs</td>
+<td>--</td>
+<td>Internal process field. <em>IRH: No information on how this is used?</em></td>
 <td></td>
-<td>➤ <strong>NOT NEEDED</strong><br>Internal process field</td>
-<td>➤ Do not export</td>
-<td><strong>DROPPED</strong></td>
 </tr>
 <tr>
 <td>mstatus</td>
 <td>mstatus</td>
+<td>--</td>
+<td>Marital status</td>
 <td></td>
-<td><strong>NOT NEEDED</strong><br>Marital status</td>
-<td>➤  Do not export. Probably no longer used.</td>
-<td><strong>DROPPED</strong></td>
 </tr>
 <tr>
 <td>resident</td>
 <td>resident</td>
+<td>--</td>
+<td>Resident in Barbados. <em>IRH: Is this used?</em></td>
 <td></td>
-<td><strong>NOT NEEDED</strong><br>Is this used</td>
-<td>➤ Code errors. Some "0" codes. Many missing - can't be used when incorporating DCOs</td>
-<td><strong>DROPPED</strong></td>
 </tr>
 <tr>
 <td>citizen</td>
 <td>citizen</td>
+<td>--</td>
+<td>Citizen of Barbados. <em>IRH: Is this used / relevant?</em></td>
 <td></td>
-<td><strong>NOT NEEDED</strong><br>Is this used</td>
-<td>➤ Code errors. Some "0" codes. Many missing. Can't be used when incorporating DCOs</td>
-<td><strong>DROPPED</strong></td>
 </tr>
 <tr>
 <td>addr</td>
 <td>addr</td>
+<td>--</td>
+<td>Patient known address</td>
 <td></td>
-<td><strong>NOT NEEDED</strong><br>Address</td>
-<td>➤ Do not export</td>
-<td><strong>DROPPED</strong></td>
-</tr>
-<tr>
-<td>parish</td>
-<td>parish</td>
-<td>parish</td>
-<td><strong>ANALYSIS</strong><br>Parish</td>
-<td>➤ Distance to hospital as a predictor of outcome?</td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>ward</td>
-<td>ward__1</td>
-<td>treatloc1</td>
-<td><strong>ANALYSIS</strong><br>Treatment in ICU/HDU</td>
-<td>➤ Treatment ward as a predictor of outcome?</td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>ward</td>
-<td>ward__2</td>
-<td>treatloc2</td>
-<td><strong>ANALYSIS</strong><br>Treatment in A&amp;E</td>
-<td>➤ Treatment ward as a predictor of outcome?</td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>ward</td>
-<td>ward__3</td>
-<td>treatloc3</td>
-<td><strong>ANALYSIS</strong><br>Treatment in Med Wards</td>
-<td>➤ Treatment ward as a predictor of outcome?</td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>ward</td>
-<td>ward__4</td>
-<td>treatloc4</td>
-<td><strong>ANALYSIS</strong><br>Treatment in Stroke Unit</td>
-<td>➤ Treatment ward as a predictor of outcome?</td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>ward</td>
-<td>ward__5</td>
-<td>treatloc5</td>
-<td><strong>ANALYSIS</strong><br>Treatment in Cardiac Unit</td>
-<td>➤ Treatment ward as a predictor of outcome?</td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td><strong>EVENT</strong></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>htype</td>
-<td>htype</td>
-<td>htype</td>
-<td>➤ <strong>PRIMARY</strong><br><strong>ANALYTICS</strong><br>AMI subtype</td>
-<td><mark>➤ Over 50% missing<br>➤ Some events classified as:<br>➤ Sudden cardiac death<br>➤   definite SMI<br>➤ Probable AMI</mark></td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>stype</td>
-<td>stype</td>
-<td>stype</td>
-<td>➤ <strong>PRIMARY</strong><br><strong>ANALYTICS</strong><br>Stroke subtype</td>
-<td>➤ Primary analysis field.</td>
-<td><strong>KEEP</strong></td>
 </tr>
 <tr>
 <td>dxtype</td>
 <td>dxtype</td>
+<td>--</td>
+<td>How is AMI subtype diagnosed?</td>
 <td></td>
-<td><strong>PROCESS</strong><br>How AMI subtype diagnosed</td>
-<td></td>
-<td><strong>DROPPED</strong></td>
 </tr>
 <tr>
 <td>dstroke</td>
 <td>dstroke</td>
-<td></td>
-<td><strong>PROCESS</strong><br>This feels like an internal variable</td>
-<td></td>
-<td><strong>DROPPED</strong></td>
-</tr>
-<tr>
-<td>edate</td>
-<td>edate</td>
-<td>doe</td>
-<td><strong>ANALYSIS</strong><br>Event Date</td>
-<td><mark>➤ What does this actually mean? Date of self-reported symptom onset, perhaps?</mark></td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>edateyr</td>
 <td>--</td>
-<td>yoe</td>
-<td><strong>ANALYSIS</strong><br>Derived date</td>
-<td>➤ Do not export</td>
-<td><strong>DROPPED / RECALCULATED</strong></td>
-</tr>
-<tr>
-<td>edatemon</td>
-<td>--</td>
-<td>moe</td>
-<td><strong>NOT NEEDED</strong><br>Derived date</td>
-<td>➤ Do not export</td>
-<td><strong>DROPPED / RECALCULATED</strong></td>
+<td>Unclear variable. <em>IRH: how is this operationalized?</em></td>
+<td></td>
 </tr>
 <tr>
 <td>edatemondash</td>
 <td>--</td>
+<td>--</td>
+<td>Derived date. <em>IRH: Meaning unclear</em></td>
 <td></td>
-<td><strong>NOT NEEDED</strong><br>Derived date</td>
-<td>➤ Do not export</td>
-<td><strong>DROPPED</strong></td>
 </tr>
 <tr>
 <td>inhosp</td>
 <td>inhosp</td>
+<td>--</td>
+<td><em>IRH: Meaning unclear</em></td>
 <td></td>
-<td><strong>NOT NEEDED</strong><br>Mostly blank</td>
-<td>➤ Do not export</td>
-<td><strong>DROPPED</strong></td>
-</tr>
-<tr>
-<td>etime</td>
-<td>etime</td>
-<td>htoe, mtoe</td>
-<td><strong>ANALYSIS</strong><br>Event time (hrs, minutes)</td>
-<td><mark>➤ What is this "event" time. Self reported time of sympton onset, for example?</mark></td>
-<td><strong>KEEP</strong></td>
 </tr>
 <tr>
 <td>etimeampm</td>
 <td>etimeampm</td>
-<td></td>
-<td><strong>NOT NEEDED</strong><br>Seem incomplete</td>
-<td>➤ Do not export</td>
-<td><strong>DROPPED</strong></td>
-</tr>
-<tr>
-<td><strong>Previous Event</strong></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>pstroke</td>
-<td>pstroke</td>
-<td>pstroke</td>
-<td><strong>ANALYTICS</strong><br>Previous stroke</td>
-<td>➤ Export, but look at completeness</td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>pstrokeyr</td>
-<td>pstrokeyr</td>
-<td>pstrokeyr</td>
-<td><strong>ANALYTICS</strong><br>Previous stroke year</td>
-<td>➤ Export, but look at completeness</td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>pami</td>
-<td>pami</td>
-<td>pami</td>
-<td><strong>ANALYTICS</strong><br>Previous AMI</td>
-<td>➤ Export, but look at completeness</td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>pamiyr</td>
-<td>pamiyr</td>
-<td>pamiyr</td>
-<td><strong>ANALYTICS</strong><br>Previous AMI year</td>
-<td>➤ Export, but look at completeness</td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td><strong>Risk Factors</strong></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>--</td>
+<td>Approximate event time (am/pm)</td>
 <td></td>
 </tr>
 <tr>
 <td>rfany</td>
 <td>fany</td>
+<td>--</td>
+<td>Any risk factors? <em>IRH: Doesn't feel useful - unhealpfully broad?</em></td>
 <td></td>
-<td><strong>ANALYTICS</strong><br>Any risk factors?</td>
-<td>➤ Can't see usefulness of this - too broad</td>
-<td><strong>DROPPED</strong></td>
-</tr>
-<tr>
-<td>htn</td>
-<td>htn</td>
-<td>htn</td>
-<td><strong>ANALYTICS</strong><br>Hypertension?</td>
-<td>➤ Export - check completeness</td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>diab</td>
-<td>diab</td>
-<td>diab</td>
-<td><strong>ANALYTICS</strong><br>Diabetes?</td>
-<td>➤ Export - check completeness</td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td><strong>TESTS</strong></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Vital Signs</strong></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>sysbp</td>
-<td>sysbp</td>
-<td>sbp</td>
-<td><strong>ANALYTICS</strong><br>Blood pressure at admission</td>
-<td>➤ Export - check completeness.<br><mark>Possible poor quality. REDCap checks in place?</mark></td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>diasbp</td>
-<td>diasbp</td>
-<td>dbp</td>
-<td><strong>ANALYTICS</strong><br>Blood pressure at admission</td>
-<td>➤ Export - check completeness.<br><mark>Possible poor quality. REDCap checks in place?</mark></td>
-<td><strong>KEEP</strong></td>
 </tr>
 <tr>
 <td>bgunit</td>
 <td>bgunit</td>
+<td>--</td>
+<td><em>IRH: Meaning?</em></td>
 <td></td>
-<td><strong>NOT NEEDED</strong><br>Internal variable</td>
-<td>➤ Do not export</td>
-<td><strong>DROPPED</strong></td>
 </tr>
 <tr>
 <td>bgmg</td>
 <td>bgmg</td>
-<td></td>
-<td>Blood glucose at admission (mg/dl)</td>
-<td>➤ Mostly empty. Do not export</td>
-<td><strong>DROPPED</strong></td>
-</tr>
-<tr>
-<td>bgmmol</td>
-<td>bgmmol</td>
-<td>bgmmol</td>
-<td><strong>ANALYTICS</strong><br>Blood glucose at admission (mmol/l)</td>
-<td>➤ Export - check completeness.<br><mark>Possible poor quality. REDCap checks in  place?</mark></td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td><strong>Exam</strong></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>--</td>
+<td><em>IRH: Mostly empty</em></td>
 <td></td>
 </tr>
 <tr>
 <td>dieany_2</td>
 <td>dieany_2</td>
+<td>--</td>
+<td>Diagnostic exam completed?</td>
 <td></td>
-<td><strong>NOT NEEDED</strong><br>Diagnostic exam completed?</td>
-<td>➤ Do not export</td>
-<td><strong>DROPPED</strong></td>
 </tr>
 <tr>
 <td>decg</td>
 <td>decg</td>
+<td>--</td>
+<td>ECG completed?</td>
 <td></td>
-<td><strong>NOT NEEDED</strong><br>ECG completed?</td>
-<td>➤ Do not export</td>
-<td><strong>DROPPED</strong></td>
-</tr>
-<tr>
-<td>ecg</td>
-<td>ecg</td>
-<td>ecg</td>
-<td><strong>ANALYSIS</strong><br>ECG report available?</td>
-<td>➤ Use date as a proxy for ECG performed</td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>ecgd</td>
-<td>ecgd</td>
-<td>doecg</td>
-<td><strong>ANALYSIS</strong><br>Date of ECG</td>
-<td>➤ Performance measure?</td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>ecgt</td>
-<td>ecgt</td>
-<td>htecg, mtecg</td>
-<td><strong>ANALYSIS</strong><br>Time of ECG</td>
-<td>➤ Performance measure?</td>
-<td><strong>KEEP</strong></td>
 </tr>
 <tr>
 <td>ecgtampm</td>
 <td>ecgtampm</td>
-<td></td>
-<td><strong>NOT NEEDED</strong><br>ECG Am/PM</td>
-<td>➤ Do not export. Incomplete</td>
-<td><strong>DROPPED</strong></td>
-</tr>
-<tr>
-<td><strong>Cardiac Enzymes</strong></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>--</td>
+<td>ECG time AM/PM</td>
 <td></td>
 </tr>
 <tr>
 <td>tropdone</td>
 <td>tropdone</td>
-<td></td>
+<td>--</td>
 <td>Troponin completed?</td>
-<td>➤ Do not export</td>
-<td><strong>DROPPED</strong></td>
+<td></td>
 </tr>
 <tr>
 <td>troptype</td>
 <td>troptype</td>
-<td></td>
+<td>--</td>
 <td>Lab or Spot?</td>
-<td>➤ Do not export</td>
-<td><strong>DROPPED</strong></td>
-</tr>
-<tr>
-<td>tropres</td>
-<td>tropres</td>
-<td>tropres</td>
-<td><strong>ANALYSIS</strong><br>How many troponin results</td>
 <td></td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>trop1res</td>
-<td>trop1res</td>
-<td>trop1res</td>
-<td><strong>ANALYSIS</strong><br>Troponin Result 1</td>
-<td></td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>trop2res</td>
-<td>trop2res</td>
-<td>trop2res</td>
-<td><strong>ANALYSIS</strong><br>Troponin Result 2</td>
-<td></td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td><strong>Assessments</strong></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>assess</td>
-<td>assess</td>
-<td>assess</td>
-<td><strong>ANALYSIS</strong><br> Evaluation by any therapist</td>
-<td></td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>assess1</td>
-<td>assess1</td>
-<td>assess1</td>
-<td><strong>ANALYSIS</strong><br> Evaluation by occupational therapist</td>
-<td></td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>assess2</td>
-<td>assess2</td>
-<td>assess2</td>
-<td><strong>ANALYSIS</strong><br> Evaluation by physiotherapist</td>
-<td></td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>assess3</td>
-<td>assess3</td>
-<td>assess3</td>
-<td><strong>ANALYSIS</strong><br> Evaluation by speech therapist</td>
-<td></td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>assess4</td>
-<td>assess4</td>
-<td>assess4</td>
-<td><strong>ANALYSIS</strong><br> Evaluation by swallowing assessment</td>
-<td></td>
-<td><strong>KEEP</strong></td>
 </tr>
 <tr>
 <td>dieany</td>
 <td>dieany</td>
+<td>--</td>
+<td>Any evaluation?</td>
 <td></td>
-<td><strong>NOT NEEDED</strong><br>Any evaluation?</td>
-<td>➤ Do not export. <code>ct</code> used as proxy</td>
-<td><strong>DROPPED</strong></td>
 </tr>
 <tr>
 <td>dct</td>
 <td>dct</td>
+<td>--</td>
+<td>CT done</td>
 <td></td>
-<td><strong>NOT NEEDED</strong><br>CT done</td>
-<td>➤ Do not export. <code>ct</code> used as proxy</td>
-<td><strong>DROPPED</strong></td>
-</tr>
-<tr>
-<td>ct</td>
-<td>ct</td>
-<td>ct</td>
-<td><strong>ANALYSIS</strong><br>Is CT report available</td>
-<td>➤ Contribution to a performance measure?</td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>doct</td>
-<td>doct</td>
-<td>doct</td>
-<td><strong>ANALYSIS</strong><br>Date of CT</td>
-<td>➤ Contribution to a performance measure?</td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td><strong>TREATMENT DISCHARGE</strong></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Reperfusion</strong></td>
-<td></td>
-<td></td>
-<td></td>
-<td>Is this a performance metric? But is it always completed?</td>
-<td></td>
-</tr>
-<tr>
-<td>reperf</td>
-<td>reperf</td>
-<td></td>
-<td><strong>NOT NEEDED</strong><br>Reperfusion attempted</td>
-<td>➤ Does missingness allow use. Or is it really quite a rare event?</td>
-<td><strong>DROPPED</strong></td>
-</tr>
-<tr>
-<td>repertype</td>
-<td>repertype</td>
-<td>repertype</td>
-<td><strong>ANALYSIS</strong><br>Reperfusion type</td>
-<td>➤ Does missingness allow use?</td>
-<td><strong>KEEP / DEID</strong></td>
-</tr>
-<tr>
-<td>reperfd</td>
-<td>reperfd</td>
-<td>dore</td>
-<td><strong>ANALYSIS</strong><br>Reperfusion date</td>
-<td>➤ Does missingness allow use?</td>
-<td><strong>KEEP / DEID</strong></td>
-</tr>
-<tr>
-<td>reperft</td>
-<td>reperft</td>
-<td>htore, mtore</td>
-<td><strong>ANALYSIS</strong><br>Reperfusion time</td>
-<td>➤ Does missingness allow use?</td>
-<td><strong>KEEP / DEID</strong></td>
-</tr>
-<tr>
-<td><strong>Medications</strong></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>asp</td>
-<td>asp__1</td>
-<td>asp1</td>
-<td><strong>ANALYSIS</strong><br>Aspirin - acute use</td>
-<td>➤ Performance metric?</td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>asp</td>
-<td>asp__2</td>
-<td>asp2</td>
-<td><strong>ANALYSIS</strong><br>Aspirin - chronic use</td>
-<td>➤ Performance metric?</td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>asp</td>
-<td>asp__3</td>
-<td>asp3</td>
-<td><strong>ANALYSIS</strong><br>Aspirin - contraindicated</td>
-<td>➤ Performance metric?</td>
-<td><strong>KEEP</strong></td>
 </tr>
 <tr>
 <td>asp</td>
 <td>asp__99</td>
+<td>--</td>
+<td>Aspirin - no record of use</td>
 <td></td>
-<td><strong>ANALYSIS</strong><br>Aspirin - no record of use</td>
-<td>➤ Performance metric?</td>
-<td><strong>NOT EXPORTED (n=0)</strong></td>
 </tr>
 <tr>
 <td>asp</td>
 <td>asp__88</td>
+<td>--</td>
+<td>Aspirin. IRH: Meaning?</td>
 <td></td>
-<td><strong>NOT NEEDED</strong><br>Aspirin - ??</td>
-<td>➤ Performance metric?</td>
-<td><strong>NOT EXPORTED (n=0)</strong></td>
 </tr>
 <tr>
 <td>asp</td>
 <td>asp__999</td>
+<td>--</td>
+<td>Aspirin. IRH: Meaning?</td>
 <td></td>
-<td><strong>NOT NEEDED</strong><br>Aspirin - ??</td>
-<td>➤ Performance metric?</td>
-<td><strong>NOT EXPORTED (n=0)</strong></td>
 </tr>
 <tr>
 <td>asp</td>
 <td>asp__9999</td>
-<td></td>
-<td><strong>NOT NEEDED</strong><br>Aspirin - ??</td>
-<td>➤ Performance metric?</td>
-<td><strong>NOT EXPORTED (n=0)</strong></td>
-</tr>
-<tr>
-<td>aspdose</td>
-<td>aspdose</td>
-<td>aspdose</td>
-<td><strong>ANALYSIS</strong><br>Aspirin - acute use dose</td>
-<td>➤ Performance metric?</td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>aspd</td>
-<td>aspd</td>
-<td>doasp</td>
-<td><strong>ANALYSIS</strong><br>Aspirin - acute use dose date</td>
-<td>➤ Performance metric?</td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>aspt</td>
-<td>aspd</td>
-<td>htoasp, mtoasp</td>
-<td><strong>ANALYSIS</strong><br>Aspirin - acute use dose time</td>
-<td>➤ Performance metric?</td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>asptimeampm_2</td>
-<td>asptimeampm_2</td>
-<td></td>
-<td><strong>NOT NEEDED</strong><br>Aspirin - acute use dose AM/PM</td>
-<td>➤ Do not export</td>
-<td><strong>DROPPED</strong></td>
-</tr>
-<tr>
-<td>vstatus</td>
-<td>vstatus</td>
-<td>sadi</td>
-<td><strong>PRIMARY</strong><br><strong>ANALYSIS</strong><br>Vital status at discharge</td>
-<td>➤ Primary variable. Associated date of discharge = dodi? <br><mark>A lot of  missing right now? (almost 5,000 missing - 4,377 related to DCO, 376 when abstracted)</mark></td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td><strong>Discharge Meds</strong></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>dismeds</td>
-<td>dismeds___1</td>
-<td>dmed1</td>
-<td><strong>ANALYSIS</strong><br>Discharge meds: Aspirin</td>
-<td>➤ Performance metric?</td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>dismeds</td>
-<td>dismeds___2</td>
-<td>dmed2</td>
-<td><strong>ANALYSIS</strong><br>Discharge meds: warfarin</td>
-<td>➤ Performance metric?</td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>dismeds</td>
-<td>dismeds___3</td>
-<td>dmed3</td>
-<td><strong>ANALYSIS</strong><br>Discharge meds: heparin</td>
-<td>➤ Performance metric?</td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>dismeds</td>
-<td>dismeds___4</td>
-<td>dmed4</td>
-<td><strong>ANALYSIS</strong><br>Discharge meds: antiplatelet</td>
-<td>➤ Performance metric?</td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>dismeds</td>
-<td>dismeds___5</td>
-<td>dmed5</td>
-<td><strong>ANALYSIS</strong><br>Discharge meds: statin</td>
-<td>➤ Performance metric?</td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>dismeds</td>
-<td>dismeds___6</td>
-<td>dmed6</td>
-<td><strong>ANALYSIS</strong><br>Discharge meds: ACE inhibitor</td>
-<td>➤ Performance metric?=</td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>dismeds</td>
-<td>dismeds___7</td>
-<td>dmed7</td>
-<td><strong>ANALYSIS</strong><br>Discharge meds: ARBs</td>
-<td>➤ Performance metric?</td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>dismeds</td>
-<td>dismeds___8</td>
-<td>dmed8</td>
-<td><strong>ANALYSIS</strong><br>Discharge meds: Beta blockers</td>
-<td>➤ Performance metric?</td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>dismeds</td>
-<td>dismeds___9</td>
-<td>dmed9</td>
-<td><strong>ANALYSIS</strong><br>Discharge meds: Bivalrudin</td>
-<td>➤ Performance metric?</td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>dismeds</td>
-<td>dismeds___10</td>
-<td>dmed10</td>
-<td><strong>ANALYSIS</strong><br>Discharge meds: Antihypertensives</td>
-<td>➤ Performance metric?</td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>aspdosedis</td>
-<td>aspdosedis</td>
-<td>daspdose</td>
-<td><strong>ANALYSIS</strong><br>Dose of ASA at discharge</td>
-<td>➤ Performance metric?</td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td><strong>Discharge Vital Signs</strong></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>--</td>
+<td>Aspirin. IRH: Meaning?</td>
 <td></td>
 </tr>
 <tr>
 <td>dissysbp</td>
 <td>dissysbp</td>
+<td>--</td>
+<td>At discharge: SBP</td>
 <td></td>
-<td><strong>NOT NEEDED</strong><br>At discharge: SBP</td>
-<td>➤ Do not export</td>
-<td><strong>DROPPED</strong></td>
 </tr>
 <tr>
 <td>disdiasbp</td>
 <td>disdiasbp</td>
+<td>--</td>
+<td>At discharge: DBP</td>
 <td></td>
-<td><strong>NOT NEEDED</strong><br>At discharge: SBP</td>
-<td>➤ Do not export</td>
-<td><strong>DROPPED</strong></td>
 </tr>
 <tr>
 <td>disbgmmol</td>
 <td>disbgmmol</td>
+<td>--</td>
+<td>At discharge: Blood glucose</td>
 <td></td>
-<td><strong>NOT NEEDED</strong><br>At discharge: Blood glucose</td>
-<td>➤ Do not export</td>
-<td><strong>DROPPED</strong></td>
 </tr>
 <tr>
 <td>carunit</td>
 <td>carunit</td>
-<td></td>
-<td><strong>ANALYSIS</strong><br>Admitted to cardiac unit</td>
-<td>➤   AMI equiv of admitted to stroke unit</td>
-<td><strong>DROPPED</strong></td>
-</tr>
-<tr>
-<td><strong>Stroke Unit</strong></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>--</td>
+<td>Admitted to cardiac unit</td>
 <td></td>
 </tr>
 <tr>
-<td>strunit</td>
-<td>strunit</td>
-<td>sunit</td>
-<td><strong>ANALYSIS</strong><br>Admitted to stroke unit</td>
+<td>natregno</td>
+<td>natregno</td>
+<td>nid</td>
+<td>Barbados National Rregistration Number</td>
 <td></td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>sunitadmsame</td>
-<td>sunitadmsame</td>
-<td>doasu_same</td>
-<td><strong>ANALYSIS</strong><br> Can use date to recalculate</td>
-<td>➤ Do not export</td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>astrunitd</td>
-<td>astrunitd</td>
-<td>doasu</td>
-<td><strong>ANALYSIS</strong><br>date of stroke unit admission</td>
-<td>➤ Use to calculate if admitted "immediately" - i.e. same day</td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>sunitdissame</td>
-<td>sunitdissame</td>
-<td>dodisu_same</td>
-<td><strong>NOT NEEDED</strong><br> Can use date to recalculate</td>
-<td>➤ Do not export</td>
-<td><strong>KEEP</strong></td>
-</tr>
-<tr>
-<td>dstrunitd</td>
-<td>dstrunitd</td>
-<td>dodisu</td>
-<td><strong>ANALYSIS</strong><br>Date of stroke unit discharge</td>
-<td>➤ Use to calculate if discharged "on same day" - as hospital discharge</td>
-<td><strong>KEEP</strong></td>
 </tr>
 </tbody>
 </table>
 </details>
-<p><br></p>
+<p><br/></p>
 
 
 
