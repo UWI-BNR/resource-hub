@@ -7,7 +7,7 @@
   - sitemap (sitemap.md)
   - timeline (timeline.md)
   - to-do (to-do.md)
-- **01_Workflow/**
+- **Workflow/**
   - overview (overview.md)
   - post-redcap (post-redcap.md)
   - pre-redcap (pre-redcap.md)
@@ -20,17 +20,17 @@
   - signoff (signoff.md)
   - sources (sources.md)
   - structure (structure.md)
-- **03_Reporting/**
+- **Reporting/**
   - analytics-overview (analytics-overview.md)
   - annual (annual.md)
   - monthly (monthly.md)
   - other-reporting (other-reporting.md)
   - sap (sap.md)
-- **04_Technical/**
+- **Technical/**
   - interface (interface.md)
   - menu (menu.md)
   - stata (stata.md)
-- **05_Training/**
+- **Training/**
   - overview (overview.md)
   - selfpaced (selfpaced.md)
 - index (index.md)

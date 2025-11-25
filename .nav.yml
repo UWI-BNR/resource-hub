@@ -1,0 +1,10 @@
+# title: BNR Refit Project
+sort:
+  direction: alphabetical 
+docs:
+  - Home: index.md
+  - BNR ReFit: 1Workflow/
+  - Data: 2Data/
+  - Analysis & Reporting: 3Reporting/
+  - Manual: 4Manual/
+  - Downloads: 5Downloads/

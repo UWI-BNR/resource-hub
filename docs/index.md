@@ -1,34 +1,56 @@
 ---
-title: "Welcome" 
+title: "Welcome"
 hide:
   - navigation
   - toc
 ---
-==IH Reviewed (16-Oct-2025)==
 
-# Welcome to the Barbados National Registry (BNR)
 
-## About this Site
+<!-- PART 1. VIDEO + TAGLINE -->
+<!-- 22-NOV-2025. Would need to add real video links -->
+<div class="section-full-bleed">
 
-This site hosts documentation related to the 2025 BNR “refit” project — an initiative to improve the efficiency, automation, and therefore hopefully the sustainability of the BNR data systems.
+<video autoplay muted loop playsinline poster="assets\media\fallback2.jpg">
+  <!-- <source src="assets/media/caribdata9.mp4" type="video/mp4"> -->
+  <!-- <source src="assets/media/caribdata9.webm" type="video/webm"> -->
+</video>
 
-## The Barbados National Registry
-The **Barbados National Registry for Chronic Non-Communicable Disease (BNR)** is a national surveillance system operated by the George Alleyne Chronic Disease Research Centre (GA-CDRC) on behalf of the Barbados Ministry of Health and Wellness. Since its establishment in 2008–2010, the BNR has been a pioneering initiative—one of the first multi-NCD registries in the Western Hemisphere. It consists of three core components:
+<div class="section content" markdown="1">
 
-- **BNR-Stroke** – launched in 2008  
-- **BNR-Heart** – launched in 2009  
-- **BNR-Cancer** – launched in 2010  
+The Barbados National Registry<br> 
+Data For Impact
 
-The BNR collects national data on incident cases of stroke, heart attack (acute myocardial infarction), and cancer. These data inform health system performance, clinical care improvements, public health policies, and research across the Caribbean.
+</div>
 
-### BNR Impact and Recognition
+</div>
 
-The BNR:
 
-- Provides high-quality national incidence and mortality estimates
-- Supports academic outputs and continuing medical education
-- Serves as a model surveillance system for other small island states
+<!-- PART 2. ELEVATOR PITCH. -->
+<div class="section section-white1 text-center" markdown>
 
-➡️ To learn more about the goals, structure, and deliverables of the BNR refit project, see the [Refit Introduction](00_Intro/index.md).
+# We track and analyse heart attacks, strokes, and cancers to understand their burden in Barbados. 
 
-</br>
+## With clear, reliable evidence, we help guide decisions that strengthen care and improve health outcomes.
+
+<br/> 
+
+<!-- PART 2. LINK TO STORIES-->
+<div class="section section-shaded2 text-center" markdown>
+
+## Data on the 2023 National CVD Burden Released
+
+[Explore Our Latest Results](./3Reporting/briefings/index.md){ .md-button}
+
+</div>
+
+## BNR Operations
+Explore how we operate, learn about our ongoing digital transformation of registry processes, access key downloads, and view our latest analytics and reports.
+
+<span style="font-family: Montserrat, sans-serif; font-weight: 400; font-size: clamp(0.75rem, 2vw, 1.0rem);">Project Theme</span> | <span style="font-family: Montserrat, sans-serif; font-weight: 400; font-size: clamp(0.75rem, 2vw, 1.0rem);">Project Component</span>
+--------|----------
+<span style="font-family: Montserrat, sans-serif;  font-weight: 300; font-size: clamp(0.75rem, 2vw, 1.0rem);">:fontawesome-solid-diagram-project: Insights | <a href="./3Reporting/briefings/" class="md-button-external">Our Analytics & Reporting</a></span>
+<span style="font-family: Montserrat, sans-serif;  font-weight: 300; font-size: clamp(0.75rem, 2vw, 1.0rem);">:fontawesome-solid-chart-simple: Data | <a href="./2Data/" class="md-button-external">Our Data Stewardship</a></span>
+<span style="font-family: Montserrat, sans-serif;  font-weight: 300; font-size: clamp(0.75rem, 2vw, 1.0rem);">:fontawesome-solid-screwdriver-wrench: BNR Modernisation Programme | <a href="./1Workflow/" class="md-button-external">Our Recent Process Changes</a></span>
+<span style="font-family: Montserrat, sans-serif;  font-weight: 300; font-size: clamp(0.75rem, 2vw, 1.0rem);">:material-download-circle: Downloads | <a href="./5Downloads/" class="md-button-external">Our Downloads</a></span>
+
+<br/>

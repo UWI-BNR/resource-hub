@@ -1,14 +1,14 @@
-site_name: BNR Analytics System Refit
-site_description: An Online Operations Manual for the 2025 BNR refit.
+site_name: BNR Resource Hub
+site_description: An Online Operations Manual for the BNR
 site_author: Ian Hambleton
 
-site_url: https://ianhambleton.github.io/bnr-refit/
-repo_url: https://github.com/ianhambleton/bnr-refit
+site_url: https://uwi-bnr.github.io/bnr-refit/
+# repo_url: https://github.com/uwi-bnr/bnr-refit
 repo_name: bnr-refit
 
 theme:
   name: material
-  logo: assets/images/bnr01-transparent.png
+  logo: assets/images/uwi3.png
   favicon: assets/icons/favicon.ico 
   font:
     text: Open Sans
@@ -31,6 +31,7 @@ theme:
     - content.action
     - content.action.edit
     - content.tabs.link
+    - content.tooltips
 #    - blog
   palette:
     # Default Color Scheme  - but overriden by styles/css 
@@ -40,10 +41,13 @@ theme:
 
 plugins:
   - search
-  - awesome-pages  
+  - awesome-nav
+  - glightbox
 #  - section-index
 
 markdown_extensions:
+  - abbr
+  - meta 
   - admonition
   - footnotes
   - pymdownx.details
@@ -93,6 +97,3 @@ extra_css:
   - https://unpkg.com/frappe-gantt/dist/frappe-gantt.css
 
 copyright: Copyright &copy; 2025 Ian Hambleton
-
-
-

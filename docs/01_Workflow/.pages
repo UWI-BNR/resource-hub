@@ -1,7 +1,0 @@
-title: BNR Process
-nav:
-  - Refit changes overview: index.md
-  - Data Handling Infrastructure: bnr-infrastructure.md
-  - Data Handling Process: bnr-process.md
-  - Data Handling Process Audit: bnr-process-audit.md
-  - Refit Changes: updates 

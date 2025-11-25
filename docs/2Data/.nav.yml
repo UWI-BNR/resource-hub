@@ -1,0 +1,10 @@
+title: Data
+nav:
+  - Data Overview: index.md 
+  - The CVD Dataset: dataset
+  - Data Sources: sources.md
+  - Dataset Signoff: signoff.md
+  - Dataset Storage: storage.md
+  - Dataset Release: dataset-release.md
+  - Dataset Dissemination: dataset-dissemination.md
+  - Data Sharing: sharing

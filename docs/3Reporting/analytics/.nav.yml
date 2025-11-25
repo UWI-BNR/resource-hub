@@ -1,0 +1,9 @@
+title: Analytical Methods
+nav:
+  - Overview: index.md
+  - Core SAP: bnr-sap-core.md 
+  - Cases: bnr-sap-cases.md
+  - Incidence: bnr-sap-incidence.md
+  - Case Fatality: bnr-sap-case-fatality.md
+  - Length of Stay: bnr-sap-length-of-stay.md
+  

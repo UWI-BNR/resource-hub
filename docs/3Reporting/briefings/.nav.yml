@@ -1,0 +1,9 @@
+title: Our Briefings
+nav:
+# - Overview: index.md
+  - Our briefings: index.md 
+  - Cases in 2023: cases-2023.md
+  - Incidence in 2023: incidence-2023.md
+  - Case Fatality in 2023: case-fatality-2023.md
+  - Length of Stay in 2023: length-of-stay-2023.md
+  

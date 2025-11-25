@@ -1,0 +1,112 @@
+
+-----------------------------------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+-----------------------------------------------------------------------------------------------------------------------------
+eid             float   %9.0g               * CVD Event Unique Identifier
+rid             str16   %16s                * REDCap Record ID
+dco_alt         float   %20.0g     dco_alt_ * Death Certificate Only (DCO) Case
+dco             float   %10.0g     dco_     * Death Certificate Only (DCO) Case
+etype           float   %9.0g      etype_     CVD Event Type (AMI=2, Stroke=1)
+docf            float   %dD_m_CY              CVD casefinding date (dd-mon-yyyy)
+dob             float   %dD_m_CY              Patient date of birth (dd-mon-yyyy)
+doe             float   %dD_m_CY              CVD event date (dd-mon-yyyy)
+yoe             float   %9.0g                 CVD event year (yyyy)
+moe             float   %9.0g                 CVD event month (mm)
+htoe            float   %9.0g                 Patient hour of event (hh)
+mtoe            float   %9.0g                 Patient minute of event (mm)
+doa             float   %dD_m_CY              Patient date of admission (dd-mon-yyyy)
+htoa            float   %9.0g                 Patient hour of admission (hh)
+mtoa            float   %9.0g                 Patient minute of admission (mm)
+dodi            float   %dD_m_CY              Patient date of discharge (dd-mon-yyyy)
+sadi            int     %8.0g      vstatus_   Patient vital status at discharge (1=Alive; 2=Dead)
+dod             float   %dD_m_CY              Patient date of death (dd-mon-yyyy)
+sex             float   %8.0g      sex_       Patient sex (1=female, 2=male)
+agey            float   %9.0g                 Patient age at event (years as integer)
+age5            float   %9.0g      age5_      Patient age at event (5-year age groups)
+age70           float   %18.0g     age70_     Patient age group (<70 yrs; 70+ yrs)
+parish          float   %13.0g     parish_    Patient parish of residence
+treatloc1       byte    %9.0g      yesno_     Treated in ICU/HDU (1=Yes; 0=No)
+treatloc2       byte    %9.0g      yesno_     Treated in A&E (1=Yes; 0=No)
+treatloc3       byte    %9.0g      yesno_     Treated in Medical wards (1=Yes; 0=No)
+treatloc4       byte    %9.0g      yesno_     Treated in Stroke Unit (1=Yes; 0=No)
+treatloc5       byte    %9.0g      yesno_     Treated in Cardiac Unit (1=Yes; 0=No)
+htype           byte    %20.0g     htype_     AMI subtype (1=STEMI; 2=NSTEMI; other categories)
+stype           byte    %25.0g     stype_     Stroke subtype (1=Ischemic; 2/3=Hemorrhagic; other categories)
+pstroke         byte    %8.0g      pstroke_   History of previous stroke (1=Yes; 2=No)
+pstrokeyr       int     %8.0g                 Year of previous stroke event (yyyy)
+pami            float   %8.0g      pami_      History of previous AMI (1=Yes; 2=No)
+pamiyr          int     %8.0g                 Year of previous AMI event (yyyy)
+htn             float   %8.0g      htn_       History of hypertension (1=Yes; 2=No)
+diab            float   %8.0g      diab_      History of diabetes mellitus (1=Yes; 2=No)
+sbp             long    %8.0g                 Systolic blood pressure on admission (mmHg)
+dbp             long    %8.0g                 Diastolic blood pressure on admission (mmHg)
+bgmmol          float   %9.0g                 Blood glucose on admission (mmol/L)
+ecg             byte    %8.0g      ecg_       ECG performed during event admission (1=Yes; 2=No)
+doecg           float   %dD_m_CY              Date of ECG during event admission (dd-mon-yyyy)
+htecg           float   %9.0g                 Hour of ECG during event admission (hh)
+mtecg           float   %9.0g                 Minute of ECG during event admission (mm)
+tropres         int     %13.0g     tropres_   Number of troponin tests completed
+trop1res        float   %9.0g                 Result of troponin test 1 (ng/L)
+trop2res        float   %9.0g                 Result of troponin test 2 (ng/L)
+assess          double  %8.0g      assess_    Assessment by any therapist (1=Yes; 2=No)
+assess1         double  %12.0g     assess1_   Evaluated by occupational therapist (1=Yes; 2=No; 3=Referred)
+assess2         double  %12.0g     assess2_   Evaluated by physiotherapist (1=Yes; 2=No; 3=Referred)
+assess3         double  %12.0g     assess3_   Evaluated by speech therapist (1=Yes; 2=No; 3=Referred)
+assess4         double  %12.0g     assess4_   Evaluated by swallowing assessment (1=Yes; 2=No; 3=Referred)
+ct              long    %8.0g      ct_        CT scan report available (1=Yes; 2=No)
+doct            float   %dD_m_CY              Date of CT scan report (dd-mon-yyyy)
+reperf          double  %8.0g      reperf_    Reperfusion attempted (1=Yes; 02=No)
+repertype       byte    %20.0g     repertype_
+                                              Type of reperfusion therapy (1=Fibrinolytic; 2=PCI)
+dore            float   %dD_m_CY              Date of reperfusion therapy (dd-mon-yyyy)
+htore           float   %9.0g                 Hour of reperfusion therapy (hh)
+mtore           float   %9.0g                 Minute of reperfusion therapy (mm)
+asp1            byte    %9.0g      asp___1_   Aspirin - acute use (1=Yes; 0=No)
+asp2            byte    %9.0g      asp___2_   Aspirin chronic use (1=Yes; 0=No)
+asp3            byte    %9.0g      asp___3_   Aspirin contraindicated (1=Yes; 0=No)
+aspdose         int     %8.0g                 Aspirin dose (mg)
+doasp           float   %dD_m_CY              Date aspirin prescribed (dd-mon-yyyy)
+htoasp          float   %9.0g                 Hour aspirin prescribed (hh)
+mtoasp          float   %9.0g                 Minute aspirin prescribed (mm)
+asp_ampm        byte    %8.0g      asptampm_
+                                              Approprimate time aspirin prescribed
+dmed1           byte    %9.0g      dismeds___1_
+                                              Aspirin prescribed at discharge (1=Yes; 0=No)
+dmed2           byte    %9.0g      dismeds___2_
+                                              Warfarin prescribed at discharge (1=Yes; 0=No)
+dmed3           byte    %9.0g      dismeds___3_
+                                              Heparin prescribed at discharge (1=Yes; 0=No)
+dmed4           byte    %9.0g      dismeds___4_
+                                              Antiplatelet prescribed at discharge (1=Yes; 0=No)
+dmed5           byte    %9.0g      dismeds___5_
+                                              Statin prescribed at discharge (1=Yes; 0=No)
+dmed6           byte    %9.0g      dismeds___6_
+                                              ACE inhibitor prescribed at discharge (1=Yes; 0=No)
+dmed7           byte    %9.0g      dismeds___7_
+                                              ARB prescribed at discharge (1=Yes; 0=No)
+dmed8           byte    %9.0g      dismeds___8_
+                                              Beta-blocker prescribed at discharge (1=Yes; 0=No)
+dmed9           byte    %9.0g      dismeds___9_
+                                              Bivalrudin prescribed at discharge (1=Yes; 0=No)
+dmed10          byte    %9.0g      dismeds___10_
+                                              Anti-hypertensive prescribed at discharge (1=Yes; 0=No)
+aspdose_dis     int     %8.0g                 Aspirin dose at discharge (mg)
+sunit           byte    %8.0g      strunit_   Admitted to stroke unit (1=Yes; 2=No)
+doasu           float   %dD_m_CY              Date of stroke unit admission (dd-mon-yyyy)
+dodisu          float   %dD_m_CY              Date of stroke unit discharge (dd-mon-yyyy)
+doasu_same      double  %8.0g      sunitadmsame_
+                                              Stroke unit admission same date as hospital admission (1=Yes; 2=No)
+dodisu_same     double  %8.0g      sunitdissame_
+                                              Stroke unit discharge same date as hospital discharge (1=Yes; 2=No)
+redcap_event_name
+                str12   %12s                  Event Type using REDCap format for all years
+secs            float   %9.0g                 
+asp_arr         float   %9.0g                 
+id_fname        str29   %29s                * First Name
+id_mname        str30   %30s                * Middle Name(s)/Initial(s)
+id_lname        str22   %22s                * Last Name(s)
+id_nid          str11   %11s                * Patient hospital number
+id_hid          str13   %13s                * Hospital / Patient Record Number
+                                            * indicated variables have notes
+--------------------------------------------------------------------------------------------------------
