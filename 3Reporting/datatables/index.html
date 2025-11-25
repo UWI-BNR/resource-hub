@@ -2072,65 +2072,78 @@
 
 
 
-<p>ables<style>
-  /<em> Wrapper: allows vertical scroll while header stays visible </em>/
+<style>
+  /* Wrapper: allows vertical scroll while header stays visible */
   .bnr-table-wrapper {
     max-height: 500px;
     overflow-y: auto;
     margin: 1rem 0;
-  }</p>
-<p>.bnr-table {
+  }
+
+  .bnr-table {
     width: 100%;
     border-collapse: collapse;
-  }</p>
-<p>.bnr-table th,
+  }
+
+  .bnr-table th,
   .bnr-table td {
     padding: 0.35rem 0.5rem;
     border: none;
     border-bottom: 1px solid #dddddd;
     text-align: left;
     white-space: nowrap;
-  }</p>
-<p>.bnr-table th:first-child,
+  }
+
+  .bnr-table th:first-child,
   .bnr-table td:first-child {
     text-align: left;
-  }</p>
-<p>.bnr-table tbody tr:nth-child(even) {
+  }
+
+  .bnr-table tbody tr:nth-child(even) {
     background-color: rgba(0, 0, 0, 0.03);
-  }</p>
-<p>.bnr-table thead th {
+  }
+
+  .bnr-table thead th {
     position: sticky;
     top: 0;
     z-index: 2;
     background-color: var(--md-surface, #ffffff);
-  }</p>
-<p>.bnr-table thead tr:last-child th {
+  }
+
+  .bnr-table thead tr:last-child th {
     border-bottom: 2px solid #cccccc;
-  }</p>
-<p>@media (prefers-color-scheme: dark) {
+  }
+
+  @media (prefers-color-scheme: dark) {
     .bnr-table tbody tr:nth-child(even) {
       background-color: rgba(255, 255, 255, 0.04);
     }
-  }</p>
-<p>.bnr-year-block {
+  }
+
+  .bnr-year-block {
     margin: 1rem 0 1.5rem 0;
-  }</p>
-<p>.bnr-year-label {
+  }
+
+  .bnr-year-label {
     font-weight: 600;
     margin-right: 0.5rem;
-  }</p>
-<p>.bnr-year-select {
+  }
+
+  .bnr-year-select {
     padding: 0.2rem 0.4rem;
     font-size: 0.9rem;
-  }</p>
-<p>/<em> Show 2023 table by default (while keeping other years hidden) </em>/
+  }
+
+/* Show 2023 table by default (while keeping other years hidden) */
 .bnr-year-table {
   display: none;
 }
 .bnr-year-table[data-bnr-year="2023"] {
   display: block;
-}</p>
+}
+
 </style>
+
 <h1 id="bnr-data-tables-2023">BNR Data Tables 2023<a class="headerlink" href="#bnr-data-tables-2023" title="Permanent link">&para;</a></h1>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <p>This page provides the full set of technical tabulations generated to support our 2023 BNR cardiovascular disease briefings. These tables present the underlying weekly, annual, and stratified counts for stroke, acute myocardial infarction (AMI), and all-CVD events, offering a transparent view of the data used in each analysis. They serve as the authoritative reference for all figures and metrics reported in each of our BNR briefings, ensuring reproducibility, comparability across years, and clarity for users who wish to explore the detailed numbers behind the summaries.</p>
