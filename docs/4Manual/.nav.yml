@@ -2,4 +2,12 @@ title: Ops Manual
 nav:
   - Manual Overview: index.md
   - Glossary: glossary.md
+  - About Manual: about-manual
+  - ChangeLog: changelog
+  - Core Processes: core-registry-processes
+  - Analytics & Reporting: reporting-analytics
+  - Documentation Templates: documentation-templates
+  - Engagement: engagement
+  - Governance: governance-roles
+  - Technical: resource-hub-technical 
 

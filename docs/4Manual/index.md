@@ -1,7 +1,14 @@
 # Operations Manual Overview
 
-The *BNR Operations Manual* will serve as the central reference for how the registry functions day to day — documenting procedures, responsibilities, and workflows across all areas of operation. This is *not part of Stage 1 of the BNR Refit*, but will be developed progressively as systems are stabilised and resources permit.
+???+ note "This is a Living Document"
 
-This manual will draw directly from *Recommendation 14 (Sustainability and Governance Enhancements)* and *Recommendation 8 (Open Standards and Documentation)* of the *BNR Process Audit*, as well as related deliverables on dataset governance, data release, and reporting. Over time, it will expand to include standard operating procedures, staff responsibilities, version-control practices, and risk management processes.
+    The BNR Operations Manual is designed to evolve as our systems strengthen and our practices improve. New pages, refinements, and clarifications will be added over time—ensuring the guidance here always reflects the most current, most effective way we work. This adaptability is intentional: it allows the BNR to stay responsive, transparent, and continuously improving.
 
-Each page added will strengthen institutional memory and support future audit, training, and accreditation needs — ensuring that the BNR remains transparent, consistent, and resilient as it evolves.
+
+Our *BNR Operations Manual* is the central reference for how the registry functions day to day — documenting procedures, responsibilities, and workflows across all areas of operation. 
+
+In creating our online manual, we are building directly from **Recommendation 14** *(Sustainability and Governance Enhancements)* and **Recommendation 8** *(Open Standards and Documentation)* of the *BNR Process Audit*. Over time, it will expand to include standard operating procedures, staff responsibilities, version-control practices, and risk management processes.
+
+<br/>
+
+

@@ -1,2 +1,0 @@
-# Analytics Overview
-This page will introduce the BNR analytics and reporting environment, explaining how cleaned and signed-off data flow into structured statistical analysis pipelines. It will describe the overall aim of producing timely, reproducible, and policy-relevant outputs using automated Stata workflows, and outline how the various report types (annual, monthly, ad-hoc) are generated and disseminated.

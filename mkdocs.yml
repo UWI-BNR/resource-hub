@@ -2,9 +2,9 @@ site_name: BNR Resource Hub
 site_description: An Online Operations Manual for the BNR
 site_author: Ian Hambleton
 
-site_url: https://uwi-bnr.github.io/bnr-refit/
-# repo_url: https://github.com/uwi-bnr/bnr-refit
-repo_name: bnr-refit
+site_url: https://uwi-bnr.github.io/resource-hub/
+# repo_url: https://github.com/uwi-bnr/resource-hub
+repo_name: resource-hub
 
 theme:
   name: material
@@ -43,6 +43,7 @@ plugins:
   - search
   - awesome-nav
   - glightbox
+#  - revealjs
 #  - section-index
 
 markdown_extensions:

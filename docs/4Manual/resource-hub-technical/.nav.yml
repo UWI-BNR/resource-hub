@@ -1,0 +1,5 @@
+title: Technical Resources
+nav:
+  - Technical Infrastructure Overview: index.md
+  - Stata Analytics System: stata-analytics-system.md
+  - Updating the Website: website-operations.md

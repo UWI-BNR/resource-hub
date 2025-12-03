@@ -1,0 +1,6 @@
+nav:
+  - Core Registry Processes Overview: index.md
+  - Case Identification & Data Sources: case-identification-data-sources.md
+  - Data Abstraction Standards: data-abstraction-standards.md
+  - Data Cleaning & Quality Control: data-cleaning-quality-control.md
+  - Dataset Release Workflow: dataset-release-workflow.md

@@ -2,7 +2,7 @@
 
 <p><span style="color:#6D6D6D;">Briefing created by the Barbados National Chronic Disease Registry, The University of the West Indies. Group Contacts ◉ Christina Howitt (BNR lead)  ◉  Ian Hambleton (analytics). Updated on: 18 Nov 2025 at 09:05:00 </span></p>
 
-<p><span style="color:#4D4D4D; font-style:italic;">For all our surveillance outputs: https://uwi-bnr.github.io/bnr-refit/5Downloads/
+<p><span style="color:#4D4D4D; font-style:italic;">For all our surveillance outputs: https://uwi-bnr.github.io/resource-hub/5Downloads/
  </span></p>
 
 ---

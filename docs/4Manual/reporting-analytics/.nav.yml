@@ -1,0 +1,4 @@
+nav:
+  - Reporting & Analytics Overview: index.md
+  - Analytics Workflow (Stata-Based): analytics-workflow-stata.md
+  - Standard Report Templates & Style Guide: report-templates-style.md
