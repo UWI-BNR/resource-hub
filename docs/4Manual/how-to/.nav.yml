@@ -1,0 +1,8 @@
+title: How To Guides
+nav:
+  - How To Guides: index.md 
+  - Setup Analytics on a PC: howto-setup-system.md 
+  - Export from REDCap: howto-export.md
+  - Run a Briefing: howto-run-briefing.md
+  - Monitor Monthly Events: howto-monitor-events.md
+  - Maintain Your System: howto-maintenance.md 

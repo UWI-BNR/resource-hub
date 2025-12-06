@@ -13,7 +13,7 @@ BNR-CVD-<CONTENT>-<TIER>-<YYYYMM>-v<VERSION>.dta
 ```
 
 - `<YYYYMM>` – the **final month of data coverage** (not the creation date).  
-- `<VERSION>` – uses semantic versioning (`v1.0`, `v1.1`, `v2.0`, etc.).  
+- `<VERSION>` – uses semantic versioning (`v1.0`, `v2.0`, etc.).  
 
 ---
 
@@ -25,7 +25,7 @@ BNR-CVD-<CONTENT>-<TIER>-<YYYYMM>-v<VERSION>.dta
 | `<CONTENT>` | Dataset type | `INDIV`, `AGGR`, `LINK` | **INDIV:** one row per event; full analytic dataset. <br> **AGGR:** aggregated or summarised dataset; no individual rows. <br> **LINK:** minimal internal linkage file used to connect records across years/sources (never distributed). |
 | `<TIER>` | Privacy level | `FULL`, `DEID`, `ANON` | **FULL:** contains identifiers or quasi-identifiers; internal use only. <br> **DEID:** de-identified; no direct identifiers; used for approved research and reporting. <br> **ANON:** anonymised or aggregated; suitable for public release. |
 | `<YYYYMM>` | Data coverage end month | e.g. `202312`, `202401` | Dataset includes data up to this month. |
-| `v<VERSION>` | Release version. | `v1.0`, `v1.1`, `v2.0` | Major = structure change; Minor = added/late records; Patch (optional) = label/cosmetic fix. |
+| `v<VERSION>` | Release version. | `v1.0`, `v2.0` | Each number change represents a change to a dataset that has been previously released. |
 
 ---
 

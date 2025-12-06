@@ -1733,6 +1733,8 @@
       
         
       
+        
+      
     
     
     
@@ -2815,15 +2817,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#8-step-by-step-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      (8) Step-by-Step Setup
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -2846,6 +2839,195 @@
   
   <span class="md-ellipsis">
     Updating the Website
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_11" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../how-to/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    How To Guides
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_11" id="__nav_5_11_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_11">
+            <span class="md-nav__icon md-icon"></span>
+            How To Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/howto-setup-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setup Analytics on a PC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/howto-export/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Export from REDCap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/howto-run-briefing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Run a Briefing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/howto-monitor-events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Monitor Monthly Events
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/howto-maintenance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Maintain Your System
     
   </span>
   
@@ -3027,15 +3209,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#8-step-by-step-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      (8) Step-by-Step Setup
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -3160,6 +3333,26 @@
 <tr>
 <td><a href="https://github.com/UWI-BNR/bnr-analytics/blob/main/ado/make_meta_xlsx.ado" target="_blank"><code>make_meta-xlsx.ado</code></a></td>
 <td>This ADO file has one sepecific use - to attach dataset-level and variable-level metadata to an exported Excel aggregated dataset. For an example of its use, see <code>bnrcvd-2023-count.do</code>.</td>
+</tr>
+<tr>
+<td>2024 ANALYTICS</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/UWI-BNR/bnr-analytics/blob/main/do/bnrcvd-2024-redcap-format.do" target="_blank"><code>bnrcvd-2024-redcap-format.do</code></a></td>
+<td>Uses python coding (the package: PyCap) to extract data directly from the REDCap API. The <code>.do</code> file extracts variables and associated variable-level metadata (variable labels, category labelling) directly into a Stata dataset via a python-pandas dataframe. The variable list to be exported and the export timeframe can be easily edited in this <code>.do</code> file. This export process is explained in the <a href="../../how-to/howto-export/">associated help file</a>.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/UWI-BNR/bnr-analytics/blob/main/do/bnrcvd-2024-redcap-format.do" target="_blank"><code>bnrcvd-2024-redcap-noformat.do</code></a></td>
+<td>The main REDCap export <code>.do</code> file (<code>bnrcvd-2024-redcap-format.do</code>) contains a fair bit of Python coding. I have created this alternative (much simpler) <code>.do</code> file that simply extracts variables from REDCap in string format and without associated metadata - to leave all subsequent data preparation in the more familiar Stata environment. (This might be useful for the future...).</td>
+</tr>
+<tr>
+<td><a href="https://github.com/UWI-BNR/bnr-analytics/blob/main/do/bnrcvd-2024-prep1.do" target="_blank"><code>bnrcvd-2024-prep1.do</code></a></td>
+<td>Joins monthly releases from 2024 to the (2009-2023) cumulative dataset. Otherwise, coding is much the same as for the 2023 version of the DO file. Exported files are placed in the BNR <code>temp/</code> folder and are not for general release.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/UWI-BNR/bnr-analytics/blob/main/do/bnrcvd-2024-count.do" target="_blank"><code>bnrcvd-2024-count.do</code></a></td>
+<td>This <code>.do</code> file is similar in style to the 2023 version of this file, but does not go beyond the creation  of a week-by-week count of CVD event, stratified by type (strokes, heart attacks). The 2024 charts are compared against the average of the previous 5 years (2018-2023). The chart can be built slowly over time as more data from the year become available, and give an ongoing sense of case-load compared to recent years.</td>
 </tr>
 </tbody>
 </table>
@@ -3439,143 +3632,6 @@ This shows the full path to <code>python.exe</code> on your PC, for example:<br 
 <li>There are no error messages</li>
 </ul>
 <p>If both <code>adopath</code> and <code>python query</code> look correct, your <code>profile.do</code> is working and your Stata startup environment is correctly configured.</p>
-</details>
-<hr />
-<details class="- info">
-<summary>(8) Setting up the system on a local PC</summary>
-<h2 id="8-step-by-step-setup">(8) Step-by-Step Setup<a class="headerlink" href="#8-step-by-step-setup" title="Permanent link">&para;</a></h2>
-<h3 id="preparing-your-local-pc-for-the-bnr-analytics-system">Preparing Your Local PC for the BNR Analytics System<a class="headerlink" href="#preparing-your-local-pc-for-the-bnr-analytics-system" title="Permanent link">&para;</a></h3>
-<p>This section brings together all the previous steps into one simple checklist, so you can prepare your PC for the BNR Analytics System and verify that everything works.</p>
-<hr />
-<h3 id="step-1-install-vs-code">Step 1 — Install VS Code<a class="headerlink" href="#step-1-install-vs-code" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Go to https://code.visualstudio.com/ in your web browser.</li>
-<li>Download the installer for your operating system (Windows or Mac).</li>
-<li>Run the installer and accept the default settings.</li>
-<li>Open VS Code.</li>
-<li>Click the Extensions icon on the left (it looks like four squares).</li>
-<li>In the search bar, type <code>Stata Enhanced</code>.</li>
-<li>Find the extension called <code>Stata Enhanced</code> by Kyle Barron and click <code>Install</code>.</li>
-</ol>
-<p>Verification:<br />
-Open any <code>.do</code> file in VS Code and confirm that the text has coloured syntax highlighting.</p>
-<hr />
-<h3 id="step-2-install-git-and-connect-to-github">Step 2 — Install Git and Connect to GitHub<a class="headerlink" href="#step-2-install-git-and-connect-to-github" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Go to https://git-scm.com/downloads.</li>
-<li>Download and install Git for your operating system (accept default options).</li>
-<li>Create a free GitHub account at https://github.com if you do not already have one.</li>
-<li>Open VS Code.</li>
-<li>Click the Accounts icon in the bottom-left corner and choose the option to sign in to GitHub.</li>
-<li>Authorise VS Code to access your GitHub account when prompted.</li>
-</ol>
-<p>To download (clone) the BNR Analytics repository:</p>
-<ol>
-<li>In VS Code, open the Command Palette (Ctrl+Shift+P).</li>
-<li>Type <code>Git: Clone</code> and press Enter.</li>
-<li>Paste the repository URL: <code>https://github.com/UWI-BNR/bnr-analytics</code></li>
-<li>Choose a folder on your PC where you want the repository to live.</li>
-<li>Wait for the download to complete, then open the newly downloaded folder in VS Code.</li>
-</ol>
-<p>Verification:<br />
-In the folder you chose, you should see subfolders such as <code>do</code>, <code>ado</code>, <code>tables</code>, <code>graphics</code>, <code>outputs</code>, and <code>temp</code>.</p>
-<hr />
-<h3 id="step-3-install-or-update-python-version-3x-required">Step 3 — Install or Update Python (Version 3.x Required)<a class="headerlink" href="#step-3-install-or-update-python-version-3x-required" title="Permanent link">&para;</a></h3>
-<ol>
-<li>In VS Code, open the Terminal (Ctrl+Shift+`).</li>
-<li>Type <code>python --version</code> and press Enter.</li>
-<li>If this shows Python 3.x, you can keep this version.<br />
-If it shows Python 2.x, or gives an error, install Python 3:</li>
-</ol>
-<p>a. Go to https://www.python.org/downloads/<br />
-b. Download the latest Python 3 version.<br />
-c. Run the installer and tick the box <code>Add Python to PATH</code>.<br />
-d. Click <code>Install Now</code> and complete the setup.</p>
-<ol>
-<li>After installation, open a new Terminal in VS Code and run <code>python --version</code> again to confirm it shows Python 3.x.</li>
-</ol>
-<p>Verification inside Stata:</p>
-<ol>
-<li>Open Stata.</li>
-<li>Type <code>python query</code> and press Enter.</li>
-<li>Confirm that the version is Python 3.x and a valid executable path is shown.</li>
-</ol>
-<p>If Stata does not show the correct path, see Instruction 3 for how to set it using <code>python set exec</code>.</p>
-<hr />
-<h3 id="step-4-check-the-analytics-folder-structure">Step 4 — Check the Analytics Folder Structure<a class="headerlink" href="#step-4-check-the-analytics-folder-structure" title="Permanent link">&para;</a></h3>
-<p>Once cloned, your <code>bnr-analytics</code> folder will contain the following subfolders:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>.
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>├── bnr-analytics/      
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>│   ├── ado             
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>│   ├── do
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>├── .gitignore
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>├── README.md
-</span></code></pre></div>
-<p>You will also have a link to a ZIP file (<code>bnr-analytics.zip</code>). This zip file contains the remaining subfolders. </p>
-<ol>
-<li>Place the zip file in the <code>bnr-analytics/</code> subfolder.</li>
-<li>Unzip to bnr-analytics/ (NOT TO a subfolder)</li>
-<li>Once unzipped, your <code>bnr-analytics</code> folder should look like this:</li>
-</ol>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>.
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>├── bnr-analytics/      
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>│   ├── ado             
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>│   ├── data         &lt;-- Contains identifiable datasets 
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>│   ├── do           &lt;-- Contains `bnrcvd-2023-redcap-token` DO file
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>│   ├── graphics
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>│   ├── log
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>│   ├── outputs      &lt;-- Contains briefings (will be replaced on running DO files)
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>│   ├── tables
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>│   ├── temp
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>├── .gitignore
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>├── README.md
-</span></code></pre></div>
-<p>Note:<br />
-The <code>data</code> and <code>temp</code> folders, and the <code>bnrcvd-2023-redcap-token.do</code> DO file hold identifiable data and interim files. These must only exist on <strong>secure, encrypted local storage</strong> and must not be uploaded to GitHub or any other public service.</p>
-<hr />
-<h3 id="step-5-configure-profiledo-in-stata">Step 5 — Configure <code>profile.do</code> in Stata<a class="headerlink" href="#step-5-configure-profiledo-in-stata" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Open Stata and type <code>sysdir</code> in the Command window, then press Enter.</li>
-<li>Note the folder shown next to <code>PERSONAL</code>.</li>
-<li>In that <code>PERSONAL</code> folder, create or edit the file <code>profile.do</code>.</li>
-<li>Add lines that tell Stata where your <code>bnr-analytics</code> repository lives and where Python is installed.</li>
-</ol>
-<p>Example (you must change the paths to match your PC):</p>
-<p><code>capture noisily adopath + "C:/Users/Joan/BNR/bnr-analytics/"</code><br />
-<code>capture noisily adopath + "C:/Users/Joan/BNR/bnr-analytics/do/"</code><br />
-<code>capture noisily adopath + "C:/Users/Joan/BNR/bnr-analytics/ado/"</code><br />
-<code>python set exec "C:/Users/Joan/AppData/Local/Programs/Python/Python312/python.exe", permanently</code></p>
-<ol>
-<li>Save <code>profile.do</code>.</li>
-</ol>
-<p>Verification:</p>
-<ol>
-<li>Close Stata completely.</li>
-<li>Open Stata again (this runs <code>profile.do</code>).</li>
-<li>Type <code>adopath</code> and press Enter. Confirm your <code>bnr-analytics</code> paths are listed.</li>
-<li>Type <code>python query</code> and press Enter. Confirm the Python path and version are correct.</li>
-</ol>
-<hr />
-<h3 id="step-6-run-a-simple-test-do-file">Step 6 — Run a Simple Test DO File<a class="headerlink" href="#step-6-run-a-simple-test-do-file" title="Permanent link">&para;</a></h3>
-<ol>
-<li>In Stata, use the <code>cd</code> command to move to your <code>bnr-analytics</code> folder, or supply the full path in quotes.</li>
-<li>Run the global setup file, for example:</li>
-</ol>
-<p><code>do "C:/Users/Joan/BNR/bnr-analytics/bnrcvd-globals.do"</code></p>
-<ol>
-<li>Check that it runs without errors.</li>
-</ol>
-<hr />
-<h3 id="step-7-run-an-analytics-script-as-a-final-check">Step 7 — Run an Analytics Script as a Final Check<a class="headerlink" href="#step-7-run-an-analytics-script-as-a-final-check" title="Permanent link">&para;</a></h3>
-<ol>
-<li>In Stata, run one of the main analytics scripts, for example:</li>
-</ol>
-<p><code>do "C:/Users/Joan/BNR/bnr-analytics/bnrcvd-2023-count.do"</code></p>
-<ol>
-<li>Watch the Stata output window for any missing-file or path errors.</li>
-<li>When it finishes, look in the <code>outputs</code> or <code>tables</code> folder to confirm that new output files (for example Excel or PDF) have been created.</li>
-</ol>
-<p>If this script runs to completion and produces outputs in the expected folders, your local PC is fully configured for the BNR Analytics System.</p>
 </details>
 <p><br/></p>
 

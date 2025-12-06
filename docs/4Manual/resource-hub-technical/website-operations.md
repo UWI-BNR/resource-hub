@@ -1,8 +1,8 @@
 # How the BNR Website Was Built — and How We Keep It Updated
 
-The BNR Resource Hub is built using **Material for MkDocs**, a simple and modern documentation system.  
-Everything lives inside a GitHub repository:  
-https://github.com/UWI-BNR/resource-hub
+The BNR Resource Hub is built using **Material for MkDocs**, a simple and modern documentation system. Everything lives inside a GitHub repository:  
+
+> https://github.com/UWI-BNR/resource-hub
 
 There is **no traditional server**, no complex CMS, and no coding required. The website is made from plain text files written in Markdown. When files are updated and pushed to GitHub, the site automatically rebuilds itself.
 
