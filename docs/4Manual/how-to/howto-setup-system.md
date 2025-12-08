@@ -1,5 +1,5 @@
 
-# **How To:** Set-up BNR Analytics on a local PC
+# How To: Set-up BNR Analytics on a local PC
 In this *How To Guide* we bring together the various steps described in more detail on the [companion page](../resource-hub-technical/stata-analytics-system.md) into a simple checklist, so you can prepare your PC for the BNR Analytics System and verify that everything works.
 
 ---
@@ -202,19 +202,33 @@ In this *How To Guide* we bring together the various steps described in more det
 
     ---
 
-???- example "Step 6 — Run a Simple Test DO File"
+???- example "Step 6 — Configure your GLOBAL settings"
 
-    ## Step 6 — Run a Simple Test DO File
+    ## Step 6 — Configure your GLOBAL settings
 
-    22. In Stata, use the `cd` command to move to your `bnr-analytics` folder, or supply the full path in quotes.
-    23. Run the global setup file, for example: `do "C:/Users/Joan/BNR/bnr-analytics/do/bnrcvd-globals.do"`
-    24. Check that it runs without errors.
+    You have a simple Stata ADO file called `bnrpath.ado` in the `ado/` folder of your `bnr-analytics` repository. This file contains a single line of code that you should change to reflect the location of your *bnr-analytics* repository.
+
+    > global BNRROOT "C:/yasuki/Sync/BNR-sandbox/006-dev/github/bnr-analytics"
+
+    Change the path in quotes to match the location of your local `bnr-analytics` folder.
+
+    You also have a local DO file called `bnrcvd-globals.do` in the `do/` folder of your `bnr-analytics` repository. This file is called by most subsequent analysis `.do` files, and contains a series of folder locations, system settings, and the BNR briefings color scheme. You can change any of these settings at any time, and these changes will be reflected across the subsequent DO files. 
 
     ---
 
-???- example "Step 7 — Run an Analytics Script as a Final Check"
+???- example "Step 7 — Run a Simple Test DO File"
 
-    ## Step 7 — Run an Analytics Script as a Final Check
+    ## Step 7 — Run a Simple Test DO File
+
+    1.  In Stata, use the `cd` command to move to your `bnr-analytics` folder, or supply the full path in quotes.
+    2.  Run the global setup file, for example: `do "C:/Users/Joan/BNR/bnr-analytics/do/bnrcvd-globals.do"`
+    3.  Check that it runs without errors.
+
+    ---
+
+???- example "Step 8 — Run an Analytics Script as a Final Check"
+
+    ## Step 8 — Run an Analytics Script as a Final Check
 
     25. In Stata, run one of the main analytics scripts, for example: `do "C:/Users/Joan/BNR/bnr-analytics/do/bnrcvd-2023-count.do"`
     26. Watch the Stata output window for any missing-file or path errors.
