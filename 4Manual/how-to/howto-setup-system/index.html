@@ -2764,8 +2764,6 @@
       
         
       
-        
-      
     
     
     
@@ -2911,18 +2909,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-6-run-a-simple-test-do-file" class="md-nav__link">
+  <a href="#step-6-configure-your-global-settings" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 6 — Run a Simple Test DO File
+      Step 6 — Configure your GLOBAL settings
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-7-run-an-analytics-script-as-a-final-check" class="md-nav__link">
+  <a href="#step-7-run-a-simple-test-do-file" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 7 — Run an Analytics Script as a Final Check
+      Step 7 — Run a Simple Test DO File
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-8-run-an-analytics-script-as-a-final-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 8 — Run an Analytics Script as a Final Check
     </span>
   </a>
   
@@ -2996,29 +3003,6 @@
   
   <span class="md-ellipsis">
     Monitor Monthly Events
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../howto-maintenance/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Maintain Your System
     
   </span>
   
@@ -3174,18 +3158,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-6-run-a-simple-test-do-file" class="md-nav__link">
+  <a href="#step-6-configure-your-global-settings" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 6 — Run a Simple Test DO File
+      Step 6 — Configure your GLOBAL settings
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-7-run-an-analytics-script-as-a-final-check" class="md-nav__link">
+  <a href="#step-7-run-a-simple-test-do-file" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 7 — Run an Analytics Script as a Final Check
+      Step 7 — Run a Simple Test DO File
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-8-run-an-analytics-script-as-a-final-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 8 — Run an Analytics Script as a Final Check
     </span>
   </a>
   
@@ -3207,7 +3200,7 @@
 
 
 
-<h1 id="how-to-set-up-bnr-analytics-on-a-local-pc"><strong>How To:</strong> Set-up BNR Analytics on a local PC<a class="headerlink" href="#how-to-set-up-bnr-analytics-on-a-local-pc" title="Permanent link">&para;</a></h1>
+<h1 id="how-to-set-up-bnr-analytics-on-a-local-pc">How To: Set-up BNR Analytics on a local PC<a class="headerlink" href="#how-to-set-up-bnr-analytics-on-a-local-pc" title="Permanent link">&para;</a></h1>
 <p>In this <em>How To Guide</em> we bring together the various steps described in more detail on the <a href="../../resource-hub-technical/stata-analytics-system/">companion page</a> into a simple checklist, so you can prepare your PC for the BNR Analytics System and verify that everything works.</p>
 <hr />
 <details class="- example">
@@ -3411,8 +3404,19 @@ The <code>data</code> and <code>temp</code> folders, and the <code>bnrcvd-2023-r
 <hr />
 </details>
 <details class="- example">
-<summary>Step 6 — Run a Simple Test DO File</summary>
-<h2 id="step-6-run-a-simple-test-do-file">Step 6 — Run a Simple Test DO File<a class="headerlink" href="#step-6-run-a-simple-test-do-file" title="Permanent link">&para;</a></h2>
+<summary>Step 6 — Configure your GLOBAL settings</summary>
+<h2 id="step-6-configure-your-global-settings">Step 6 — Configure your GLOBAL settings<a class="headerlink" href="#step-6-configure-your-global-settings" title="Permanent link">&para;</a></h2>
+<p>You have a simple Stata ADO file called <code>bnrpath.ado</code> in the <code>ado/</code> folder of your <code>bnr-analytics</code> repository. This file contains a single line of code that you should change to reflect the location of your <em>bnr-analytics</em> repository.</p>
+<blockquote>
+<p>global BNRROOT "C:/yasuki/Sync/BNR-sandbox/006-dev/github/bnr-analytics"</p>
+</blockquote>
+<p>Change the path in quotes to match the location of your local <code>bnr-analytics</code> folder.</p>
+<p>You also have a local DO file called <code>bnrcvd-globals.do</code> in the <code>do/</code> folder of your <code>bnr-analytics</code> repository. This file is called by most subsequent analysis <code>.do</code> files, and contains a series of folder locations, system settings, and the BNR briefings color scheme. You can change any of these settings at any time, and these changes will be reflected across the subsequent DO files. </p>
+<hr />
+</details>
+<details class="- example">
+<summary>Step 7 — Run a Simple Test DO File</summary>
+<h2 id="step-7-run-a-simple-test-do-file">Step 7 — Run a Simple Test DO File<a class="headerlink" href="#step-7-run-a-simple-test-do-file" title="Permanent link">&para;</a></h2>
 <ol>
 <li>In Stata, use the <code>cd</code> command to move to your <code>bnr-analytics</code> folder, or supply the full path in quotes.</li>
 <li>Run the global setup file, for example: <code>do "C:/Users/Joan/BNR/bnr-analytics/do/bnrcvd-globals.do"</code></li>
@@ -3421,8 +3425,8 @@ The <code>data</code> and <code>temp</code> folders, and the <code>bnrcvd-2023-r
 <hr />
 </details>
 <details class="- example">
-<summary>Step 7 — Run an Analytics Script as a Final Check</summary>
-<h2 id="step-7-run-an-analytics-script-as-a-final-check">Step 7 — Run an Analytics Script as a Final Check<a class="headerlink" href="#step-7-run-an-analytics-script-as-a-final-check" title="Permanent link">&para;</a></h2>
+<summary>Step 8 — Run an Analytics Script as a Final Check</summary>
+<h2 id="step-8-run-an-analytics-script-as-a-final-check">Step 8 — Run an Analytics Script as a Final Check<a class="headerlink" href="#step-8-run-an-analytics-script-as-a-final-check" title="Permanent link">&para;</a></h2>
 <ol>
 <li>In Stata, run one of the main analytics scripts, for example: <code>do "C:/Users/Joan/BNR/bnr-analytics/do/bnrcvd-2023-count.do"</code></li>
 <li>Watch the Stata output window for any missing-file or path errors.</li>

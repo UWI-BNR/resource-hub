@@ -18,7 +18,7 @@
         <link rel="prev" href="../howto-run-briefing/">
       
       
-        <link rel="next" href="../howto-maintenance/">
+        <link rel="next" href="../../../5Downloads/">
       
       
       <link rel="icon" href="../../../assets/icons/favicon.ico">
@@ -91,6 +91,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#how-to-monitor-cvd-events" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -2759,8 +2764,6 @@
       
         
       
-        
-      
     
     
     
@@ -2886,6 +2889,21 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Monitor Monthly Events
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -2899,29 +2917,34 @@
 
       </a>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../howto-maintenance/" class="md-nav__link">
         
-  
-  
-  <span class="md-ellipsis">
-    Maintain Your System
-    
-  </span>
-  
 
-      </a>
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#new-cvd-events-in-2024-by-month" class="md-nav__link">
+    <span class="md-ellipsis">
+      New CVD Events in 2024 by Month
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -3017,6 +3040,25 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#new-cvd-events-in-2024-by-month" class="md-nav__link">
+    <span class="md-ellipsis">
+      New CVD Events in 2024 by Month
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -3032,9 +3074,78 @@
 
 
 
-  <h1>Monitor Monthly Events</h1>
-
-
+<h1 id="how-to-monitor-cvd-events">How To: Monitor CVD Events<a class="headerlink" href="#how-to-monitor-cvd-events" title="Permanent link">&para;</a></h1>
+<p>In your BNR-analytics DO file repository there are four files with the prefix <strong>bnrcvd-2024</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Do file</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/UWI-BNR/bnr-analytics/blob/main/do/bnrcvd-2024-redcap-format.do" target="_blank"><strong>bnrcvd-2024-redcap-format.do</strong></a></td>
+<td>Exports data from REDCap into Stata format</td>
+</tr>
+<tr>
+<td><a href="https://github.com/UWI-BNR/bnr-analytics/blob/main/do/bnrcvd-2024-redcap-noformat.do" target="_blank"><strong>bnrcvd-2024-redcap-noformat.do</strong></a></td>
+<td>Exports data from REDCap into a CSV file, with all variables exported as strings. This is a simpler export version, should the Stata-formatting in the formatted export fail for any reason</td>
+</tr>
+<tr>
+<td><a href="https://github.com/UWI-BNR/bnr-analytics/blob/main/do/bnrcvd-2024-prep1.do" target="_blank"><strong>bnrcvd-2024-prep1.do</strong></a></td>
+<td>Prepares the 2024 data exports for subsequent analytics</td>
+</tr>
+<tr>
+<td><a href="https://github.com/UWI-BNR/bnr-analytics/blob/main/do/bnrcvd-2024-count.do" target="_blank"><strong>bnrcvd-2024-count.do</strong></a></td>
+<td>Creates weekly cumulative "worm" plots of new CVD events</td>
+</tr>
+</tbody>
+</table>
+<p>These are example files, providing one possible process for exporting monthly 2024 (and beyond) data from REDCap, with minimal changes to the 2023 code, and creating simple monthly plots for event monitoring in "real time" (could do this daily, for example if this ever made sense).</p>
+<p>The entire process could be wrapped in further automation, but at this stage - with process change still to be decided on and enacted - automation would be premature.</p>
+<p>Nevertheless, the final do file (<code>bnrcvd-2024-worms.do</code>) creates the following monthly plots of new CVD events in 2024, which can be used to monitor trends as the year progresses.</p>
+<h2 id="new-cvd-events-in-2024-by-month">New CVD Events in 2024 by Month<a class="headerlink" href="#new-cvd-events-in-2024-by-month" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:12"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><input id="__tabbed_1_7" name="__tabbed_1" type="radio" /><input id="__tabbed_1_8" name="__tabbed_1" type="radio" /><input id="__tabbed_1_9" name="__tabbed_1" type="radio" /><input id="__tabbed_1_10" name="__tabbed_1" type="radio" /><input id="__tabbed_1_11" name="__tabbed_1" type="radio" /><input id="__tabbed_1_12" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Jan</label><label for="__tabbed_1_2">Feb</label><label for="__tabbed_1_3">Mar</label><label for="__tabbed_1_4">Apr</label><label for="__tabbed_1_5">May</label><label for="__tabbed_1_6">Jun</label><label for="__tabbed_1_7">Jul</label><label for="__tabbed_1_8">Aug</label><label for="__tabbed_1_9">Sep</label><label for="__tabbed_1_10">Oct</label><label for="__tabbed_1_11">Nov</label><label for="__tabbed_1_12">Dec</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="glightbox" href="../../../assets/images/bnrcvd-worm-wks-01-05.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="left" alt="Jan 2024" src="../../../assets/images/bnrcvd-worm-wks-01-05.png" /></a></p>
+</div>
+<div class="tabbed-block">
+<p><a class="glightbox" href="../../../assets/images/bnrcvd-worm-wks-01-08.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="left" alt="Feb 2024" src="../../../assets/images/bnrcvd-worm-wks-01-08.png" /></a></p>
+</div>
+<div class="tabbed-block">
+<p><a class="glightbox" href="../../../assets/images/bnrcvd-worm-wks-01-13.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="left" alt="Feb 2024" src="../../../assets/images/bnrcvd-worm-wks-01-13.png" /></a></p>
+</div>
+<div class="tabbed-block">
+<p><a class="glightbox" href="../../../assets/images/bnrcvd-worm-wks-01-17.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="left" alt="Feb 2024" src="../../../assets/images/bnrcvd-worm-wks-01-17.png" /></a></p>
+</div>
+<div class="tabbed-block">
+<p><a class="glightbox" href="../../../assets/images/bnrcvd-worm-wks-01-22.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="left" alt="Feb 2024" src="../../../assets/images/bnrcvd-worm-wks-01-22.png" /></a></p>
+</div>
+<div class="tabbed-block">
+<p><a class="glightbox" href="../../../assets/images/bnrcvd-worm-wks-01-26.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="left" alt="Feb 2024" src="../../../assets/images/bnrcvd-worm-wks-01-26.png" /></a></p>
+</div>
+<div class="tabbed-block">
+<p><a class="glightbox" href="../../../assets/images/bnrcvd-worm-wks-01-31.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="left" alt="Feb 2024" src="../../../assets/images/bnrcvd-worm-wks-01-31.png" /></a></p>
+</div>
+<div class="tabbed-block">
+<p><a class="glightbox" href="../../../assets/images/bnrcvd-worm-wks-01-36.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="left" alt="Feb 2024" src="../../../assets/images/bnrcvd-worm-wks-01-36.png" /></a></p>
+</div>
+<div class="tabbed-block">
+<p><a class="glightbox" href="../../../assets/images/bnrcvd-worm-wks-01-40.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="left" alt="Feb 2024" src="../../../assets/images/bnrcvd-worm-wks-01-40.png" /></a></p>
+</div>
+<div class="tabbed-block">
+<p><a class="glightbox" href="../../../assets/images/bnrcvd-worm-wks-01-44.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="left" alt="Feb 2024" src="../../../assets/images/bnrcvd-worm-wks-01-44.png" /></a></p>
+</div>
+<div class="tabbed-block">
+<p><a class="glightbox" href="../../../assets/images/bnrcvd-worm-wks-01-48.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="left" alt="Feb 2024" src="../../../assets/images/bnrcvd-worm-wks-01-48.png" /></a></p>
+</div>
+<div class="tabbed-block">
+<p><a class="glightbox" href="../../../assets/images/bnrcvd-worm-wks-01-52.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="left" alt="Feb 2024" src="../../../assets/images/bnrcvd-worm-wks-01-52.png" /></a></p>
+</div>
+</div>
+</div>
 
 
 
@@ -3089,13 +3200,13 @@
         
         
           
-          <a href="../howto-maintenance/" class="md-footer__link md-footer__link--next" aria-label="Next: Maintain Your System">
+          <a href="../../../5Downloads/" class="md-footer__link md-footer__link--next" aria-label="Next: Downloads">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Maintain Your System
+                Downloads
               </div>
             </div>
             <div class="md-footer__button md-icon">
