@@ -3362,41 +3362,34 @@
 </ul>
 <hr />
 <h2 id="6-cumulative-dataset-release">6. Cumulative Dataset Release<a class="headerlink" href="#6-cumulative-dataset-release" title="Permanent link">&para;</a></h2>
-<p>A cumulative release of the <em>CVD-AMI</em> dataset and the <em>CVD-Stroke</em> dataset will be created once each month. </p>
+<p>A cumulative release of the <em>CVD-CVD</em> dataset will be created once each month. </p>
 <p><strong>Release Date:</strong> First working day of each month</p>
 <p><strong>Datasets:</strong> </p>
 <ul>
+<li>One combined CVD dataset</li>
+</ul>
+<p>and potentially, </p>
+<ul>
 <li>One AMI dataset, </li>
 <li>One stroke dataset, </li>
-<li>One combined CVD dataset</li>
 </ul>
 <p><strong>Included records:</strong> All cumulative releases + all CVD cases for which abstraction has been completed and the REDCap case record has been electronically-signed and locked by the BNR Team Lead as clean. </p>
 <p><strong>Dataset Naming Convention:</strong></p>
+<p>See <a href="../dataset/metadata/">metadata standards</a> for details: </p>
 <ul>
 <li>
-<p><code>BNR-&lt;TYPE&gt;-&lt;TIER&gt;-&lt;YYYYMM&gt;.dta</code></p>
+<p><code>BNR-CVD-&lt;CONTENT&gt;-&lt;TIER&gt;-&lt;YYYYMM&gt;-v&lt;VERSION&gt;.dta</code></p>
 </li>
 <li>
-<p>(Example) <code>BNR-AMI-DEID-202509.dta</code></p>
+<p>(Example) <code>BNR-CVD-DEID-202509-v1.dta</code></p>
 </li>
 <li>
-<p>(Example) <code>BNR-STROKE-ANON-202509.dta</code></p>
+<p>(Example) <code>BNR-STROKE-ANON-202509-v2.dta</code></p>
 </li>
 </ul>
 <p><strong>Release Folder Structure:</strong></p>
 <ul>
-<li>
-<p><code>/2Data/releases/YYYY/MM/</code></p>
-</li>
-<li>
-<p><code>FULL/</code></p>
-</li>
-<li>
-<p><code>DEID/</code></p>
-</li>
-<li>
-<p><code>ANON/</code></p>
-</li>
+<li><code>/Data/releases/y&lt;YYYY&gt;/m&lt;MM&gt;/</code></li>
 </ul>
 <p><strong>Dataset Formats</strong>
 Each released dataset will be provided in multiple formats:</p>
@@ -3413,7 +3406,7 @@ Each released dataset will be provided in multiple formats:</p>
 <td><strong>Stata binary file</strong> (primary working format, includes labels, formats, internal metadata)</td>
 </tr>
 <tr>
-<td><code>.csv</code></td>
+<td><code>.csv / .xlsx</code></td>
 <td><strong>Non-proprietary, comma-separated format</strong> (for general use, readable in most statistical software and Excel)</td>
 </tr>
 <tr>
@@ -3421,14 +3414,14 @@ Each released dataset will be provided in multiple formats:</p>
 <td><strong>Machine-readable format</strong> useful for integration with dashboards, data visualization tools, or APIs</td>
 </tr>
 <tr>
-<td><code>.txt</code></td>
+<td><code>.yml</code></td>
 <td><strong>Metadata file</strong> summarizing variables, definitions, coding, and notes (accompanies each release)</td>
 </tr>
 </tbody>
 </table>
 <hr />
 <h2 id="7-tiered-dataset-creation">7. Tiered Dataset Creation<a class="headerlink" href="#7-tiered-dataset-creation" title="Permanent link">&para;</a></h2>
-<h4 id="see-the-dataset-dissemination-sop-for-details"><mark>See the dataset dissemination SOP for details</mark><a class="headerlink" href="#see-the-dataset-dissemination-sop-for-details" title="Permanent link">&para;</a></h4>
+<h4 id="see-the-dataset-dissemination-sop-for-details">See the <a href="../dataset-dissemination/">dataset dissemination SOP</a> for details<a class="headerlink" href="#see-the-dataset-dissemination-sop-for-details" title="Permanent link">&para;</a></h4>
 <p><strong>Small Island Privacy Considerations:</strong> Given the BNR's context in Barbados, a small island developing state (SIDS) with a population of ~280,000, the risk of potential re-identification from seemingly benign combinations of data is higher than in larger jurisdictions. Even when direct identifiers are removed, indirect identifiers ("quasi-identifiers") may allow individuals to be re-identified when cross-referenced with external datasets or local knowledge. This consideration is key in our process of de-identification (<a href="#72-de-identified-dataset">section 7.2</a>), anonymisation (<a href="#73-anonymised-dataset">section 7.3</a>), and review of identifiability risk (<a href="#8-identifiability-risk">Section 8</a>).</p>
 <h3 id="71-full-dataset">7.1. Full Dataset<a class="headerlink" href="#71-full-dataset" title="Permanent link">&para;</a></h3>
 <p>These datasets are maintained as an Individual Level Data (ILD), with one row of data per CVD event. All collected variables are retained in this dataset, including names, exact dates, hospital IDs. For internal BNR team use only.</p>
@@ -3490,8 +3483,8 @@ Each released dataset will be provided in multiple formats:</p>
 <blockquote>
 <p>Counts fewer than 5 have been suppressed to protect confidentiality. Additional suppression may be applied where necessary.</p>
 </blockquote>
-<p>Before release, aggregated datasets must undergo review for suppression compliance, metadata completeness, and re-identification risk. For open data publication, assign a CC BY 4.0 license, register a DOI, and provide a recommended citation format.<br />
-<mark>See the dataset dissemination SOP for details.</mark></p>
+<p>Before release, aggregated datasets must undergo review for suppression compliance, metadata completeness, and re-identification risk. For open data publication, assign a CC BY 4.0 license, register a DOI, and provide a recommended citation format.  </p>
+<p>See the <a href="../dataset-dissemination/">dataset dissemination SOP</a> for details.</p>
 <h3 id="75-a-note-on-cell-suppression">7.5 A note on cell suppression<a class="headerlink" href="#75-a-note-on-cell-suppression" title="Permanent link">&para;</a></h3>
 <p>Due to the sensitive nature of the BNR, we generally suppress cells where the overall stratified count per year is less than 5 to protect confidentiality. </p>
 <p>Additional suppression is applied where the risk of re-identification is high due to geography, rare outcomes, or small subgroups.”</p>
