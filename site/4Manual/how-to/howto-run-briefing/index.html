@@ -92,6 +92,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#how-to-update-a-bnr-analytics-briefing" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -2759,8 +2764,6 @@
       
         
       
-        
-      
     
     
     
@@ -2863,6 +2866,21 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Run a Briefing
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -2875,6 +2893,52 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-dataset-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1 - Dataset Preparation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-create-do-file-copy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2 - Create DO file Copy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-updating-the-briefing-do-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3 - Updating the Briefing DO file
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2894,29 +2958,6 @@
   
   <span class="md-ellipsis">
     Monitor Monthly Events
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../howto-maintenance/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Maintain Your System
     
   </span>
   
@@ -3017,6 +3058,43 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-dataset-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1 - Dataset Preparation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-create-do-file-copy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2 - Create DO file Copy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-updating-the-briefing-do-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3 - Updating the Briefing DO file
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -3032,9 +3110,71 @@
 
 
 
-  <h1>Run a Briefing</h1>
-
-
+<h1 id="how-to-update-a-bnr-analytics-briefing">How To: Update a BNR Analytics Briefing<a class="headerlink" href="#how-to-update-a-bnr-analytics-briefing" title="Permanent link">&para;</a></h1>
+<p>In this <em>How To Guide</em> we describe how to update an BNR BRiefing. We use the briefing known as "Hospital Cardiovascular Cases in Barbados" as our example. This is created using the <code>.do</code> file <code>bnrcvd-2023-count.do</code></p>
+<hr />
+<details class="- example">
+<summary>Step 1 - Dataset Preparation</summary>
+<h2 id="step-1-dataset-preparation">Step 1 - Dataset Preparation<a class="headerlink" href="#step-1-dataset-preparation" title="Permanent link">&para;</a></h2>
+<p>Each briefing initially calls two <code>.do</code> files:</p>
+<blockquote>
+<p><strong>bnrcvd-globals.do</strong> — sets up global settings used everywhere.</p>
+<p><strong>bnrcvd-2023-prep1.do</strong> — prepares the cleaned dataset used in your briefing.</p>
+</blockquote>
+<p>In the <strong>prep1 DO file</strong>, the main section needing updates is at the end of the file, where the datasets with associated metadata are created.</p>
+</details>
+<details class="- example">
+<summary>Step 2 - Create DO file Copy</summary>
+<h2 id="step-2-create-do-file-copy">Step 2 - Create DO file Copy<a class="headerlink" href="#step-2-create-do-file-copy" title="Permanent link">&para;</a></h2>
+<p>Always make a copy of last year’s briefing file.<br />
+Use a clear naming system such as:</p>
+<ul>
+<li><code>bnrcvd-2024-count.do</code></li>
+<li><code>bnrcvd-2025-count.do</code></li>
+</ul>
+<p>or perhaps,</p>
+<ul>
+<li><code>bnrcvd-2024-06-count.do</code> if choosing to release the briefing at more regular intervals.</li>
+</ul>
+<p>This prevents accidental edits to previous briefings and ensures a 1-to-1 match between each briefing and it's associated DO file and dataset - which will help future analysts understand past analytic efforts. </p>
+</details>
+<details class="- example">
+<summary>Step 3 - Updating the briefing DO file</summary>
+<h2 id="step-3-updating-the-briefing-do-file">Step 3 - Updating the Briefing DO file<a class="headerlink" href="#step-3-updating-the-briefing-do-file" title="Permanent link">&para;</a></h2>
+<p>New data will inevitably mean that certain parts of the briefing DO file will need to be updated. Each Briefing DO files makes it very clear the points that changes should be considered. At these points, the DO file contains comments like the following:</p>
+<div class="language-stata highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cs">/// --- UPDATE AS NEEDED -- </span><span class="c1">///</span>
+</span></code></pre></div>
+<p>Below is a example list of all UPDATE comments inside <code>bnrcvd-2023-count.do</code>, with simple explanations. Similar comment points exist in each briefing DO file:</p>
+<p><strong>1. <code>UPDATE 5-YEAR AVERAGE AS NEEDED</code></strong>  </p>
+<ul>
+<li>Update the comparison years used to calculate rolling averages.</li>
+</ul>
+<p><strong>2. <code>UPDATE RANGE AS NEEDED</code></strong>  </p>
+<ul>
+<li>Potentially adjust y-axis range used in graphic.</li>
+</ul>
+<p><strong>3. <code>UPDATE GRAPH NAME AS NEEDED</code></strong>  </p>
+<ul>
+<li>Update the filename of the graph that will be saved.</li>
+</ul>
+<p><strong>4. <code>UPDATE GRAPH METADATA FILE AS NEEDED</code></strong>  </p>
+<ul>
+<li>Update the <code>.yml</code> metadata file used for graph descriptions.</li>
+</ul>
+<p><strong>5. <code>BRIEFING LAYOUT FROM HERE. UPDATE AS NEEDED</code></strong>  </p>
+<ul>
+<li>Potentially edit the style and layout of the briefing as required.</li>
+</ul>
+<p><strong>6. <code>BRIEFING TEXT. UPDATE AS NEEDED</code></strong>  </p>
+<ul>
+<li>Update the written text that will appear in the briefing (e.g., explanations of trends).</li>
+</ul>
+<p><strong>7. <code>BRIEFING FILENAME. UPDATE AS NEEDED</code></strong>  </p>
+<ul>
+<li>Change the filename of the final exported briefing.</li>
+</ul>
+</details>
+<p><br/></p>
 
 
 

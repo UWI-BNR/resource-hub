@@ -63,13 +63,24 @@ Each table summarises the issues, their relative urgency, and their implications
 |🟢| **Medium** | Developmental or strategic actions to enhance sustainability, scalability, and research capacity. |
 
 ---
+## (Pre-amble) Governance
+A review of the BNR Governance structure was outside of the audit scope. Nevertheless, several governance-related issues were identified that affect data quality and process efficiency. These include: 
+
+- Unclear roles and responsibilities, 
+- Absence of formal dataset sign-off procedures, and 
+- Lack of a risk management framework. 
+
+Addressing these governance gaps is essential to underpin technical improvements and ensure long-term sustainability. 
+
+At BNR initiation there was a plan for the BNR to have a Technical Advisory Group (TAG) in addition to the functionaing Professional Advisory Board (PAB). Given that the PAB is primarily focused on clinical and public health matters, establishing a TAG with expertise in data governance, analytics, and health informatics would provide essential oversight for the technical dimensions of the registry **and should be convened as a priority**.
+
 
 ## (a) Case Capture and Preparation (Pre-REDCap)
 
 | **Priority / Issue** | **What’s Happening** | **Why It Matters** |
 |-----------------------|----------------------|--------------------|
 | 🔴 **Death data not yet fit for purpose** | The registry depends on death certificate data abstracted by the BNR team from hard copy records at the Barbados Registrar General. While all deaths are medically certified, the underlying cause of death (UCOD)—formally coded using internationally-accepted rules—is not provided by the Barbados Government. The current registry workaround—keyword searches of free text—does not achieve the precision or reproducibility required for national or WHO reporting. | The absence of coded UCOD data limits the accuracy of mortality statistics and complicates linkage between deaths and prior events. |
-| 🔴 **Inconsistent inclusion criteria** | Definitions of “eligible” and “ineligible” cases have varied over time, and trace-back periods before dataset closure have been inconsistently applied. | These inconsistencies affect the comparability of trends and can distort incidence estimates. |
+| 🔴 **Inconsistent inclusion criteria** | Definitions of “eligible” and “ineligible” cases have varied over time, and trace-back periods before dataset closure have been inconsistently applied.<br/><br/>Part of the difficulty seems to be that the related-but-distinct processes of **case-finding** and **case-abstraction** occur within the same database. This has led to an event type known as **"partially abstracted"**, with abstractors returning repeatedly to the same record for record updating. This process is potentially complex and prone to error / methodology slippage. The process should either be tightened considerably - so that records can **never** be left indefinitely as partially-completed, or the case-finding and case-abstraction processes should be separated within REDCap. | These inconsistencies affect the comparability of trends and can distort incidence estimates. |
 | 🟠 **Weak duplication controls at abstraction** | Current case-finding procedures do not consistently include a step to check for existing records before creating new entries. | Duplicated records can inflate event counts and compromise trend accuracy. |
 | 🟢 **Loss of historical identifiers (2009–2017)** | Certain analysis files have lost key identifiers over time due to the blending of data cleaning and analytical processes and limited control of Stata algorithms. While most (**potentially not all**) identifiers remain in the source data, their removal from intermediate files has complicated longitudinal linkage and required retrospective reconstruction to restore completeness. | Missing identifiers reduce the ability to assess repeat events and survival.<br/><br/>It remains possible that datasets without full age information have been used in past annual reports. |
 

@@ -14,12 +14,12 @@ hide:
 
     This data dictionary includes **three sets** of variables representing:
 
-    - **COLUMN 1: REDCap database.** Variables collected in the 2025 REDCap database
-    - ==**COLUMN 2: Extracted Dataset.** Variables after extraction from the 2025 REDCap database, with DO file preparation (**DO FILE:** ```DO file name```)==
+    - **COLUMN 1: REDCap database.** Variables collected and extracted from the BNR event database (**DO FILE:** ```bnrcvd-2025-redcap-format.do```)
+    - **COLUMN 2: interim Dataset.** Variables in the interim cumulative dataset (2009-2023). These are presented for completeness.
     - **COLUMN 3: Analytics Dataset.** Variables for analytics use, after firther DO file preparation (**DO FILE:** ```bnrcvd-2023-prep1.do```) 
 
 
-    | REDCap variable | Extracted dataset variable | Analytics dataset variable | Variable label | Display format |
+    | REDCap<br/>database variable | Cumulative<br/>dataset variable | Analytics<br/>dataset variable | Variable<br/>label | Display<br/>format |
     |---|---|---|---|---|
     |**Key Classifiers**| | | | |
     | -- | pid | eid | CVD Event Unique Identifier | %9.0g |

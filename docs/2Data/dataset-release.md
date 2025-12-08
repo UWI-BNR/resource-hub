@@ -68,35 +68,36 @@ For each CVD case, the sign-off process should include the following steps:
 ---
 
 ## 6. Cumulative Dataset Release
-A cumulative release of the *CVD-AMI* dataset and the *CVD-Stroke* dataset will be created once each month. 
+A cumulative release of the *CVD-CVD* dataset will be created once each month. 
 
 **Release Date:** First working day of each month
 
 **Datasets:** 
 
+- One combined CVD dataset
+
+and potentially, 
+
 - One AMI dataset, 
 - One stroke dataset, 
-- One combined CVD dataset
+
 
 **Included records:** All cumulative releases + all CVD cases for which abstraction has been completed and the REDCap case record has been electronically-signed and locked by the BNR Team Lead as clean. 
 
 **Dataset Naming Convention:**
 
-- `BNR-<TYPE>-<TIER>-<YYYYMM>.dta`
+See [metadata standards](./dataset/metadata.md) for details: 
 
-- (Example) `BNR-AMI-DEID-202509.dta`
+- `BNR-CVD-<CONTENT>-<TIER>-<YYYYMM>-v<VERSION>.dta`
 
-- (Example) `BNR-STROKE-ANON-202509.dta`
+- (Example) `BNR-CVD-DEID-202509-v1.dta`
+
+- (Example) `BNR-STROKE-ANON-202509-v2.dta`
 
 **Release Folder Structure:**
 
-- `/2Data/releases/YYYY/MM/`
+- `/Data/releases/y<YYYY>/m<MM>/`
 
-- `FULL/`
-
-- `DEID/`
-
-- `ANON/`
 
 **Dataset Formats**
 Each released dataset will be provided in multiple formats:
@@ -104,14 +105,14 @@ Each released dataset will be provided in multiple formats:
 | Format  | Description                                                                                                    |
 | ------- | -------------------------------------------------------------------------------------------------------------- |
 | `.dta`  | **Stata binary file** (primary working format, includes labels, formats, internal metadata)                    |
-| `.csv`  | **Non-proprietary, comma-separated format** (for general use, readable in most statistical software and Excel) |
+| `.csv / .xlsx`  | **Non-proprietary, comma-separated format** (for general use, readable in most statistical software and Excel) |
 | `.json` | **Machine-readable format** useful for integration with dashboards, data visualization tools, or APIs          |
-| `.txt`  | **Metadata file** summarizing variables, definitions, coding, and notes (accompanies each release)             |
+| `.yml`  | **Metadata file** summarizing variables, definitions, coding, and notes (accompanies each release)             |
 
 ---
 
 ## 7. Tiered Dataset Creation
-#### ==See the dataset dissemination SOP for details==
+#### See the [dataset dissemination SOP](../2Data/dataset-dissemination.md) for details
 
 **Small Island Privacy Considerations:** Given the BNR's context in Barbados, a small island developing state (SIDS) with a population of ~280,000, the risk of potential re-identification from seemingly benign combinations of data is higher than in larger jurisdictions. Even when direct identifiers are removed, indirect identifiers ("quasi-identifiers") may allow individuals to be re-identified when cross-referenced with external datasets or local knowledge. This consideration is key in our process of de-identification ([section 7.2](#72-de-identified-dataset)), anonymisation ([section 7.3](#73-anonymised-dataset)), and review of identifiability risk ([Section 8](#8-identifiability-risk)).
 
@@ -167,7 +168,8 @@ Include the following footnote in all outputs:
 > Counts fewer than 5 have been suppressed to protect confidentiality. Additional suppression may be applied where necessary.
 
 Before release, aggregated datasets must undergo review for suppression compliance, metadata completeness, and re-identification risk. For open data publication, assign a CC BY 4.0 license, register a DOI, and provide a recommended citation format.  
-==See the dataset dissemination SOP for details.==
+
+See the [dataset dissemination SOP](../2Data/dataset-dissemination.md) for details.
 
 
 ### 7.5 A note on cell suppression

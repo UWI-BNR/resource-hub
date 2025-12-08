@@ -66,3 +66,5 @@ Nevertheless, the final do file (`bnrcvd-2024-worms.do`) creates the following m
 === "Dec"
 
     ![Feb 2024](../../assets/images/bnrcvd-worm-wks-01-52.png){ align=left }
+
+<br/>
