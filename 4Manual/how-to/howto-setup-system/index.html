@@ -3216,6 +3216,7 @@
 <li>Click the Extensions icon on the left (it looks like four squares).</li>
 <li>In the search bar, type <code>Stata Enhanced</code> (this creates syntax highlighting for Stata DO files).</li>
 <li>Find the extension called <code>Stata Enhanced</code> by Kyle Barron and click <code>Install</code>.</li>
+<li>A message asking if you trust the publisher may appear, simply click <code>Trust Publisher &amp; Install</code></li>
 </ol>
 <h3 id="verification">Verification:<a class="headerlink" href="#verification" title="Permanent link">&para;</a></h3>
 <p>Open any <code>.do</code> file in VS Code and confirm that the text has coloured syntax highlighting.</p>
@@ -3248,11 +3249,11 @@
 <li>In VS Code, open the Command Palette (Ctrl+Shift+P).</li>
 <li>Type <code>Git: Clone</code> and press Enter.</li>
 <li>Paste the repository URL: <code>https://github.com/UWI-BNR/bnr-analytics</code></li>
-<li>Choose a folder on your PC where you want the repository to live.</li>
+<li>Choose a folder on your PC where you want the repository to live. E.g. <code>C:\Users\...</code></li>
 <li>Wait for the download to complete, then open the newly downloaded folder in VS Code.</li>
 </ol>
 <h3 id="verification_1">Verification:<a class="headerlink" href="#verification_1" title="Permanent link">&para;</a></h3>
-<p>In the folder you chose, you should see subfolders such as <code>do</code>, <code>ado</code>, <code>tables</code>, <code>graphics</code>, <code>outputs</code>, and <code>temp</code>.</p>
+<p>In the folder you chose, you should see two subfolders at this point (<code>do</code>, <code>ado</code>). We will add more later.</p>
 <hr />
 </details>
 <details class="- example">
@@ -3312,7 +3313,8 @@ Both should return version numbers.</p>
 <li>
 <p>In a <code>cmd</code> window, navigate to your project folder:</p>
 <blockquote>
-<p>cd path\to\your\project</p>
+<p>cd path\to\your\project
+<strong>Tip</strong>: If you are unsure where your project folder is located, type <code>where python</code> in your <code>cmd</code> window.</p>
 </blockquote>
 </li>
 <li>
@@ -3366,10 +3368,11 @@ This file can be read at our online GitHub repository, and lists the available <
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>│   ├── graphics
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>│   ├── log
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>│   ├── outputs      &lt;-- Contains briefings (will be replaced on running DO files)
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>│   ├── tables
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>│   ├── temp
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>├── .gitignore
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>├── README.md
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>│   ├── setup 
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>│   ├── tables
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>│   ├── temp
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>├── .gitignore
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>├── README.md
 </span></code></pre></div>
 <p><strong>Note:</strong><br />
 The <code>data</code> and <code>temp</code> folders, and the <code>bnrcvd-2023-redcap-token.do</code> DO file hold identifiable data and interim files. These must only exist on <strong>secure, encrypted local storage</strong> and must not be uploaded to GitHub or any other public service.</p>
@@ -3382,7 +3385,7 @@ The <code>data</code> and <code>temp</code> folders, and the <code>bnrcvd-2023-r
 <p>You have access to an example <code>profile.do</code> file in the <code>setup</code> folder of the <code>bnr_analytics.zip folder. You can copy this file to your Stata</code>PERSONAL<code>folder and edit it there, or create a new</code>profile.do` file from scratch in that folder.</p>
 <ol>
 <li>Open Stata and type <code>sysdir</code> in the Command window, then press Enter.</li>
-<li>Note the folder shown next to <code>PERSONAL</code>.</li>
+<li>Note the folder shown next to <code>PERSONAL</code>. <em>You may have to create this folder; simply use the New Folder option on your PC</em></li>
 <li>In that <code>PERSONAL</code> folder, create or edit the provided <code>profile.do</code> file.</li>
 <li>Edit the lines that tell Stata where your <code>bnr-analytics</code> repository lives and where Python is installed.</li>
 </ol>
@@ -3431,7 +3434,17 @@ The <code>data</code> and <code>temp</code> folders, and the <code>bnrcvd-2023-r
 <li>In Stata, run one of the main analytics scripts, for example: <code>do "C:/Users/Joan/BNR/bnr-analytics/do/bnrcvd-2023-count.do"</code></li>
 <li>Watch the Stata output window for any missing-file or path errors.</li>
 <li>When it finishes, look in the <code>outputs</code> or <code>tables</code> folder to confirm that new output files (for example Excel or PDF) have been created.</li>
+<li><strong>Note:</strong> If you do not have the font 'Montserrat' installed on your PC, you will need to perform the below steps:
+    a.  Download font files from: <a href="https://fonts.google.com/specimen/Montserrat" target="_blank">https://fonts.google.com/specimen/Montserrat</a>
+    b.  Unzip the files
+    c.  Install the font files:
+        (a) Selected all font files 
+        (b) Right click
+        (c) Select "Show More Options"
+        (d) Select "Install for all Users"
+        &gt; Only install Static Fonts - there should be 18 Montserrat static font files</li>
 </ol>
+<p>If this script runs to completion and produces outputs in the expected folders, your local PC is fully configured for the BNR Analytics System.</p>
 <p>If this script runs to completion and produces outputs in the expected folders, your local PC is fully configured for the BNR Analytics System.</p>
 </details>
 <p><br/> </p>
