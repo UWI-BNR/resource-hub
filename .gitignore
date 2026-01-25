@@ -5,6 +5,7 @@
 # Built site output
 site/ 
 deprecated/
+background/
 
 # MkDocs cache
 .mkdocs_cache/

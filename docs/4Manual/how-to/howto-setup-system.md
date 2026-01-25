@@ -18,6 +18,7 @@ In this *How To Guide* we bring together the various steps described in more det
     5. Click the Extensions icon on the left (it looks like four squares).
     6. In the search bar, type `Stata Enhanced` (this creates syntax highlighting for Stata DO files).
     7. Find the extension called `Stata Enhanced` by Kyle Barron and click `Install`.
+    8. A message asking if you trust the publisher may appear, simply click `Trust Publisher & Install`
 
     ### Verification: 
     Open any `.do` file in VS Code and confirm that the text has coloured syntax highlighting.
@@ -53,11 +54,11 @@ In this *How To Guide* we bring together the various steps described in more det
     7.  In VS Code, open the Command Palette (Ctrl+Shift+P).
     8.  Type `Git: Clone` and press Enter.
     9.  Paste the repository URL: `https://github.com/UWI-BNR/bnr-analytics`
-    10. Choose a folder on your PC where you want the repository to live.
+    10. Choose a folder on your PC where you want the repository to live. E.g. `C:\Users\...`
     11. Wait for the download to complete, then open the newly downloaded folder in VS Code.
 
     ### Verification:  
-    In the folder you chose, you should see subfolders such as `do`, `ado`, `tables`, `graphics`, `outputs`, and `temp`.
+    In the folder you chose, you should see two subfolders at this point (`do`, `ado`). We will add more later.
 
     ---
 
@@ -106,6 +107,7 @@ In this *How To Guide* we bring together the various steps described in more det
 
     6. In a `cmd` window, navigate to your project folder:
     > cd path\to\your\project
+    **Tip**: If you are unsure where your project folder is located, type `where python` in your `cmd` window.
 
     7. Create a virtual environment:
     `python -m venv venv`
@@ -160,6 +162,7 @@ In this *How To Guide* we bring together the various steps described in more det
     │   ├── graphics
     │   ├── log
     │   ├── outputs      <-- Contains briefings (will be replaced on running DO files)
+    │   ├── setup 
     │   ├── tables
     │   ├── temp
     ├── .gitignore
@@ -179,10 +182,10 @@ In this *How To Guide* we bring together the various steps described in more det
 
     You have access to an example `profile.do` file in the `setup` folder of the `bnr_analytics.zip folder. You can copy this file to your Stata `PERSONAL` folder and edit it there, or create a new `profile.do` file from scratch in that folder.
 
-    13. Open Stata and type `sysdir` in the Command window, then press Enter.
-    14. Note the folder shown next to `PERSONAL`.
-    15. In that `PERSONAL` folder, create or edit the provided `profile.do` file.
-    16. Edit the lines that tell Stata where your `bnr-analytics` repository lives and where Python is installed.
+    1.  Open Stata and type `sysdir` in the Command window, then press Enter.
+    2.  Note the folder shown next to `PERSONAL`. *You may have to create this folder; simply use the New Folder option on your PC*
+    3.  In that `PERSONAL` folder, create or edit the provided `profile.do` file.
+    4.  Edit the lines that tell Stata where your `bnr-analytics` repository lives and where Python is installed.
 
     Example (you must change the paths to match your PC):
 
@@ -191,14 +194,14 @@ In this *How To Guide* we bring together the various steps described in more det
     `capture noisily adopath + "C:/Users/Joan/BNR/bnr-analytics/ado/"`  
     `python set exec "C:/Users/Joan/AppData/Local/Programs/Python/Python312/python.exe", permanently`
 
-    17. Save `profile.do`.
+    5.  Save `profile.do`.
 
     ### Verification:
 
-    18. Close Stata completely.
-    19. Open Stata again (this runs `profile.do`).
-    20. Type `adopath` and press Enter. Confirm your `bnr-analytics` paths are listed.
-    21. Type `python query` and press Enter. Confirm the Python path and version are correct.
+    6.  Close Stata completely.
+    7.  Open Stata again (this runs `profile.do`).
+    8.  Type `adopath` and press Enter. Confirm your `bnr-analytics` paths are listed.
+    9.  Type `python query` and press Enter. Confirm the Python path and version are correct.
 
     ---
 
@@ -230,9 +233,21 @@ In this *How To Guide* we bring together the various steps described in more det
 
     ## Step 8 — Run an Analytics Script as a Final Check
 
-    25. In Stata, run one of the main analytics scripts, for example: `do "C:/Users/Joan/BNR/bnr-analytics/do/bnrcvd-2023-count.do"`
-    26. Watch the Stata output window for any missing-file or path errors.
-    27. When it finishes, look in the `outputs` or `tables` folder to confirm that new output files (for example Excel or PDF) have been created.
+    1. In Stata, run one of the main analytics scripts, for example: `do "C:/Users/Joan/BNR/bnr-analytics/do/bnrcvd-2023-count.do"`
+    2. Watch the Stata output window for any missing-file or path errors.
+    3. When it finishes, look in the `outputs` or `tables` folder to confirm that new output files (for example Excel or PDF) have been created.
+    4. **Note:** If you do not have the font 'Montserrat' installed on your PC, you will need to perform the below steps:
+        a.  Download font files from: [https://fonts.google.com/specimen/Montserrat](https://fonts.google.com/specimen/Montserrat){ target="_blank"}
+        b.  Unzip the files
+        c.  Install the font files:
+            (a) Selected all font files 
+            (b) Right click
+            (c) Select "Show More Options"
+            (d) Select "Install for all Users"
+            > Only install Static Fonts - there should be 18 Montserrat static font files
+
+    If this script runs to completion and produces outputs in the expected folders, your local PC is fully configured for the BNR Analytics System.
+
 
     If this script runs to completion and produces outputs in the expected folders, your local PC is fully configured for the BNR Analytics System.
   
