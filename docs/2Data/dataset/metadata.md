@@ -33,10 +33,8 @@ BNR-CVD-<CONTENT>-<TIER>-<YYYYMM>-v<VERSION>.dta
 
 - Cumulative individual dataset (Dec 2023):  
   `BNR-CVD-INDIV-DEID-202312-v1.0.dta`
-- Monthly roll-forward (minor version increment):  
-  `BNR-CVD-INDIV-DEID-202401-v1.1.dta`
 - Public aggregated dataset (mid-2026):  
-  `BNR-CVD-AGGR-ANON-202606-v1.0.dta`
+  `BNR-CVD-AGGR-ANON-202606-v2.0.dta`
 - Internal linkage file:  
   `BNR-CVD-LINK-FULL-202312-v1.0.dta`
 
