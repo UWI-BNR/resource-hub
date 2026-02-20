@@ -8,8 +8,10 @@ This review was undertaken to strengthen the efficiency, accuracy, and long-term
 
 This review provides an integrated assessment of technical and procedural systems supporting the generation of BNR outputs. The findings offer practical steps toward a more reliable, efficient, and sustainable registry.
 
+<!---
 !!! info "Project Deliverables"
     The proposed consultancy deliverables are detailed in the following website pages:  [Process Improvements](../updates/process-new.md) ○ [Data Improvements](../updates/dataset-new.md) ○ [Analytics Improvements](../updates/analytics-new.md) ○ [Reporting Improvements](../updates/reporting-new.md) ○ [Improvements by Audit Recommendation](../updates/recommendations-new.md).
+--->
 
 ---
 
@@ -72,26 +74,26 @@ A review of the BNR Governance structure was outside of the audit scope. Neverth
 
 Addressing these governance gaps is essential to underpin technical improvements and ensure long-term sustainability. 
 
-At BNR initiation there was a plan for the BNR to have a Technical Advisory Group (TAG) in addition to the functionaing Professional Advisory Board (PAB). Given that the PAB is primarily focused on clinical and public health matters, establishing a TAG with expertise in data governance, analytics, and health informatics would provide essential oversight for the technical dimensions of the registry **and should be convened as a priority**.
+At BNR initiation there was a plan for the BNR to have a Technical Advisory Group (TAG) in addition to the functioning Professional Advisory Board (PAB). Given that the PAB is primarily focused on clinical and public health matters, establishing a TAG with expertise in data governance, analytics, and health informatics would provide essential oversight for the technical dimensions of the registry **and should be convened as a priority**.
 
 
 ## (a) Case Capture and Preparation (Pre-REDCap)
 
 | **Priority / Issue** | **What’s Happening** | **Why It Matters** |
 |-----------------------|----------------------|--------------------|
-| 🔴 **Death data not yet fit for purpose** | The registry depends on death certificate data abstracted by the BNR team from hard copy records at the Barbados Registrar General. While all deaths are medically certified, the underlying cause of death (UCOD)—formally coded using internationally-accepted rules—is not provided by the Barbados Government. The current registry workaround—keyword searches of free text—does not achieve the precision or reproducibility required for national or WHO reporting. | The absence of coded UCOD data limits the accuracy of mortality statistics and complicates linkage between deaths and prior events. |
+| 🔴 **Death data recoding incomplete** | Death data abstraction from the Registrar General is operational; however, structured recoding of causes of death by the BNR is not yet comprehensive. Formal ICD-10 underlying cause of death (UCOD) coding, following international selection rules, would represent the gold standard but carries substantial resource implications (specialist training, coding software, QA processes, ongoing maintenance). In the absence of formal UCOD infrastructure, a pragmatic interim solution is recommended:</br></br>(1) comprehensive ICD-10 pattern mapping of all reported causes of death using rigorously validated regular expression logic applied to free-text fields; </br></br>(2) systematic identification and coding of “junk” or ill-defined codes (e.g. heart failure, cardiac arrest, unspecified stroke); </br></br>(3) structured redistribution of these codes across cardiovascular disease categories using transparent and documented assumptions; and </br></br>(4) development of sensitivity scenarios to quantify uncertainty introduced by non-UCOD coding. </br></br>This approach would produce reproducible mortality groupings suitable for linkage with incident registry cases and enable survival and case-fatality analytics while longer-term UCOD solutions are explored. | Without structured cause-of-death coding, mortality estimates lack precision and reproducibility. Implementing rigorous ICD-10 pattern mapping and sensitivity frameworks will substantially improve analytic validity, support survival modelling, and strengthen linkage between death records and prior registry events — even in the absence of formal UCOD coding infrastructure. |
 | 🔴 **Inconsistent inclusion criteria** | Definitions of “eligible” and “ineligible” cases have varied over time, and trace-back periods before dataset closure have been inconsistently applied.<br/><br/>Part of the difficulty seems to be that the related-but-distinct processes of **case-finding** and **case-abstraction** occur within the same database. This has led to an event type known as **"partially abstracted"**, with abstractors returning repeatedly to the same record for record updating. This process is potentially complex and prone to error / methodology slippage. The process should either be tightened considerably - so that records can **never** be left indefinitely as partially-completed, or the case-finding and case-abstraction processes should be separated within REDCap. | These inconsistencies affect the comparability of trends and can distort incidence estimates. |
 | 🟠 **Weak duplication controls at abstraction** | Current case-finding procedures do not consistently include a step to check for existing records before creating new entries. | Duplicated records can inflate event counts and compromise trend accuracy. |
 | 🟢 **Loss of historical identifiers (2009–2017)** | Certain analysis files have lost key identifiers over time due to the blending of data cleaning and analytical processes and limited control of Stata algorithms. While most (**potentially not all**) identifiers remain in the source data, their removal from intermediate files has complicated longitudinal linkage and required retrospective reconstruction to restore completeness. | Missing identifiers reduce the ability to assess repeat events and survival.<br/><br/>It remains possible that datasets without full age information have been used in past annual reports. |
 
 !!! warning "Most Urgent Actions (Recommendations 3–5 - See Below)"
-    - Re-establish a **hospital-based registry model** to ensure consistent, verifiable case capture of incident cases.  
-    - Introduce and lead on national **UCOD assignment** using World Health Organization IRIS software.  
+    - Re-establish a **nationally representative registry model**, ensuring consistent, verifiable capture of incident cases.  
+    - Improve **cause of death assignment** using ICD10 coding, thorough use of regular expressions to capture free text anomolies, re-distribution of *junk codes* (ICD10 R* codes) across CVD deaths, and use of sensitivity work to address UCOD uncertainty.  
     - Standardise eligibility definitions and strengthen duplicate checking as a key part of the abstraction process.
     - Build and document a single cumulative data record (2009-2023)
 
 **Summary:**  
-The pre-REDCap phase presents several foundational data-quality risks that directly affect national comparability. Addressing these will require structural adjustments rather than additional resources. The registry can move quickly toward improvement through a quality-managed hospital-based verification process, standardised inclusion rules, and adoption of IRIS for formal UCOD coding—changes that will align BNR methods with international best practice.
+The pre-REDCap phase presents several foundational data-quality risks that directly affect national comparability. Addressing these will require structural adjustments rather than additional resources. The registry can move quickly toward improvement through a quality-managed verification process, standardised inclusion rules, and adoption of more thorough cause-of-death assignment.
 
 ---
 
@@ -152,27 +154,27 @@ The post-REDCap phase requires clear data governance and modernisation of the an
 | **1** | 🔴 **Dataset Governance and Version Control** | • Approve a definitive cumulative dataset (to Dec 2023) as the single official record.<br>• Implement dataset sign-off protocols and release logs.<br>• Apply version numbering to all analytical datasets. | A verified, auditable foundation for all future analyses and reporting. |
 | **2** | 🔴 **REDCap Quality Controls** | • Lock the production database and reinstate validation rules.<br>• Reintroduce required fields and range checks.<br>• Produce monthly REDCap data-quality snapshots. | Improved accuracy and early detection of issues at the point of entry. |
 | **3** | 🔴 **Core Variable Set Definition** | • Identify and protect a 30–40-variable Core Dataset essential for reporting.<br>• Prioritise validation of these variables before others. | Completeness of the most critical indicators for national health monitoring. |
-| **4** | 🔴 **Pre-REDCap Process and Hospital-Based Re-focus** | • Revert to a hospital-only based model for verified case capture.<br>• Treat annual mortality separately until formal UCOD coding is implemented.<br>• Formalise collaboration with MoHW on UCOD-data sharing. | Reliable incidence monitoring and improved consistency in data capture. |
-| **5** | 🔴 **Formal UCOD Assignment (IRIS)** | • Test then implement WHO-endorsed **IRIS** software for UCOD coding.<br>• Train designated BNR and MoHW staff.<br>• Establish a quarterly reconciliation process. | A national automated mortality-coding capability meeting WHO standards.<br/><br/>Would represent a new national public good. |
+| **4** | 🔴 **Re-establish National Incidence & Mortality Monitoring** | • Stabilise verified case capture to ensure consistent national incidence reporting.<br>• Separate mortality processing within a structured coding framework.<br>• Align reporting definitions across sources. | Restores credibility of national CVD surveillance and stabilises trend reporting. |
+| **5** | 🔴 **Structured ICD-10 Mortality Coding Framework** | • Implement comprehensive ICD-10 coding using systematic regular-expression methods.<br>• Explicitly identify and redistribute “junk” codes across CVD categories.<br>• Develop sensitivity analyses to support survival linkage. | Delivers reproducible mortality classification to support incidence–mortality linkage and survival analytics without full UCOD system implementation. |
 | **6** | 🟠 **Analytics Workflow Redesign** | • Separate data-cleaning scripts from analysis scripts.<br>• Introduce modular, annotated Stata programs.<br>• Automate production of tables, figures and (optionally) dashboards. | Faster, reproducible, and transparent analysis workflows. |
 | **7** | 🟠 **Data Dictionary and Metadata Management** | • Create a unified, version-controlled data dictionary.<br>• Archive (if possible) all prior definitions and mappings.<br>• Assign a metadata steward for ongoing maintenance. | Greater transparency and cross-year comparability of variables. |
 | **8** | 🟠 **Open Standards and Documentation** | • Transition documentation from proprietary tools (eg. OneNote) to open standards (Markdown, MkDocs, GitHub) to open-publish BNR methods.<br>• Adopt international coding standards at all times (e.g. ICD-10/11, WHO HEARTS). | Sustainable, accessible documentation aligned with global open-data and open-science practice. |
 | **9** | 🟠 **Continuous Data-Quality Monitoring** | • Re-assert/implement within-database checks for missingness, duplicates, and validation breaches.<br>• Publish a monthly data-quality report (optionally dashboard).<br>• Integrate metrics into BNR performance monitoring. | Moves the registry from reactive correction to continuous improvement. |
 | **10** | 🟠 **Automation in Data Abstraction** | • Continue to explore the extent of possible abstraction automation.<br>• Pilot test for high-volume variables such as admission/discharge data. | Reduced manual workload and improved timeliness of updates. |
-| **11** | 🟢 **Expansion to Additional Conditions** | • With QEH partners, pilot simplified modules for injury or other high-priority conditions.<br>• Conduct feasibility assessments before scaling. | Incremental broadening of surveillance capacity using existing structures. |
+| **11** | 🟢 **Expansion to Primary Care Conditions** | • With clinical partners, pilot simplified modules for hypertension and diabetes.<br>• Conduct feasibility assessments before scaling. | Incremental broadening of surveillance capacity using existing structures. |
 | **12** | 🟢 **‘Research Analytics’ Workstream** | • Establish periodic research cycles (e.g., every 3–5 years) for survival analysis and linkage studies.<br>• Keep outside routine operations. | Supports in-depth research while protecting routine registry stability. |
-| **13** | 🟢 **Revamped Reporting Framework** | • Develop shorter, visually clear quarterly or bi-annual reports.<br>• Retain an annual detailed technical report.<br>• Introduce infographics for broader communication. | Timely, accessible outputs supporting evidence-based decision-making. |
+| **13** | 🟢 **Revamped Reporting Framework** | • Develop shorter, visually clear regular reporting.<br>• Introduce infographics for broader communication. | Timely, accessible outputs supporting evidence-based decision-making. |
 | **14** | 🟢 **Sustainability and Governance Enhancements** | • Define and document registry roles and responsibilities.<br>• Maintain a formal risk log and review report (optionally dashboard) quarterly.<br>• Schedule independent audits every 2–3 years. | Institutionalises accountability and continuous system improvement. |
 
 ---
 
-### Implementation Stages
+### Implementation Phases
 
-| **Stage** | **Timeline** | **Primary Focus** |
-|------------|--------------|-------------------|
-| **Stage 1** | 0–9 months | Implement all 🔴 *Critical* actions: governance, REDCap controls, hospital-based focus, IRIS deployment, and core-variable protection. |
-| **Stage 2** | 9–18 months | Deliver 🟠 *High-priority* actions: analytics redesign, metadata management, open documentation, abstraction automation, and dashboards. |
-| **Stage 3** | 36 months | Advance 🟢 *Medium-term* goals: expanded condition modules, research analytics stream, refreshed reporting, and governance consolidation. |
+| **Phase** | **Timeline** | **Primary Focus** |
+|----------------|---------|-------------------|
+| **Phase 1, 2** | year 1 | Implement all 🔴 *Critical* actions: governance, REDCap controls, hospital-based focus, IRIS deployment, and core-variable protection. |
+| **Phase 2, 3** | year 2 | Deliver 🟠 *High-priority* actions: analytics redesign, metadata management, open documentation, abstraction automation, and dashboards. |
+| **Phase 3** | years 3-4 | Advance 🟢 *Medium-term* goals: expanded condition modules, research analytics stream, refreshed reporting, and governance consolidation. |
 
 ---
 
@@ -195,8 +197,7 @@ The audit identifies serious and correctable challenges but also outlines clear 
 
 | **Area of Progress** | **Expected National Gain** |
 |-----------------------|----------------------------|
-| **Reliable National Datasets** | A verified, reproducible record of cardiovascular disease incidence and outcomes, forming the basis for policy and international reporting. |
-| **Formal Mortality Coding (IRIS)** | A national UCOD system aligned with WHO standards, improving the completeness and international comparability of Barbados death data. |
+| **Reliable Nationally Representative Datasets** | A verified, reproducible record of cardiovascular disease incidence and outcomes, forming the basis for policy and international reporting. |
 | **Modernised Analytics and Reporting** | Faster, clearer reports supporting evidence-based decisions and continuous monitoring of health-service performance. |
 | **Open, Interoperable Documentation** | Transition to open data standards and transparent documentation ensures sustainability and reduces reliance on proprietary systems. |
 | **Integration and Research Potential** | A data platform capable of linking with other national health datasets and supporting collaborative research across the Caribbean. |

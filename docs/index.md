@@ -46,9 +46,8 @@ Data For Impact
 ## BNR Operations
 Explore how we operate, learn about our ongoing digital transformation of registry processes, access key downloads, and view our latest analytics and reports.
 
-<span style="font-family: Montserrat, sans-serif; font-weight: 400; font-size: clamp(0.75rem, 2vw, 1.0rem);">Project Theme</span> | <span style="font-family: Montserrat, sans-serif; font-weight: 400; font-size: clamp(0.75rem, 2vw, 1.0rem);">Project Component</span>
---------|----------
 <span style="font-family: Montserrat, sans-serif;  font-weight: 300; font-size: clamp(0.75rem, 2vw, 1.0rem);">:fontawesome-solid-diagram-project: Insights | <a href="./3Reporting/briefings/" class="md-button-external">Our Analytics & Reporting</a></span>
+--------|----------
 <span style="font-family: Montserrat, sans-serif;  font-weight: 300; font-size: clamp(0.75rem, 2vw, 1.0rem);">:fontawesome-solid-chart-simple: Data | <a href="./2Data/" class="md-button-external">Our Data Stewardship</a></span>
 <span style="font-family: Montserrat, sans-serif;  font-weight: 300; font-size: clamp(0.75rem, 2vw, 1.0rem);">:fontawesome-solid-screwdriver-wrench: BNR Modernisation Programme | <a href="./1Workflow/" class="md-button-external">Our Recent Process Changes</a></span>
 <span style="font-family: Montserrat, sans-serif;  font-weight: 300; font-size: clamp(0.75rem, 2vw, 1.0rem);">:material-download-circle: Downloads | <a href="./5Downloads/" class="md-button-external">Our Downloads</a></span>

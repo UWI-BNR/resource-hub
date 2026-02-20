@@ -92,9 +92,28 @@ extra_javascript:
 # Add downloads directory to site
 docs_dir: docs
 
+exclude_docs: |
+  drafts/*
+  2Data/index.md
+  2Data/sharing/index.md
+  analytics-new.md
+  dataset-new.md
+  process-new.md
+  recommendations-new.md
+  reporting-new.md
+  sources.md
+  signoff.md
+  storage.md
+  dataset-release.md
+  dataset-dissemination.md
+  data-access-statement.md
+  dsa.md
+  dtrust.md 
+  sharing-sop.md
+
 extra_css:
   - styles/landing.css
   - styles/mermaid.css
   - https://unpkg.com/frappe-gantt/dist/frappe-gantt.css
 
-copyright: Copyright &copy; 2026 Ian Hambleton
+copyright: Copyright &copy; 2026 The Barbados National Registry (The BNR). All rights reserved.

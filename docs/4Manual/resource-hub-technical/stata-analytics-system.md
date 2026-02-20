@@ -282,7 +282,7 @@ The Stata Analytics system has been built to partially automate a series of repo
 
     ## (7) Dependency: **`profile.do`**
 
-    The Stata **`profile.do`** is a simple set of instructions that Stata runs automatically every time you start a new session of Stata. You can download a template **`profile.do`** [here](XX).  The template is a very simple **`profile.do`**, and looks somthing like this:
+    The Stata **`profile.do`** is a simple set of instructions that Stata runs automatically every time you start a new session of Stata.  The template is a very simple **`profile.do`**, and looks somthing like this:
 
     ```
     *────────────────────────────────────────────────────────────────────────────*
@@ -341,13 +341,13 @@ The Stata Analytics system has been built to partially automate a series of repo
 
     #### B. Set the Python executable path
 
-    1. In VS Code, open the Terminal (Ctrl+Shift+`).
-    2. Type `where python` and press Enter.
-    3. Copy the full path shown, for example:
+    7. In VS Code, open the Terminal (Ctrl+Shift+`).
+    8. Type `where python` and press Enter.
+    9. Copy the full path shown, for example:
 
     `C:\Users\Joan\AppData\Local\Programs\Python\Python312\python.exe`
 
-    4. In `profile.do`, add a line like:
+    10. In `profile.do`, add a line like:
 
     `python set exec "C:/Users/Joan/AppData/Local/Programs/Python/Python312/python.exe", permanently`
 
@@ -359,13 +359,13 @@ The Stata Analytics system has been built to partially automate a series of repo
 
     ### Step 3 — Test That Stata Recognises Your Setup
 
-    1. Close Stata completely.
-    2. Re-open Stata (this will cause `profile.do` to run).
-    3. In the Command window, type `adopath` and press Enter.
+    11. Close Stata completely.
+    12. Re-open Stata (this will cause `profile.do` to run).
+    13. In the Command window, type `adopath` and press Enter.
 
     Check that the output includes entries pointing to your `bnr-analytics`, `bnr-analytics/do`, and `bnr-analytics/ado` folders.
 
-    4. Then type `python query` and press Enter.
+    14. Then type `python query` and press Enter.
 
     Check that:
 

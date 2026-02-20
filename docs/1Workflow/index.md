@@ -15,7 +15,7 @@ description: A concise, engaging summary of how the Barbados National Registry i
 }
 .hero h1 {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 1rem;
   color: #FFFFFF;
 }
@@ -33,7 +33,7 @@ description: A concise, engaging summary of how the Barbados National Registry i
   color: #fff;
   padding: 0.9rem 1.6rem;
   border-radius: 2rem;
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: none;
   transition: background 0.3s ease;
 }
@@ -44,15 +44,18 @@ description: A concise, engaging summary of how the Barbados National Registry i
 
 <div class="hero">
   <h1>BNR Refit Project</h1>
-  <br/>
   <p>
-    A fresh start for the Barbados National Registry — smarter data, faster reporting, stronger impact.
+    <i>February, 2026</i>
+    </br></br>
+  </p>
+  <p>
+    A fresh start for the Barbados National Registry &mdash; smarter data, faster reporting, stronger impact.
   </p>
 </div>
 
 ---
 
-The <strong>BNR Refit (2025–2026)</strong> is transforming how we collect and manage national data on heart disease and stroke, creating a modern, system&mdash;automated when possible&mdash;delivering insight, efficiency, and sustainability.
+The <strong>BNR Refit </strong> is an ongoing digital transformation of how we collect, manage, and report national data on heart disease and stroke, creating a modern, system&mdash;automated when possible&mdash;delivering insight, efficiency, and sustainability.
 
 
 ## Why this refit matters

@@ -15,7 +15,7 @@ Originally focused on the BNR-CVD analytics process, the audit was broadened whe
 ## Key Findings at a Glance
 | **Process Area** | **Current Challenges** | **Improvement Opportunity** |
 |------------------|------------------------|-----------------------------|
-| **Case Capture & Preparation<br/>(Pre-REDCap)** | Mortality data depend on national death registration that currently does not assign underlying cause of death (UCOD). Case-finding has over time applied inconsistent eligibility definitions. | Strengthen reliability and introduce an **important new national public good **by (a) introducing national UCOD coding and (b) re-anchoring the registry to report hospital burden. |
+| **Case Capture & Preparation<br/>(Pre-REDCap)** | Mortality data recoding remains incomplete. Underlying cause of death (UCOD) coding would be ideal but carries substantial resource and system implications. Current keyword-based approaches limit precision, reproducibility, and survival linkage. | Adopt a pragmatic Phase 2 approach by systematically coding the full ICD-10 spectrum using structured regular expressions, explicitly coding “junk” causes for redistribution across CVD deaths, and introducing sensitivity measures to support robust linkage with incident cases for survival analytics. |
 | **Data Entry & Quality Control<br/>(Within-REDCap)** | The 2023 database rebuild left some validation and documentation gaps. | Lock and stabilise the REDCap platform, reinstate data checks, and build a living data dictionary. |
 | **Analysis & Reporting<br/>(Post-REDCap)** | No single “official” cumulative dataset and reliance on older Stata scripts. | Establish dataset governance, modernise analytics, and deliver faster, policy-relevant reporting. |
 
@@ -29,8 +29,8 @@ Across all stages, the audit found dedicated staff working within a complex syst
 | 1️⃣ | Finalise and approve a single cumulative dataset (to Dec 2023). | Creates an authoritative national CVD record. |
 | 2️⃣ | Lock the production REDCap version and reinstate validation rules. | Protects data integrity and comparability. |
 | 3️⃣ | Define and safeguard a 30–40-variable **Core Dataset**. | Guarantees completeness of key national indicators. |
-| 4️⃣ | Re-focus on a **hospital-based registry model** for case capture. | Stabilises incidence monitoring, ensures accuracy, and creates a model for tracking all hospital outcomes. |
-| 5️⃣ | Test and implement WHO **IRIS** software for UCOD coding. | Delivers a national mortality-coding system for Barbados - **a new national public good.** |
+| 4️⃣ | Re-establish true national reporting by stabilising incidence and mortality monitoring. | Restores credibility of national CVD statistics and provides a dependable foundation for surveillance and policy. |
+| 5️⃣ | Implement a structured ICD-10 coding framework using systematic regular-expression methods, including explicit identification and redistribution of “junk” codes, with sensitivity analyses for survival linkage. | Delivers reproducible mortality classification to support incidence–mortality linkage and survival analytics without the full resource burden of national UCOD implementation. |
 
 ---
 
@@ -41,26 +41,21 @@ Across all stages, the audit found dedicated staff working within a complex syst
 | **Stage 2** | 9–18 months | Modernise analytics and documentation using open, interoperable standards. |
 | **Stage 3** | 18–36 months | Expand registry coverage and integrate new conditions within a digital-ready platform. |
 
+
 ---
 
 ## Expected National Gains
 - A **trusted, auditable national CVD dataset** supporting evidence-based decisions.  
-- A **certified national UCOD system (IRIS)** strengthening mortality statistics and WHO reporting.  
 - **Shorter, more frequent, and policy-focused reporting** for senior decision-makers.  
 - **Open-standard, cloud-ready documentation** positioning Barbados at the forefront of the Caribbean’s digital health transformation.
 
 ---
 
 ## Endorsement Requested
-The BNR seeks Advisory Committee and Ministry support to proceed with **Stage 1 modernisation**, including  
-
-- approval of the unified dataset and REDCap stabilisation, and  
-- technical support for IRIS installation and testing.  
-
-Together, these actions will transform the BNR from a valuable legacy system into a **cutting-edge national digital health resource** ready for the next decade of data-driven decision-making.
+The BNR seeks Advisory Committee and Ministry support to proceed with this proposed modernisation. These improvements will transform the BNR from a valuable legacy system into a **cutting-edge national digital health resource** ready for the next decade of data-driven decision-making.
 
 ---
 
 *Lead: BNR Technical Team  |  Support: GA-CDRC  &  CaribData  |  Date: October 2025*
 
-<br>
+</br>
